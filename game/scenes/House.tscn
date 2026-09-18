@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ngjl4nr6nlq3"]
+
+[ext_resource type="Texture2D" uid="uid://dutb0yqgylf5p" path="res://assets/tiles/mirti_runner_concrete_tile.png" id="1_8twys"]
+[ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://actors/player/Player.tscn" id="2_r2usd"]
+
+[node name="House" type="Node2D" unique_id=1662081687]
+
+[node name="MirtiRunnerConcreteTile" type="Sprite2D" parent="." unique_id=658001168]
+position = Vector2(132, 84)
+texture = ExtResource("1_8twys")
+
+[node name="Player" parent="." unique_id=25723801 instance=ExtResource("2_r2usd")]
+position = Vector2(129, 97)
