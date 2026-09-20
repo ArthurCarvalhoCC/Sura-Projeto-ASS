@@ -1,24 +1,37 @@
 using Godot;
-using System;
 
 public partial class SceneManager : Node
 {
     [Export]
     private PackedScene _initialScene;
     [Export]
-    private Node SceneContainer;
-    private Node _currentScene;
+    private Node2D _sceneContainer;
+    private SceneRoot _currentScene;
+    private Player _player;
+    [Signal]
+    public delegate void playerChangedEventHandler(Player player);
 
     public override void _EnterTree()
     {
-        loadNewScene(_initialScene);
+        LoadNewScene(_initialScene);
     }
 
-    private void loadNewScene(PackedScene scene)
+    private void LoadNewScene(PackedScene scene)
     {
-        if(_currentScene != null) _currentScene.QueueFree();
-        _currentScene = scene.Instantiate();
-        SceneContainer.AddChild(_currentScene);
+        if (_currentScene != null)
+        {
+            _currentScene.QueueFree();
+        }
+
+        _currentScene = scene.Instantiate<SceneRoot>();
+        _sceneContainer.AddChild(_currentScene);
+
+        _player = _currentScene._player;
+        NotifyPlayerChanged(_player);
     }
 
+    private void NotifyPlayerChanged(Player player)
+    {
+        EmitSignal(SignalName.playerChanged, player);
+    }
 }

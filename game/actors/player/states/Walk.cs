@@ -5,12 +5,13 @@ public partial class Walk : PlayerState
 {
 	public override void Enter()
 	{
+        if (_player._animStateMachine == null) return;
         _player._animStateMachine.Travel("Walk");
 	}
     public override void Update(double delta)
     {
         if (_player == null) return;
-        if (_player.DebugMode) Machine.TransitionTo("debug");
+        if (_player.debugMode) Machine.TransitionTo("debug");
 
         if (_player.direction == Vector2.Zero) Machine.TransitionTo("idle");
         else {

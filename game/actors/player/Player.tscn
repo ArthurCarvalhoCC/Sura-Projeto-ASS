@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4qailok3ycwu"]
 
 [ext_resource type="Script" uid="uid://vti7k8lcjl3b" path="res://actors/player/Player.cs" id="1_v7rlw"]
-[ext_resource type="Texture2D" uid="uid://bvo2130vrei4s" path="res://assets/characters/sura/protagonista.png" id="2_fd065"]
+[ext_resource type="Texture2D" uid="uid://bvo2130vrei4s" path="res://assets/sprites/characters/sura/protagonista.png" id="2_fd065"]
 [ext_resource type="Script" uid="uid://du5q6gsxw1iih" path="res://actors/player/PlayerStateMachine.cs" id="3_fd065"]
 [ext_resource type="Script" uid="uid://td0p3ko4poqn" path="res://actors/player/states/Idle.cs" id="4_v5qoq"]
 [ext_resource type="Script" uid="uid://cel12hh6skpqm" path="res://actors/player/states/Walk.cs" id="5_jtmj1"]
@@ -244,7 +244,6 @@ position = Vector2(0, -12)
 texture = ExtResource("2_fd065")
 hframes = 4
 vframes = 5
-frame = 1
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=149437398]
 shape = SubResource("RectangleShape2D_vlew8")
@@ -286,5 +285,3 @@ _player = NodePath("../..")
 [node name="Talk" type="Node" parent="StateMachine" unique_id=245282841 node_paths=PackedStringArray("_player")]
 script = ExtResource("7_v5qoq")
 _player = NodePath("../..")
-
-[node name="Pause" type="Node" parent="StateMachine" unique_id=585954670]

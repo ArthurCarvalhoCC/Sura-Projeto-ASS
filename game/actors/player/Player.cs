@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public partial class Player : CharacterBody2D
 {	
-	public static Player Instance {get; private set;}
 	[Export] public float MoveSpd = 40f;
 	[Export] public AnimationTree _animTree;
 	[Export] public CollisionShape2D _collision;
@@ -12,10 +11,12 @@ public partial class Player : CharacterBody2D
 	[Export] public float acceleration = 3000f;
 	[Export] public float fricttion = 5000f;
 	public AnimationNodeStateMachinePlayback _animStateMachine;
-	public Vector2 velocity;
-	public Vector2 direction;
-	public bool DebugMode;
-	public bool back;
+	public Vector2 velocity = Vector2.Zero;
+	public Vector2 direction = Vector2.Zero;
+	public bool debugMode = false;
+	public bool collisionActive = true;
+	public bool back = false;
+	
 
 	[Signal]
 	public delegate void ChangeSceneEventHandler();
@@ -24,7 +25,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _EnterTree() 
 	{
-		Instance = this;			
+				
 	}
     public override void _Ready()
     {
@@ -35,12 +36,12 @@ public partial class Player : CharacterBody2D
 	public override void _PhysicsProcess(double delta)
 	{
 		direction = Input.GetVector("game_left", "game_right", "game_up", "game_down");
-		DebugMode = Input.IsActionJustPressed("debug_mode");
+		debugMode = Input.IsActionJustPressed("debug_mode");
 		back = Input.IsActionJustPressed("game_back");
 	}
 
 	// SIGNALS
-	public void NotifyStateChanged( String newState)
+	public void NotifyStateChanged(String newState)
 	{
 		GD.Print(newState);
 		EmitSignal(SignalName.StateChanged, newState);

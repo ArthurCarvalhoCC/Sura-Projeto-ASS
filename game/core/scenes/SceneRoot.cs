@@ -1,12 +1,16 @@
 using Godot;
 using System;
 
-public partial class Main : Node2D
+public partial class SceneRoot : Node2D
 {
+	[Export]
+	public Node2D _doors;
+	[Export]
+	public Player _player;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		// SceneManager.Instance.LoadScene("res://src/scenes/bedroom.tscn");
+
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

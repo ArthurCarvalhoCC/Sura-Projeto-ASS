@@ -3,15 +3,14 @@ using System;
 
 public partial class Debug : PlayerState
 {
-    bool collisionSwitch;
 
     public override void Update(double delta)
     {
-        if (_player.DebugMode) Machine.TransitionTo("idle");
+        if (_player.debugMode) Machine.TransitionTo("idle");
         if (_player.back) {
-            onCollision(collisionSwitch);      
-            collisionSwitch = !collisionSwitch;
-            GD.Print(collisionSwitch);
+            onCollision(_player.collisionActive);      
+            _player.collisionActive = !_player.collisionActive;
+            GD.Print("Player Collision: "+_player.collisionActive);
         }
     }   
     public override void PhysicsUpdate(double delta)
