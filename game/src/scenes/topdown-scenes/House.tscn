@@ -1,11 +1,13 @@
 [gd_scene format=4 uid="uid://ngjl4nr6nlq3"]
 
-[ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scenes/SceneRoot.cs" id="1_r2usd"]
-[ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="2_r2usd"]
-[ext_resource type="Texture2D" uid="uid://cgv80htuw52ue" path="res://assets/tiles/autotile_wood_floor.png" id="4_ispqn"]
+[ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/SceneRoot.cs" id="1_w02m0"]
+[ext_resource type="Texture2D" uid="uid://cgv80htuw52ue" path="res://assets/tiles/autotile_wood_floor.png" id="2_kndox"]
+[ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_ljpeu"]
+[ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_tha1t"]
+[ext_resource type="Script" uid="uid://8l217tyb32jy" path="res://core/scene/door-system/Door.cs" id="5_7r7x3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etd6b"]
-texture = ExtResource("4_ispqn")
+texture = ExtResource("2_kndox")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -343,7 +345,7 @@ terrain_set_0/terrain_0/color = Color(0.63, 0.24926999, 0.16379999, 1)
 sources/0 = SubResource("TileSetAtlasSource_etd6b")
 
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
-script = ExtResource("1_r2usd")
+script = ExtResource("1_w02m0")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Player")
 
@@ -353,7 +355,14 @@ _player = NodePath("Player")
 tile_map_data = PackedByteArray("AAAGAAUAAAAKAAEAAAAFAAUAAAAKAAEAAAAHAAUAAAAKAAEAAAAIAAUAAAAKAAEAAAAJAAUAAAAKAAEAAAAKAAUAAAAKAAEAAAALAAUAAAAKAAEAAAAMAAUAAAALAAIAAAAMAAYAAAALAAIAAAALAAYAAAAKAAEAAAAKAAYAAAAKAAEAAAAJAAYAAAAKAAEAAAAIAAYAAAAKAAEAAAAHAAYAAAAKAAEAAAAGAAYAAAAKAAEAAAAFAAYAAAAKAAEAAAAFAAcAAAAJAAMAAAAGAAcAAAAJAAMAAAAHAAcAAAAJAAMAAAAIAAcAAAAJAAMAAAAKAAcAAAAJAAMAAAAJAAcAAAAJAAMAAAALAAcAAAAJAAMAAAAMAAcAAAALAAMAAAAMAAQAAAALAAAAAAALAAQAAAAJAAAAAAAKAAQAAAAKAAAAAAAJAAQAAAAKAAAAAAAIAAQAAAAKAAAAAAAHAAQAAAAKAAAAAAAGAAQAAAAGAAEAAAAFAAQAAAAKAAEAAAALAAMAAAAAAAAAAAAEAAcAAAAJAAMAAAAEAAYAAAAKAAEAAAAEAAUAAAAKAAEAAAAEAAQAAAAKAAEAAAAEAAMAAAAKAAEAAAAEAAIAAAAKAAAAAAADAAIAAAAIAAAAAAADAAMAAAAIAAEAAAADAAQAAAAIAAEAAAADAAUAAAAIAAEAAAADAAYAAAAIAAEAAAADAAcAAAAIAAMAAAAFAAIAAAAKAAAAAAAGAAIAAAALAAAAAAAGAAMAAAALAAIAAAAFAAMAAAAKAAEAAAA=")
 tile_set = SubResource("TileSet_vlew8")
 
-[node name="Player" parent="." unique_id=25723801 instance=ExtResource("2_r2usd")]
+[node name="Player" parent="." unique_id=25723801 instance=ExtResource("3_ljpeu")]
 position = Vector2(129, 97)
 
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=459142698]
+script = ExtResource("4_tha1t")
+
+[node name="Node2D" type="Node2D" parent="DoorsContainer" unique_id=1801831118]
+script = ExtResource("5_7r7x3")
+
+[node name="Node2D2" type="Node2D" parent="DoorsContainer" unique_id=1575787319]
+script = ExtResource("5_7r7x3")
