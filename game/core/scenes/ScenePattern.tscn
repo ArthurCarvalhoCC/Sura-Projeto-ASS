@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bw8a4yfc8oo4s"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scenes/SceneRoot.cs" id="1_a7itt"]
-[ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://actors/player/Player.tscn" id="2_a7itt"]
+[ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="2_a7itt"]
 
-[node name="SceneRoot" type="Node2D" unique_id=772253470 node_paths=PackedStringArray("_doors", "_player")]
+[node name="SceneRoot" type="Node2D" unique_id=772253470 node_paths=PackedStringArray("_doorsManager", "_player")]
 script = ExtResource("1_a7itt")
-_doors = NodePath("Doors")
+_doorsManager = NodePath("DoorsContainer")
 _player = NodePath("Player")
 
 [node name="Player" parent="." unique_id=25723801 instance=ExtResource("2_a7itt")]
@@ -18,6 +18,6 @@ _player = NodePath("Player")
 
 [node name="Gameplay" type="Node2D" parent="." unique_id=558415303]
 
-[node name="Doors" type="Node2D" parent="." unique_id=1405745130]
+[node name="DoorsContainer" type="Node2D" parent="." unique_id=1405745130]
 
 [node name="Interactables" type="Node2D" parent="." unique_id=438828209]

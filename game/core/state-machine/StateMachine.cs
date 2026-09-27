@@ -21,10 +21,9 @@ public partial class StateMachine : Node
 	public override void _Process(double delta)
     {
         ActualState?.Update(delta);
-        // GD.Print("estado: "+ActualState.Name+" velv: "+Player.Instance.velocity+" direction: "+Player.Instance.direction.X);
     }
     public override void _PhysicsProcess(double delta){ActualState?.PhysicsUpdate(delta);}
-	public virtual void TransitionTo(String newState)
+	public virtual void TransitionTo(string newState)
 	{
 		if (newState == null ) return;
 		string key = newState.ToLower();

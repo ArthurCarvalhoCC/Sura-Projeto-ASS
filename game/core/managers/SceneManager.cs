@@ -8,15 +8,18 @@ public partial class SceneManager : Node
     private Node2D _sceneContainer;
     private SceneRoot _currentScene;
     private Player _player;
-    [Signal]
-    public delegate void playerChangedEventHandler(Player player);
 
-    public override void _EnterTree()
+    public void SetSceneContainer(Node2D sceneConteiner)
+    {
+        _sceneContainer = sceneConteiner;
+    }
+
+
+    public void LoadInitialScene()
     {
         LoadNewScene(_initialScene);
     }
-
-    private void LoadNewScene(PackedScene scene)
+    public void LoadNewScene(PackedScene scene)
     {
         if (_currentScene != null)
         {
@@ -26,12 +29,11 @@ public partial class SceneManager : Node
         _currentScene = scene.Instantiate<SceneRoot>();
         _sceneContainer.AddChild(_currentScene);
 
-        _player = _currentScene._player;
-        NotifyPlayerChanged(_player);
+        UpdatePlayerReference();
     }
-
-    private void NotifyPlayerChanged(Player player)
+    private void UpdatePlayerReference()
     {
-        EmitSignal(SignalName.playerChanged, player);
+        if(_currentScene._player == null) return;
+        _player = _currentScene._player;
     }
 }

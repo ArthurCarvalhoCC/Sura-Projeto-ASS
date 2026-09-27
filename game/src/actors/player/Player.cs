@@ -1,9 +1,10 @@
 using Godot;
 using System;
-using System.Collections.Generic;
 
 public partial class Player : CharacterBody2D
-{	
+{
+	[Signal]
+	public delegate void StateChangedEventHandler(string stateName);
 	[Export] public float MoveSpd = 40f;
 	[Export] public AnimationTree _animTree;
 	[Export] public CollisionShape2D _collision;
@@ -16,19 +17,9 @@ public partial class Player : CharacterBody2D
 	public bool debugMode = false;
 	public bool collisionActive = true;
 	public bool back = false;
-	
 
-	[Signal]
-	public delegate void ChangeSceneEventHandler();
-	[Signal]
-	public delegate void StateChangedEventHandler(String stateName);
-
-	public override void _EnterTree() 
+	public override void _Ready()
 	{
-				
-	}
-    public override void _Ready()
-    {
 		_camera.ProcessCallback = Camera2D.Camera2DProcessCallback.Physics;
 		_animStateMachine = (AnimationNodeStateMachinePlayback)_animTree.Get("parameters/playback");
 	}
@@ -41,9 +32,9 @@ public partial class Player : CharacterBody2D
 	}
 
 	// SIGNALS
-	public void NotifyStateChanged(String newState)
+	public void NotifyStateChanged(string newState)
 	{
-		GD.Print(newState);
+		GD.Print("New State: " + newState);
 		EmitSignal(SignalName.StateChanged, newState);
 	}
 }

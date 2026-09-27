@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ft6sytpqo0f7"]
+
+[ext_resource type="Script" uid="uid://chpm38nxiwkau" path="res://core/managers/Managers.cs" id="1_l1efg"]
+[ext_resource type="Script" uid="uid://dvjdvmiak5yyu" path="res://core/managers/SceneManager.cs" id="1_mclmg"]
+[ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://scenes/House.tscn" id="3_8njin"]
+
+[node name="Managers" type="Node" unique_id=2068923241 node_paths=PackedStringArray("sceneManager")]
+script = ExtResource("1_l1efg")
+sceneManager = NodePath("SceneManager")
+
+[node name="SceneManager" type="Node" parent="." unique_id=136735442]
+script = ExtResource("1_mclmg")
+_initialScene = ExtResource("3_8njin")

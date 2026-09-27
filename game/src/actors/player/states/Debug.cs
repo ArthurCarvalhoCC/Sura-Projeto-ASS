@@ -8,7 +8,7 @@ public partial class Debug : PlayerState
     {
         if (_player.debugMode) Machine.TransitionTo("idle");
         if (_player.back) {
-            onCollision(_player.collisionActive);      
+            TurnOnCollision(_player.collisionActive);      
             _player.collisionActive = !_player.collisionActive;
             GD.Print("Player Collision: "+_player.collisionActive);
         }
@@ -24,9 +24,9 @@ public partial class Debug : PlayerState
     }
     public override void Exit()
     {
-        onCollision(true);
+        TurnOnCollision(true);
     }
-    private void onCollision(bool button)
+    private void TurnOnCollision(bool button)
     {
         _player._collision.SetDeferred(CollisionShape2D.PropertyName.Disabled, !button);
     }

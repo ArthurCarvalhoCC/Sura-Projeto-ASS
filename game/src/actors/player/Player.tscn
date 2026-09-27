@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://4qailok3ycwu"]
 
-[ext_resource type="Script" uid="uid://vti7k8lcjl3b" path="res://actors/player/Player.cs" id="1_v7rlw"]
-[ext_resource type="Texture2D" uid="uid://bvo2130vrei4s" path="res://assets/sprites/characters/sura/protagonista.png" id="2_fd065"]
-[ext_resource type="Script" uid="uid://du5q6gsxw1iih" path="res://actors/player/PlayerStateMachine.cs" id="3_fd065"]
-[ext_resource type="Script" uid="uid://td0p3ko4poqn" path="res://actors/player/states/Idle.cs" id="4_v5qoq"]
-[ext_resource type="Script" uid="uid://cel12hh6skpqm" path="res://actors/player/states/Walk.cs" id="5_jtmj1"]
-[ext_resource type="Script" uid="uid://dlmmqs3sb735t" path="res://actors/player/states/Debug.cs" id="6_ebyyx"]
-[ext_resource type="Script" uid="uid://jv5uhnoro5ow" path="res://actors/player/states/Talk.cs" id="7_v5qoq"]
+[ext_resource type="Script" uid="uid://vti7k8lcjl3b" path="res://src/actors/player/Player.cs" id="1_faapv"]
+[ext_resource type="Texture2D" uid="uid://bvo2130vrei4s" path="res://assets/sprites/characters/sura/protagonista.png" id="2_6fa6a"]
+[ext_resource type="Script" uid="uid://du5q6gsxw1iih" path="res://src/actors/player/PlayerStateMachine.cs" id="3_v2xrw"]
+[ext_resource type="Script" uid="uid://td0p3ko4poqn" path="res://src/actors/player/states/Idle.cs" id="4_cjy8o"]
+[ext_resource type="Script" uid="uid://cel12hh6skpqm" path="res://src/actors/player/states/Walk.cs" id="5_jaifi"]
+[ext_resource type="Script" uid="uid://dlmmqs3sb735t" path="res://src/actors/player/states/Debug.cs" id="6_hm7pf"]
+[ext_resource type="Script" uid="uid://jv5uhnoro5ow" path="res://src/actors/player/states/Talk.cs" id="7_sjuqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlew8"]
 size = Vector2(14, 4)
@@ -234,16 +234,17 @@ _data = {
 [node name="Player" type="CharacterBody2D" unique_id=25723801 node_paths=PackedStringArray("_animTree", "_collision", "_camera")]
 collision_mask = 0
 up_direction = Vector2(0, 1)
-script = ExtResource("1_v7rlw")
+script = ExtResource("1_faapv")
 _animTree = NodePath("AnimationTree")
 _collision = NodePath("Collision")
 _camera = NodePath("Camera")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=881894639]
 position = Vector2(0, -12)
-texture = ExtResource("2_fd065")
+texture = ExtResource("2_6fa6a")
 hframes = 4
 vframes = 5
+frame = 1
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=149437398]
 shape = SubResource("RectangleShape2D_vlew8")
@@ -266,22 +267,22 @@ parameters/Walk/blend_position = Vector2(0, 0)
 libraries/ = SubResource("AnimationLibrary_v5qoq")
 
 [node name="StateMachine" type="Node" parent="." unique_id=785069280 node_paths=PackedStringArray("_player", "BeginState")]
-script = ExtResource("3_fd065")
+script = ExtResource("3_v2xrw")
 _player = NodePath("..")
 BeginState = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=599516438 node_paths=PackedStringArray("_player")]
-script = ExtResource("4_v5qoq")
+script = ExtResource("4_cjy8o")
 _player = NodePath("../..")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1541687853 node_paths=PackedStringArray("_player")]
-script = ExtResource("5_jtmj1")
+script = ExtResource("5_jaifi")
 _player = NodePath("../..")
 
 [node name="Debug" type="Node" parent="StateMachine" unique_id=261630902 node_paths=PackedStringArray("_player")]
-script = ExtResource("6_ebyyx")
+script = ExtResource("6_hm7pf")
 _player = NodePath("../..")
 
 [node name="Talk" type="Node" parent="StateMachine" unique_id=245282841 node_paths=PackedStringArray("_player")]
-script = ExtResource("7_v5qoq")
+script = ExtResource("7_sjuqx")
 _player = NodePath("../..")
