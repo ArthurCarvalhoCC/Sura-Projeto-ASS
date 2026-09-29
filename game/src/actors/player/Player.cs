@@ -31,10 +31,13 @@ public partial class Player : CharacterBody2D
 		back = Input.IsActionJustPressed("game_back");
 	}
 
-	// SIGNALS
 	public void NotifyStateChanged(string newState)
 	{
 		GD.Print("State: " + newState);
 		EmitSignal(SignalName.StateChanged, newState);
+	}
+	public void SetNewPosition(Vector2I position)
+	{
+		Position = position;	
 	}
 }

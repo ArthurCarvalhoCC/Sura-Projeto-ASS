@@ -20,6 +20,6 @@ public partial class SceneRoot : Node2D
 	}
 	public void OnSceneChangeInfos(Vector2I coords, PackedScene targetScene)
 	{
-		Managers.Instance.sceneManager.LoadNewScene(targetScene);
+		Managers.Instance.sceneManager.LoadNewScene(targetScene, coords);
 	}
 }

@@ -17,13 +17,13 @@ public partial class SceneManager : Node
 
     public void LoadInitialScene()
     {
-        LoadNewScene(_initialScene);
+        LoadNewScene(_initialScene, Vector2I.Zero);
     }
-    public void LoadNewScene(PackedScene scene)
+    public void LoadNewScene(PackedScene scene, Vector2I coords)
     {
-        CallDeferred(nameof(LoadNewSceneDeferred), scene);
+        CallDeferred(nameof(LoadNewSceneDeferred), scene, coords);
     }
-    private void LoadNewSceneDeferred(PackedScene scene) // lógica de LoadNewScene "empacotada" para poder usar na função CallDeferred
+    private void LoadNewSceneDeferred(PackedScene scene, Vector2I coords) // lógica de LoadNewScene "empacotada" para poder usar na função CallDeferred
     {
         if (_currentScene != null)
             _currentScene.QueueFree();
@@ -32,6 +32,8 @@ public partial class SceneManager : Node
         _sceneContainer.AddChild(_currentScene);
 
         UpdatePlayerReference();
+        _player.SetNewPosition(coords);
+
     }
     private void UpdatePlayerReference()
     {
