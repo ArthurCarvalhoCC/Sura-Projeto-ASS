@@ -34,7 +34,7 @@ public partial class Player : CharacterBody2D
 	// SIGNALS
 	public void NotifyStateChanged(string newState)
 	{
-		GD.Print("New State: " + newState);
+		GD.Print("State: " + newState);
 		EmitSignal(SignalName.StateChanged, newState);
 	}
 }

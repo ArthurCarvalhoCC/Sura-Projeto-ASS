@@ -21,10 +21,12 @@ public partial class SceneManager : Node
     }
     public void LoadNewScene(PackedScene scene)
     {
+        CallDeferred(nameof(LoadNewSceneDeferred), scene);
+    }
+    private void LoadNewSceneDeferred(PackedScene scene) // lógica de LoadNewScene "empacotada" para poder usar na função CallDeferred
+    {
         if (_currentScene != null)
-        {
             _currentScene.QueueFree();
-        }
 
         _currentScene = scene.Instantiate<SceneRoot>();
         _sceneContainer.AddChild(_currentScene);
@@ -36,4 +38,5 @@ public partial class SceneManager : Node
         if(_currentScene._player == null) return;
         _player = _currentScene._player;
     }
+
 }

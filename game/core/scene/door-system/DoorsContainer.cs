@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public partial class DoorsContainer : Node2D
 {
+	[Signal]
+	public delegate void SceneChangeInfosEventHandler(Vector2I coords, PackedScene targetScene);
 	private List<Door> doorsList = new();
 
 	public override void _Ready()
@@ -13,7 +15,7 @@ public partial class DoorsContainer : Node2D
 			if (child is Door door)
 			{
 				doorsList.Add(door);
-				door.SceneChangeResquest += OnSceneChangeResquest;
+				door.SceneChangeRequest += OnSceneChangeResquest;
 				GD.Print(door.Name);
 			}
 		}
@@ -24,6 +26,9 @@ public partial class DoorsContainer : Node2D
 	}
 	public void OnSceneChangeResquest(Door door)
 	{
-
+		
+		GD.Print(door._targetCoords);
+		GD.Print(door.targetScene);
+		EmitSignal(SignalName.SceneChangeInfos, door._targetCoords, door.targetScene);
 	}
 }

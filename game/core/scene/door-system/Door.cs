@@ -4,38 +4,43 @@ using System;
 public partial class Door : Node2D
 {
 	[Export]
-	public PackedScene _targetScene {get; private set;}
+	public string _targetScenePath {get; private set;}
 	[Export]
 	public Vector2I _targetCoords {get; private set;}
+	public PackedScene targetScene {get; private set;}
+
 	private bool canTeleport = false;
 	private bool buttonPressed = true;
 	[Signal]
-	public delegate void SceneChangeResquestEventHandler(Door door);
+	public delegate void SceneChangeRequestEventHandler(Door door);
 	public override void _Ready()
 	{
-
 	}
 
 	public override void _Process(double delta)
 	{
 	}
 
-	private void OnBodyEntered(Node2D node)
+	private void OnBodyEntered(Node2D body)
 	{
-		if (!(node is Player player)) return;
-
-		canTeleport = true;
-		if (buttonPressed)
+		if (body is Player player)
 		{
-			EmitSignal(SignalName.SceneChangeResquest, this);
-			GD.Print(_targetScene);
-			GD.Print(_targetCoords);
+			canTeleport = true;
+			if (buttonPressed)
+			{
+				targetScene = ResourceLoader.Load<PackedScene>(_targetScenePath);
+				EmitSignal(SignalName.SceneChangeRequest, this);
+				GD.Print(_targetScenePath);
+				GD.Print(_targetCoords);
+			}
 		}
+
+
 	}
 
-	private void OnBodyExited(Node2D node)
+	private void OnBodyExited(Node2D body)
 	{
-		if (!(node is Player player)) return;
+		if (!(body is Player player)) return;
 		canTeleport = false;
 	}
 }

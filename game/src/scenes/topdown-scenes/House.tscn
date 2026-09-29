@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_tha1t"]
 [ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="5_w02m0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etd6b"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljpeu"]
 texture = ExtResource("2_kndox")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -342,7 +342,7 @@ texture = ExtResource("2_kndox")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Wood"
 terrain_set_0/terrain_0/color = Color(0.63, 0.24926999, 0.16379999, 1)
-sources/0 = SubResource("TileSetAtlasSource_etd6b")
+sources/0 = SubResource("TileSetAtlasSource_ljpeu")
 
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_w02m0")
@@ -361,8 +361,6 @@ position = Vector2(129, 97)
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=459142698]
 script = ExtResource("4_tha1t")
 
-[node name="Area2D" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("5_w02m0")]
-position = Vector2(79, 32)
-
 [node name="Area2D2" parent="DoorsContainer" unique_id=594169115 instance=ExtResource("5_w02m0")]
 position = Vector2(186, 55)
+_targetScenePath = "res://src/scenes/topdown-scenes/Hall.tscn"
