@@ -4,29 +4,26 @@ using System.Collections.Generic;
 
 public partial class DoorsContainer : Node2D
 {
-	[Signal]
-	public delegate void doorsSearchFinishedEventHandler();
 	private List<Door> doorsList = new();
 
-	public override void _Ready() 
-    {
+	public override void _Ready()
+	{
 		foreach (Node child in GetChildren())
 		{
-			if (child is Door door) {
+			if (child is Door door)
+			{
 				doorsList.Add(door);
+				door.SceneChangeResquest += OnSceneChangeResquest;
 				GD.Print(door.Name);
 			}
-			EmitSignal(SignalName.doorsSearchFinished);
 		}
-	
 	}
 
 	public override void _Process(double delta)
 	{
 	}
-
-	public IReadOnlyList<Door> GetDoorsList()
+	public void OnSceneChangeResquest(Door door)
 	{
-		return doorsList;
+
 	}
 }

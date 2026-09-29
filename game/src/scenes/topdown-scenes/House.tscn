@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cgv80htuw52ue" path="res://assets/tiles/autotile_wood_floor.png" id="2_kndox"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_ljpeu"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_tha1t"]
-[ext_resource type="Script" uid="uid://8l217tyb32jy" path="res://core/scene/door-system/Door.cs" id="5_7r7x3"]
+[ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="5_w02m0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etd6b"]
 texture = ExtResource("2_kndox")
@@ -361,8 +361,8 @@ position = Vector2(129, 97)
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=459142698]
 script = ExtResource("4_tha1t")
 
-[node name="Node2D" type="Node2D" parent="DoorsContainer" unique_id=1801831118]
-script = ExtResource("5_7r7x3")
+[node name="Area2D" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("5_w02m0")]
+position = Vector2(79, 32)
 
-[node name="Node2D2" type="Node2D" parent="DoorsContainer" unique_id=1575787319]
-script = ExtResource("5_7r7x3")
+[node name="Area2D2" parent="DoorsContainer" unique_id=594169115 instance=ExtResource("5_w02m0")]
+position = Vector2(186, 55)
