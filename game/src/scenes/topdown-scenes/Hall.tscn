@@ -361,7 +361,7 @@ position = Vector2(129, 97)
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=469260652]
 script = ExtResource("3_vpb2o")
 
-[node name="Door" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("4_yw0yi")]
+[node name="Door1" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("4_yw0yi")]
 position = Vector2(120, 148)
 _targetScenePath = "res://src/scenes/topdown-scenes/House.tscn"
 _targetCoords = Vector2i(104, -56)

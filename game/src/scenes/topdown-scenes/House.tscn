@@ -360,7 +360,7 @@ tile_set = SubResource("TileSet_vlew8")
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=459142698]
 script = ExtResource("4_tha1t")
 
-[node name="Area2D2" parent="DoorsContainer" unique_id=594169115 instance=ExtResource("5_w02m0")]
+[node name="Door1" parent="DoorsContainer" unique_id=594169115 instance=ExtResource("5_w02m0")]
 position = Vector2(104, -68)
 _targetScenePath = "res://src/scenes/topdown-scenes/Hall.tscn"
 _targetCoords = Vector2i(120, 136)
