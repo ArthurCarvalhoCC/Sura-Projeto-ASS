@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dp6nuisn70hdp"]
+
+[ext_resource type="Script" uid="uid://jbaf2ixqdi1r" path="res://core/scene/roots/Main.cs" id="1_gt4qt"]
+[ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/HUD.tscn" id="2_mvbs5"]
+[ext_resource type="PackedScene" uid="uid://2ip8o25cvq52" path="res://src/ui/PauseMenu.tscn" id="3_rrof4"]
+[ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/SceneTransition.tscn" id="4_3xjhu"]
+
+[node name="Main" type="Node" unique_id=1739575294 node_paths=PackedStringArray("_SceneContainer", "_UI", "_SceneTransition")]
+script = ExtResource("1_gt4qt")
+_SceneContainer = NodePath("SceneContainer")
+_UI = NodePath("UI")
+_SceneTransition = NodePath("UI/CanvasLayer/SceneTransition")
+
+[node name="SceneContainer" type="Node2D" parent="." unique_id=1556521232]
+
+[node name="UI" type="Control" parent="." unique_id=863204452]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI" unique_id=456768952]
+
+[node name="HUD" parent="UI/CanvasLayer" unique_id=1656029404 instance=ExtResource("2_mvbs5")]
+
+[node name="PauseMenu" parent="UI/CanvasLayer" unique_id=1914284591 instance=ExtResource("3_rrof4")]
+
+[node name="SceneTransition" parent="UI/CanvasLayer" unique_id=1518877647 instance=ExtResource("4_3xjhu")]

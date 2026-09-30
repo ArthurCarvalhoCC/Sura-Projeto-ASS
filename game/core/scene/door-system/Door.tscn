@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://chkj6usa2bgcg"]
+
+[ext_resource type="Script" uid="uid://8l217tyb32jy" path="res://core/scene/door-system/Door.cs" id="1_0u2dl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_faapv"]
+size = Vector2(16, 16)
+
+[node name="Door" type="Area2D" unique_id=1684345977]
+script = ExtResource("1_0u2dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1079315450]
+shape = SubResource("RectangleShape2D_faapv")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="body_exited" from="." to="." method="OnBodyExited"]

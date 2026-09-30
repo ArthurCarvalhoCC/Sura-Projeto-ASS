@@ -1,11 +1,13 @@
 [gd_scene format=4 uid="uid://ngjl4nr6nlq3"]
 
-[ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scenes/SceneRoot.cs" id="1_r2usd"]
-[ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="2_r2usd"]
-[ext_resource type="Texture2D" uid="uid://cgv80htuw52ue" path="res://assets/tiles/autotile_wood_floor.png" id="4_ispqn"]
+[ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/SceneRoot.cs" id="1_w02m0"]
+[ext_resource type="Texture2D" uid="uid://cgv80htuw52ue" path="res://assets/tiles/autotile_wood_floor.png" id="2_kndox"]
+[ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_ljpeu"]
+[ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_tha1t"]
+[ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="5_w02m0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etd6b"]
-texture = ExtResource("4_ispqn")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljpeu"]
+texture = ExtResource("2_kndox")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -340,20 +342,25 @@ texture = ExtResource("4_ispqn")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Wood"
 terrain_set_0/terrain_0/color = Color(0.63, 0.24926999, 0.16379999, 1)
-sources/0 = SubResource("TileSetAtlasSource_etd6b")
+sources/0 = SubResource("TileSetAtlasSource_ljpeu")
 
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
-script = ExtResource("1_r2usd")
+script = ExtResource("1_w02m0")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Player")
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1319549989]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=1673711609]
-tile_map_data = PackedByteArray("AAAGAAUAAAAKAAEAAAAFAAUAAAAKAAEAAAAHAAUAAAAKAAEAAAAIAAUAAAAKAAEAAAAJAAUAAAAKAAEAAAAKAAUAAAAKAAEAAAALAAUAAAAKAAEAAAAMAAUAAAALAAIAAAAMAAYAAAALAAIAAAALAAYAAAAKAAEAAAAKAAYAAAAKAAEAAAAJAAYAAAAKAAEAAAAIAAYAAAAKAAEAAAAHAAYAAAAKAAEAAAAGAAYAAAAKAAEAAAAFAAYAAAAKAAEAAAAFAAcAAAAJAAMAAAAGAAcAAAAJAAMAAAAHAAcAAAAJAAMAAAAIAAcAAAAJAAMAAAAKAAcAAAAJAAMAAAAJAAcAAAAJAAMAAAALAAcAAAAJAAMAAAAMAAcAAAALAAMAAAAMAAQAAAALAAAAAAALAAQAAAAJAAAAAAAKAAQAAAAKAAAAAAAJAAQAAAAKAAAAAAAIAAQAAAAKAAAAAAAHAAQAAAAKAAAAAAAGAAQAAAAGAAEAAAAFAAQAAAAKAAEAAAALAAMAAAAAAAAAAAAEAAcAAAAJAAMAAAAEAAYAAAAKAAEAAAAEAAUAAAAKAAEAAAAEAAQAAAAKAAEAAAAEAAMAAAAKAAEAAAAEAAIAAAAKAAAAAAADAAIAAAAIAAAAAAADAAMAAAAIAAEAAAADAAQAAAAIAAEAAAADAAUAAAAIAAEAAAADAAYAAAAIAAEAAAADAAcAAAAIAAMAAAAFAAIAAAAKAAAAAAAGAAIAAAALAAAAAAAGAAMAAAALAAIAAAAFAAMAAAAKAAEAAAA=")
+tile_map_data = PackedByteArray("AAD+//v/AAAIAAAAAAD+//z/AAAIAAEAAAD+//3/AAAIAAEAAAD+//7/AAAIAAEAAAD+////AAAIAAEAAAD+/wAAAAAIAAMAAAD///v/AAAKAAAAAAD///z/AAAKAAEAAAD///3/AAAKAAEAAAD///7/AAAKAAEAAAD/////AAAKAAEAAAD//wAAAAAJAAMAAAAAAPv/AAAKAAAAAAAAAPz/AAAKAAEAAAAAAP3/AAAKAAEAAAAAAP7/AAAKAAEAAAAAAP//AAAKAAEAAAAAAAAAAAAJAAMAAAABAPv/AAALAAAAAAABAPz/AAALAAIAAAABAP3/AAAGAAEAAAABAP7/AAAKAAEAAAABAP//AAAKAAEAAAABAAAAAAAJAAMAAAACAP3/AAAKAAAAAAACAP7/AAAKAAEAAAACAP//AAAKAAEAAAACAAAAAAAJAAMAAAADAP3/AAAKAAAAAAADAP7/AAAKAAEAAAADAP//AAAKAAEAAAADAAAAAAAJAAMAAAAEAP3/AAAKAAAAAAAEAP7/AAAKAAEAAAAEAP//AAAKAAEAAAAEAAAAAAAJAAMAAAAFAP3/AAAKAAAAAAAFAP7/AAAKAAEAAAAFAP//AAAKAAEAAAAFAAAAAAAJAAMAAAAGAPz/AAAAAAAAAAAGAP3/AAAJAAAAAAAGAP7/AAAKAAEAAAAGAP//AAAKAAEAAAAGAAAAAAAJAAMAAAAHAP3/AAALAAAAAAAHAP7/AAALAAIAAAAHAP//AAALAAIAAAAHAAAAAAALAAMAAAA=")
 tile_set = SubResource("TileSet_vlew8")
 
-[node name="Player" parent="." unique_id=25723801 instance=ExtResource("2_r2usd")]
-position = Vector2(129, 97)
+[node name="Player" parent="." unique_id=25723801 instance=ExtResource("3_ljpeu")]
 
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=459142698]
+script = ExtResource("4_tha1t")
+
+[node name="Door1" parent="DoorsContainer" unique_id=594169115 instance=ExtResource("5_w02m0")]
+position = Vector2(104, -68)
+_targetScenePath = "res://src/scenes/topdown-scenes/Hall.tscn"
+_targetCoords = Vector2i(120, 136)
