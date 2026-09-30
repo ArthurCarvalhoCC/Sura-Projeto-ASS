@@ -4,41 +4,65 @@ public partial class SceneManager : Node
 {
     [Export]
     private PackedScene _initialScene;
-    [Export]
-    private Node2D _sceneContainer;
+
+    private Node2D _sceneContainerNode;
+    private SceneTransition _transitionNode;
     private SceneRoot _currentScene;
     private Player _player;
 
-    public void SetSceneContainer(Node2D sceneConteiner)
+    public void SetSceneContainerNode(Node2D sceneConteiner)
     {
-        _sceneContainer = sceneConteiner;
+        _sceneContainerNode = sceneConteiner;
     }
+    public void SetTransitionNode(SceneTransition transitionNode)
+    {
+        _transitionNode = transitionNode;
+    }
+
 
 
     public void LoadInitialScene()
     {
-        LoadNewScene(_initialScene, Vector2I.Zero);
+        LoadScene(_initialScene, Vector2I.Zero);
     }
-    public void LoadNewScene(PackedScene scene, Vector2I coords)
+    public void LoadScene(PackedScene scene, Vector2I coords)
     {
-        CallDeferred(nameof(LoadNewSceneDeferred), scene, coords);
+        CallDeferred(nameof(LoadSceneDeferred), scene, coords);
     }
-    private void LoadNewSceneDeferred(PackedScene scene, Vector2I coords) // lógica de LoadNewScene "empacotada" para poder usar na função CallDeferred
+    private async void LoadSceneDeferred(PackedScene scene, Vector2I coords) // lógica de LoadScene "empacotada" para poder usar na função CallDeferred
+    {
+        if (_currentScene != null)
+        {
+            Tween fadeOut = _transitionNode.FadeOut();
+
+            fadeOut.Finished += () =>
+            {
+                FinishSceneChange(scene, coords);
+            };
+
+            return;
+        }
+
+        FinishSceneChange(scene, coords);
+    }
+    private void FinishSceneChange(PackedScene scene, Vector2I coords)
     {
         if (_currentScene != null)
             _currentScene.QueueFree();
 
         _currentScene = scene.Instantiate<SceneRoot>();
-        _sceneContainer.AddChild(_currentScene);
+        _sceneContainerNode.AddChild(_currentScene);
 
         UpdatePlayerReference();
         _player.SetNewPosition(coords);
 
+        _transitionNode.FadeIn();
     }
     private void UpdatePlayerReference()
     {
-        if(_currentScene._player == null) return;
+        if (_currentScene._player == null) return;
         _player = _currentScene._player;
     }
+
 
 }

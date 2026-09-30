@@ -5,10 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://2ip8o25cvq52" path="res://src/ui/PauseMenu.tscn" id="3_rrof4"]
 [ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/SceneTransition.tscn" id="4_3xjhu"]
 
-[node name="Main" type="Node" unique_id=1739575294 node_paths=PackedStringArray("_SceneContainer", "_UI")]
+[node name="Main" type="Node" unique_id=1739575294 node_paths=PackedStringArray("_SceneContainer", "_UI", "_SceneTransition")]
 script = ExtResource("1_gt4qt")
 _SceneContainer = NodePath("SceneContainer")
 _UI = NodePath("UI")
+_SceneTransition = NodePath("UI/CanvasLayer/SceneTransition")
 
 [node name="SceneContainer" type="Node2D" parent="." unique_id=1556521232]
 
@@ -28,5 +29,4 @@ size_flags_vertical = 4
 
 [node name="PauseMenu" parent="UI/CanvasLayer" unique_id=1914284591 instance=ExtResource("3_rrof4")]
 
-[node name="SceneTransition" parent="UI/CanvasLayer" unique_id=1518877647 node_paths=PackedStringArray("_fade") instance=ExtResource("4_3xjhu")]
-_fade = NodePath("")
+[node name="SceneTransition" parent="UI/CanvasLayer" unique_id=1518877647 instance=ExtResource("4_3xjhu")]
