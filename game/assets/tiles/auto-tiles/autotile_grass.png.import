@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du13k7ox50y1p"
-path="res://.godot/imported/tile_dirt.png-f4820a9357d280d3367bab99a569fb89.ctex"
+uid="uid://cjq1jajukuupi"
+path="res://.godot/imported/autotile_grass.png-1afb2b413f90970f378b969c71b4d0e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/tile_dirt.png"
-dest_files=["res://.godot/imported/tile_dirt.png-f4820a9357d280d3367bab99a569fb89.ctex"]
+source_file="res://assets/tiles/auto-tiles/autotile_grass.png"
+dest_files=["res://.godot/imported/autotile_grass.png-1afb2b413f90970f378b969c71b4d0e4.ctex"]
 
 [params]
 

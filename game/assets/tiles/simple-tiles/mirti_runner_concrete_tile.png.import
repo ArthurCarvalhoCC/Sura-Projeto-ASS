@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgv80htuw52ue"
-path="res://.godot/imported/autotile_wood_floor.png-b5dcc3b7b46388f759039a74be59b25a.ctex"
+uid="uid://dutb0yqgylf5p"
+path="res://.godot/imported/mirti_runner_concrete_tile.png-eb0b67e16dbe569d63994f465a52ed25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/autotile_wood_floor.png"
-dest_files=["res://.godot/imported/autotile_wood_floor.png-b5dcc3b7b46388f759039a74be59b25a.ctex"]
+source_file="res://assets/tiles/simple-tiles/mirti_runner_concrete_tile.png"
+dest_files=["res://.godot/imported/mirti_runner_concrete_tile.png-eb0b67e16dbe569d63994f465a52ed25.ctex"]
 
 [params]
 

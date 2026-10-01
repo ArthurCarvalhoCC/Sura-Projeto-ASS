@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b03ghl6gcgybw"
-path="res://.godot/imported/dark_clouds.png-0c310b20464b097c28abbfb365f216a1.ctex"
+uid="uid://p5h1gecmy5s4"
+path="res://.godot/imported/_tilemap_casa.png-7bd074eaaef2f39726733f0eff01c2c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/scene-tiles/dark_clouds.png"
-dest_files=["res://.godot/imported/dark_clouds.png-0c310b20464b097c28abbfb365f216a1.ctex"]
+source_file="res://assets/tiles/tilemaps/_tilemap_casa.png"
+dest_files=["res://.godot/imported/_tilemap_casa.png-7bd074eaaef2f39726733f0eff01c2c6.ctex"]
 
 [params]
 

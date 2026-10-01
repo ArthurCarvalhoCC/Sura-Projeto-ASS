@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://jv5uhnoro5ow" path="res://src/actors/player/states/Talk.cs" id="7_sjuqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlew8"]
-size = Vector2(14, 4)
+size = Vector2(10, 5)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bj1ma"]
 animation = &"idle_down"
@@ -232,7 +232,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=25723801 node_paths=PackedStringArray("_animTree", "_collision", "_camera")]
-collision_mask = 0
+collision_mask = 2
 up_direction = Vector2(0, 1)
 script = ExtResource("1_faapv")
 _animTree = NodePath("AnimationTree")
@@ -247,13 +247,14 @@ vframes = 5
 frame = 1
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=149437398]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_vlew8")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1241451837]
 offset = Vector2(0, -12)
-zoom = Vector2(3, 3)
+zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
-position_smoothing_speed = 2.0
+position_smoothing_speed = 4.0
 editor_draw_drag_margin = true
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1821625121]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fi53ckxyosfh"
-path="res://.godot/imported/autotile_water.png-b6ad7c57f60070d418e256c6733c110c.ctex"
+uid="uid://b03ghl6gcgybw"
+path="res://.godot/imported/dark_clouds.png-47e32fceb935bd84dbaac233b7dc87cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/autotile_water.png"
-dest_files=["res://.godot/imported/autotile_water.png-b6ad7c57f60070d418e256c6733c110c.ctex"]
+source_file="res://assets/tiles/simple-tiles/dark_clouds.png"
+dest_files=["res://.godot/imported/dark_clouds.png-47e32fceb935bd84dbaac233b7dc87cb.ctex"]
 
 [params]
 
