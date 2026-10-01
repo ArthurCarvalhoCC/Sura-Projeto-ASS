@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://ngjl4nr6nlq3"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/SceneRoot.cs" id="1_w02m0"]
-[ext_resource type="Texture2D" uid="uid://cgv80htuw52ue" path="res://assets/tiles/auto-tiles/autotile_wood_floor.png" id="2_kndox"]
-[ext_resource type="Texture2D" uid="uid://p5h1gecmy5s4" path="res://assets/tiles/tilemaps/_tilemap_casa.png" id="3_4qn2p"]
+[ext_resource type="Texture2D" uid="uid://cgv80htuw52ue" path="res://assets/sprites/tiles/auto-tiles/autotile_wood_floor.png" id="2_kndox"]
+[ext_resource type="Texture2D" uid="uid://p5h1gecmy5s4" path="res://assets/sprites/tiles/tilemaps/_tilemap_casa.png" id="3_4qn2p"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_ljpeu"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_tha1t"]
 [ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="5_w02m0"]

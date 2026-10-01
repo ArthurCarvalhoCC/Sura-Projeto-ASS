@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b03ghl6gcgybw"
-path="res://.godot/imported/dark_clouds.png-47e32fceb935bd84dbaac233b7dc87cb.ctex"
+uid="uid://dutb0yqgylf5p"
+path="res://.godot/imported/mirti_runner_concrete_tile.png-e125ba4f209a1a606aeb824666d26888.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/simple-tiles/dark_clouds.png"
-dest_files=["res://.godot/imported/dark_clouds.png-47e32fceb935bd84dbaac233b7dc87cb.ctex"]
+source_file="res://assets/sprites/tiles/simple-tiles/mirti_runner_concrete_tile.png"
+dest_files=["res://.godot/imported/mirti_runner_concrete_tile.png-e125ba4f209a1a606aeb824666d26888.ctex"]
 
 [params]
 

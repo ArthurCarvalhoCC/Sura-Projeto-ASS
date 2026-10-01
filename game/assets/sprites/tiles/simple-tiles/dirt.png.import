@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dutb0yqgylf5p"
-path="res://.godot/imported/mirti_runner_concrete_tile.png-eb0b67e16dbe569d63994f465a52ed25.ctex"
+uid="uid://du13k7ox50y1p"
+path="res://.godot/imported/dirt.png-dd073bbaeea6050a24775634dea57c3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/simple-tiles/mirti_runner_concrete_tile.png"
-dest_files=["res://.godot/imported/mirti_runner_concrete_tile.png-eb0b67e16dbe569d63994f465a52ed25.ctex"]
+source_file="res://assets/sprites/tiles/simple-tiles/dirt.png"
+dest_files=["res://.godot/imported/dirt.png-dd073bbaeea6050a24775634dea57c3c.ctex"]
 
 [params]
 

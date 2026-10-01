@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjq1jajukuupi"
-path="res://.godot/imported/autotile_grass.png-1afb2b413f90970f378b969c71b4d0e4.ctex"
+uid="uid://p5h1gecmy5s4"
+path="res://.godot/imported/_tilemap_casa.png-1112b2349b2ead5f4df95cb3064514bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/auto-tiles/autotile_grass.png"
-dest_files=["res://.godot/imported/autotile_grass.png-1afb2b413f90970f378b969c71b4d0e4.ctex"]
+source_file="res://assets/sprites/tiles/tilemaps/_tilemap_casa.png"
+dest_files=["res://.godot/imported/_tilemap_casa.png-1112b2349b2ead5f4df95cb3064514bc.ctex"]
 
 [params]
 

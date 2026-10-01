@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b76bkyac4kv5h"
-path="res://.godot/imported/street.png-3608c3e56c26b0fafbd0265226c103fc.ctex"
+uid="uid://b03ghl6gcgybw"
+path="res://.godot/imported/dark_clouds.png-88a625481d663f93f5210ae44fdce572.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/simple-tiles/street.png"
-dest_files=["res://.godot/imported/street.png-3608c3e56c26b0fafbd0265226c103fc.ctex"]
+source_file="res://assets/sprites/tiles/simple-tiles/dark_clouds.png"
+dest_files=["res://.godot/imported/dark_clouds.png-88a625481d663f93f5210ae44fdce572.ctex"]
 
 [params]
 

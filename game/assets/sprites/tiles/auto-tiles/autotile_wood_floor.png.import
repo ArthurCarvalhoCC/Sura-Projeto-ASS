@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du13k7ox50y1p"
-path="res://.godot/imported/tile_dirt.png-91f1ce6c354f142a1d1e54ec185ac887.ctex"
+uid="uid://cgv80htuw52ue"
+path="res://.godot/imported/autotile_wood_floor.png-381170eb21f6321340fba24ac9260be2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/simple-tiles/tile_dirt.png"
-dest_files=["res://.godot/imported/tile_dirt.png-91f1ce6c354f142a1d1e54ec185ac887.ctex"]
+source_file="res://assets/sprites/tiles/auto-tiles/autotile_wood_floor.png"
+dest_files=["res://.godot/imported/autotile_wood_floor.png-381170eb21f6321340fba24ac9260be2.ctex"]
 
 [params]
 

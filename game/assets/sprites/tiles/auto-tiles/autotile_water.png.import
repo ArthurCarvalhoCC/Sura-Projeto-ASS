@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fi53ckxyosfh"
-path="res://.godot/imported/autotile_water.png-a4d4f33f0fa19b1fae0c4251f80f117d.ctex"
+path="res://.godot/imported/autotile_water.png-7ebe2efcbe8143bc71eda4e12cbf38c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/auto-tiles/autotile_water.png"
-dest_files=["res://.godot/imported/autotile_water.png-a4d4f33f0fa19b1fae0c4251f80f117d.ctex"]
+source_file="res://assets/sprites/tiles/auto-tiles/autotile_water.png"
+dest_files=["res://.godot/imported/autotile_water.png-7ebe2efcbe8143bc71eda4e12cbf38c3.ctex"]
 
 [params]
 

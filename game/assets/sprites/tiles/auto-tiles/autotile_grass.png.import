@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dehjdwkgprgn7"
-path="res://.godot/imported/clouds.png-fcbefe349aa0383d037ec009078e0720.ctex"
+uid="uid://cjq1jajukuupi"
+path="res://.godot/imported/autotile_grass.png-e7f5ee3061bd5e32a901c7ba08d777b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/simple-tiles/clouds.png"
-dest_files=["res://.godot/imported/clouds.png-fcbefe349aa0383d037ec009078e0720.ctex"]
+source_file="res://assets/sprites/tiles/auto-tiles/autotile_grass.png"
+dest_files=["res://.godot/imported/autotile_grass.png-e7f5ee3061bd5e32a901c7ba08d777b5.ctex"]
 
 [params]
 
