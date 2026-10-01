@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://jv5uhnoro5ow" path="res://src/actors/player/states/Talk.cs" id="7_sjuqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlew8"]
-size = Vector2(10, 5)
+size = Vector2(10, 7)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bj1ma"]
 animation = &"idle_down"
@@ -240,7 +240,8 @@ _collision = NodePath("Collision")
 _camera = NodePath("Camera")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=881894639]
-position = Vector2(0, -12)
+y_sort_enabled = true
+position = Vector2(0, -11)
 texture = ExtResource("2_6fa6a")
 hframes = 4
 vframes = 5
