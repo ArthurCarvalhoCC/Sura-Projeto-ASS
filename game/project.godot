@@ -74,6 +74,10 @@ debug_mode={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/translation/languages.en_US.translation", "res://assets/translation/languages.es.translation", "res://assets/translation/languages.pt_BR.translation")
+
 [layer_names]
 
 2d_physics/layer_1="Player"

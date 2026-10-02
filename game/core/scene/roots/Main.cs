@@ -14,6 +14,8 @@ public partial class Main : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		TranslationServer.SetLocale("pt_BR");
+		
 		Managers.Instance.sceneManager.SetSceneContainerNode(_SceneContainer);
 		Managers.Instance.sceneManager.LoadInitialScene();
 		Managers.Instance.sceneManager.SetTransitionNode(_SceneTransition);	
