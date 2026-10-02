@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b76bkyac4kv5h" path="res://assets/sprites/tiles/simple-tiles/street.png" id="4_sa53c"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="4_y2yhs"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="5_0rxgo"]
+[ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="8_y2yhs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljpeu"]
 texture = ExtResource("2_vgwx4")
@@ -485,10 +486,24 @@ physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_otwcv")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p355v"]
+texture = ExtResource("3_sa53c")
+6:3/0 = 0
+6:4/size_in_atlas = Vector2i(1, 2)
+6:4/0 = 0
+6:4/0/texture_origin = Vector2i(0, 8)
+6:4/0/y_sort_origin = -2
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, 7, -5, 7, -5, 7, 6, 7, 6, 1, -5, 1)
+
+[sub_resource type="TileSet" id="TileSet_ycd51"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_p355v")
+
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_l1awk")
 _doorsContainer = NodePath("DoorsContainer")
-_player = NodePath("TileMapLayers/Player")
+_player = NodePath("")
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1319549989]
 y_sort_enabled = true
@@ -505,7 +520,19 @@ tile_set = SubResource("TileSet_qtxk6")
 tile_map_data = PackedByteArray("AAAAAPv/AAAIAAQAAAA=")
 tile_set = SubResource("TileSet_svp7o")
 
-[node name="Player" parent="TileMapLayers" unique_id=25723801 instance=ExtResource("4_y2yhs")]
-
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=459142698]
 script = ExtResource("5_0rxgo")
+
+[node name="Door" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("8_y2yhs")]
+
+[node name="YSortElements" type="Node2D" parent="." unique_id=1987625241]
+y_sort_enabled = true
+
+[node name="Player" parent="YSortElements" unique_id=25723801 instance=ExtResource("4_y2yhs")]
+y_sort_enabled = true
+position = Vector2(129, 97)
+
+[node name="Objects" type="TileMapLayer" parent="YSortElements" unique_id=1252735653]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD+//z/AAAGAAQAAAACAPz/AAAGAAQAAAA=")
+tile_set = SubResource("TileSet_ycd51")

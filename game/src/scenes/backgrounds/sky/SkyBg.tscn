@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b0a1gxyecka4h"]
+
+[ext_resource type="Script" uid="uid://b4f33ep1rrgrl" path="res://src/scenes/backgrounds/sky/SkyBg.cs" id="1_tdwqx"]
+
+[sub_resource type="Gradient" id="Gradient_3irg7"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vlew8"]
+gradient = SubResource("Gradient_3irg7")
+
+[node name="SkyBg" type="CanvasLayer" unique_id=168957984 node_paths=PackedStringArray("_sprite")]
+layer = -5
+script = ExtResource("1_tdwqx")
+_sprite = NodePath("Sprite2D")
+firstColor = Color(0, 0.6999998, 1, 1)
+secondColor = Color(0.4509804, 0.827451, 1, 1)
+fillFromX = 1.0
+fillFromY = 1.0
+fillToX = 0.0
+fillToY = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1277600478]
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_vlew8")
