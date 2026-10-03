@@ -4,8 +4,7 @@ public partial class SceneManager : Node
 {
     private Node2D _sceneContainerNode;
     private SceneTransition _transitionNode;
-    private SceneRoot _currentScene;
-    private Player _player;
+    private Node _currentScene;
     public Vector2I playerInitialNewSceneCoords {get; private set;}
 
     public void SetSceneContainerNode(Node2D sceneConteiner)
@@ -42,20 +41,14 @@ public partial class SceneManager : Node
     }
     private void ContinueSceneChange(PackedScene scene)
     {
-        _currentScene = scene.Instantiate<SceneRoot>();
+        _currentScene = scene.Instantiate<Node>();
         _sceneContainerNode.AddChild(_currentScene);
-
-        UpdatePlayerReference();
     }
     public void FinishSceneChange()
     {
         _transitionNode.FadeIn();
     }
-    private void UpdatePlayerReference()
-    {
-        if (_currentScene._player == null) return;
-        _player = _currentScene._player;
-    }
+
     public void SetPlayerInitialNewSceneCoords(Vector2I coords)
     {
         playerInitialNewSceneCoords = coords;
