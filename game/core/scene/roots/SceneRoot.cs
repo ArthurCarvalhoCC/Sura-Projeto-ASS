@@ -10,16 +10,14 @@ public partial class SceneRoot : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_doorsContainer.SceneChangeInfos += OnSceneChangeInfos;
+		_player.SetNewPosition(Managers.Instance.sceneManager.playerInitialNewSceneCoords);
+		Managers.Instance.sceneManager.FinishSceneChange();
+		_doorsContainer.SceneChangeInfos += OnSceneChangeRequest;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public void OnSceneChangeRequest(Vector2I targetCoords, PackedScene targetScene)
 	{
-
-	}
-	public void OnSceneChangeInfos(Vector2I coords, PackedScene targetScene)
-	{
-		Managers.Instance.sceneManager.LoadScene(targetScene, coords);
+		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(targetCoords);
+		Managers.Instance.sceneManager.StartSceneChange(targetScene);
 	}
 }
