@@ -5,13 +5,13 @@ public partial class Main : Node
 {
 	public Player player;
 	[Export]
-	public Node2D _SceneContainer;
+	public Node _SceneContainer;
 	[Export]
 	public Control _UI;
 	[Export]
 	public SceneTransition _SceneTransition;
 	[Export]
-	private PackedScene InitialScenePath;
+	private PackedScene InitialScene;
 	[Export]
 	private Vector2I InitialPlayerCoords;
 
@@ -22,11 +22,6 @@ public partial class Main : Node
 		
 		Managers.Instance.sceneManager.SetTransitionNode(_SceneTransition);	
 		Managers.Instance.sceneManager.SetSceneContainerNode(_SceneContainer);
-		Managers.Instance.sceneManager.LoadInitialScene(InitialScenePath, InitialPlayerCoords);
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+		Managers.Instance.sceneManager.LoadInitialScene(InitialScene);
 	}
 }

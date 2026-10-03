@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0a1gxyecka4h"]
 
-[ext_resource type="Script" uid="uid://b4f33ep1rrgrl" path="res://src/actors/backgrounds/sky/SkyBg.cs" id="1_tdwqx"]
+[ext_resource type="Script" uid="uid://b4f33ep1rrgrl" path="res://src/actors/backgrounds/gameplay/sky/SkyBg.cs" id="1_tdwqx"]
 
 [sub_resource type="Gradient" id="Gradient_3irg7"]
 

@@ -1,5 +1,24 @@
 [gd_scene format=3 uid="uid://tv6vgwfd46qa"]
 
+[ext_resource type="FontFile" uid="uid://bwvfo6t04bpds" path="res://assets/fonts/m6x11plus.ttf" id="1_uhu2c"]
+
+[sub_resource type="Gradient" id="Gradient_uhu2c"]
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.98324025)
+colors = PackedColorArray(0.72, 0.65448004, 0.4392, 1, 0.15, 0.07560001, 0.010499999, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4gaqg"]
+gradient = SubResource("Gradient_uhu2c")
+width = 128
+height = 128
+fill_from = Vector2(0.8, 0.1)
+fill_to = Vector2(0.2, 0.90000004)
+metadata/_snap_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_vlew8"]
+font = ExtResource("1_uhu2c")
+font_size = 20
+
 [node name="MainMenu" type="Control" unique_id=1303787038]
 layout_mode = 3
 anchors_preset = 15
@@ -8,5 +27,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=292045104]
-anchor_mode = 0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1071309990]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_4gaqg")
+
+[node name="Label" type="Label" parent="." unique_id=72435122]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+text = "v0.1"
+label_settings = SubResource("LabelSettings_vlew8")
