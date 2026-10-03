@@ -5,7 +5,7 @@ public partial class SceneManager : Node
     private Node2D _sceneContainerNode;
     private SceneTransition _transitionNode;
     private SceneRoot _currentScene;
-    private Player _player;
+    private Player? _player;
 
     public void SetSceneContainerNode(Node2D sceneConteiner)
     {
@@ -30,11 +30,7 @@ public partial class SceneManager : Node
         {
             Tween fadeOut = _transitionNode.FadeOut();
 
-            fadeOut.Finished += () =>
-            {
-                FinishSceneChange(scene, coords);
-            };
-
+            fadeOut.Finished += () => { FinishSceneChange(scene, coords); };
             return;
         }
         FinishSceneChange(scene, coords);
@@ -48,10 +44,8 @@ public partial class SceneManager : Node
 
         UpdatePlayerReference();
 
-        if (_player == null) GD.Print("cannot set player new coords. the player refernce is null."); 
-        
+        if (_player == null) GD.Print("cannot set player new coords. the player reference is null.");
         _player.SetNewPosition(coords);
-
         _transitionNode.FadeIn();
     }
     private void UpdatePlayerReference()

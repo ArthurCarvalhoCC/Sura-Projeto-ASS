@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_7d7o5"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_4bjil"]
 [ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="5_5xpf8"]
-[ext_resource type="PackedScene" uid="uid://crqmtowod1w7i" path="res://src/scenes/backgrounds/dark/DarkBg.tscn" id="5_7d7o5"]
+[ext_resource type="PackedScene" uid="uid://crqmtowod1w7i" path="res://src/actors/backgrounds/dark/DarkBg.tscn" id="5_7d7o5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gacts"]
 texture = ExtResource("2_4dned")
