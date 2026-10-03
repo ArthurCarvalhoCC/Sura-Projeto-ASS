@@ -5,7 +5,7 @@ public partial class Main : Node
 {
 	public Player player;
 	[Export]
-	public Node2D _SceneContainer;
+	public Node _SceneContainer;
 	[Export]
 	public Control _UI;
 	[Export]

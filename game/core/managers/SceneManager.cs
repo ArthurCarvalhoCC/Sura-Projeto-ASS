@@ -2,12 +2,12 @@ using Godot;
 
 public partial class SceneManager : Node
 {
-    private Node2D _sceneContainerNode;
+    private Node _sceneContainerNode;
     private SceneTransition _transitionNode;
     private Node _currentScene;
     public Vector2I playerInitialNewSceneCoords {get; private set;}
 
-    public void SetSceneContainerNode(Node2D sceneConteiner)
+    public void SetSceneContainerNode(Node sceneConteiner)
     {
         _sceneContainerNode = sceneConteiner;
     }
