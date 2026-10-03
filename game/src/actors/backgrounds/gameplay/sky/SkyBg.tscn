@@ -21,3 +21,5 @@ fillToY = 0.0
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1277600478]
 scale = Vector2(10, 10)
 texture = SubResource("GradientTexture2D_vlew8")
+
+[node name="clouds" type="Node2D" parent="." unique_id=1501370276]
