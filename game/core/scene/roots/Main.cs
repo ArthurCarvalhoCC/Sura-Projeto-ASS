@@ -13,15 +13,19 @@ public partial class Main : Node
 	[Export]
 	private PackedScene InitialScene;
 	[Export]
-	private Vector2I InitialPlayerCoords;
+	private Vector2I initialPlayerCoords;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		TranslationServer.SetLocale("pt_BR");
 		
+
+		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(initialPlayerCoords);
+
 		Managers.Instance.sceneManager.SetTransitionNode(_SceneTransition);	
 		Managers.Instance.sceneManager.SetSceneContainerNode(_SceneContainer);
 		Managers.Instance.sceneManager.LoadInitialScene(InitialScene);
 	}
+	
 }

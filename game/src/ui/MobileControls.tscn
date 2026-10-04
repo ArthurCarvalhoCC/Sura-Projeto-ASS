@@ -35,13 +35,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="MarginContainer" unique_id=619793673]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer" unique_id=515325950]
 layout_mode = 2
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="MarginContainer/AspectRatioContainer" unique_id=619793673]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
 theme_override_styles/normal_joystick = SubResource("StyleBoxTexture_al7ov")
 theme_override_styles/normal_tip = SubResource("StyleBoxTexture_ivroo")
 theme_override_styles/pressed_joystick = SubResource("StyleBoxTexture_b32gh")
@@ -51,8 +56,9 @@ action_right = &"game_right"
 action_up = &"game_up"
 action_down = &"game_down"
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="MarginContainer" unique_id=792985076]
-position = Vector2(549, 268)
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=792985076]
+position = Vector2(519, 252)
+scale = Vector2(2, 2)
 texture_normal = ExtResource("1_al7ov")
 texture_pressed = ExtResource("2_ivroo")
 shape = SubResource("RectangleShape2D_bqntk")
