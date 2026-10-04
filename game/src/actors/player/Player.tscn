@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4qailok3ycwu"]
 
 [ext_resource type="Script" uid="uid://vti7k8lcjl3b" path="res://src/actors/player/Player.cs" id="1_faapv"]
-[ext_resource type="Texture2D" uid="uid://bvo2130vrei4s" path="res://assets/sprites/characters/sura/protagonista.png" id="2_6fa6a"]
+[ext_resource type="Texture2D" uid="uid://bvo2130vrei4s" path="res://assets/sprites/characters/player/protagonista.png" id="2_6fa6a"]
 [ext_resource type="Script" uid="uid://du5q6gsxw1iih" path="res://src/actors/player/PlayerStateMachine.cs" id="3_v2xrw"]
 [ext_resource type="Script" uid="uid://td0p3ko4poqn" path="res://src/actors/player/states/Idle.cs" id="4_cjy8o"]
 [ext_resource type="Script" uid="uid://cel12hh6skpqm" path="res://src/actors/player/states/Walk.cs" id="5_jaifi"]
@@ -253,7 +253,7 @@ shape = SubResource("RectangleShape2D_vlew8")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1241451837]
 offset = Vector2(0, -12)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 editor_draw_drag_margin = true

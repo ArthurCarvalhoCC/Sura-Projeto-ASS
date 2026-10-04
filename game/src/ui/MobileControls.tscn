@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dwid5ckfdpkln"]
+
+[ext_resource type="Texture2D" uid="uid://bu4r4f243kduh" path="res://assets/sprites/ui/mobile-controls/joystick_background.png" id="1_8io7m"]
+[ext_resource type="Texture2D" uid="uid://ch67os4l1tse4" path="res://assets/sprites/ui/mobile-controls/button_select.png" id="1_al7ov"]
+[ext_resource type="Texture2D" uid="uid://1teu3m2rm03e" path="res://assets/sprites/ui/mobile-controls/button_select_pressed.png" id="2_ivroo"]
+[ext_resource type="Texture2D" uid="uid://2ynbmsvvyej" path="res://assets/sprites/ui/mobile-controls/joystick_button.png" id="2_ss3ik"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_al7ov"]
+texture = ExtResource("1_8io7m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivroo"]
+texture = ExtResource("2_ss3ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b32gh"]
+texture = ExtResource("1_8io7m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yucqy"]
+texture = ExtResource("2_ss3ik")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqntk"]
+size = Vector2(40, 40)
+
+[node name="MobileControls" type="Control" unique_id=1475332507]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2085952424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="MarginContainer" unique_id=619793673]
+layout_mode = 2
+theme_override_styles/normal_joystick = SubResource("StyleBoxTexture_al7ov")
+theme_override_styles/normal_tip = SubResource("StyleBoxTexture_ivroo")
+theme_override_styles/pressed_joystick = SubResource("StyleBoxTexture_b32gh")
+theme_override_styles/pressed_tip = SubResource("StyleBoxTexture_yucqy")
+action_left = &"game_left"
+action_right = &"game_right"
+action_up = &"game_up"
+action_down = &"game_down"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="MarginContainer" unique_id=792985076]
+position = Vector2(549, 268)
+texture_normal = ExtResource("1_al7ov")
+texture_pressed = ExtResource("2_ivroo")
+shape = SubResource("RectangleShape2D_bqntk")
+action = "game_accept"

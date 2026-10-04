@@ -73,9 +73,13 @@ debug_mode={
 ]
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/translation/languages.en_US.translation", "res://assets/translation/languages.es.translation", "res://assets/translation/languages.pt_BR.translation")
+locale/translations=PackedStringArray("res://assets/translate/languages.en_US.translation", "res://assets/translate/languages.es.translation", "res://assets/translate/languages.pt_BR.translation")
 
 [layer_names]
 
