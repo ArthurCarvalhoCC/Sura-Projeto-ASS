@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chxexpfd1imvy"
-path="res://.godot/imported/clouds.png-727d0551cae0e177773c08635f875fbd.ctex"
+uid="uid://b6ybhk7o633r"
+path="res://.godot/imported/cloud_1.png-69048f67a703e222e73bb3c17f2da197.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds.png"
-dest_files=["res://.godot/imported/clouds.png-727d0551cae0e177773c08635f875fbd.ctex"]
+source_file="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_1.png"
+dest_files=["res://.godot/imported/cloud_1.png-69048f67a703e222e73bb3c17f2da197.ctex"]
 
 [params]
 

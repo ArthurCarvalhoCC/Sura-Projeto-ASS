@@ -573,7 +573,6 @@ y_sort_enabled = true
 position = Vector2(129, 97)
 
 [node name="DarkBG" parent="YSortElements/Player" unique_id=683168971 instance=ExtResource("5_7d7o5")]
-visible = false
 
 [node name="Objects" type="TileMapLayer" parent="YSortElements" unique_id=113902391]
 y_sort_enabled = true

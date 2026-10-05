@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jbaf2ixqdi1r" path="res://core/scene/roots/Main.cs" id="1_gt4qt"]
 [ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/HUD.tscn" id="2_mvbs5"]
-[ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://src/scenes/predio/House.tscn" id="2_rrof4"]
+[ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/MainMenu.tscn" id="2_rrof4"]
 [ext_resource type="PackedScene" uid="uid://2ip8o25cvq52" path="res://src/ui/PauseMenu.tscn" id="3_rrof4"]
 [ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/SceneTransition.tscn" id="4_3xjhu"]
 [ext_resource type="PackedScene" uid="uid://dwid5ckfdpkln" path="res://src/ui/MobileControls.tscn" id="6_rrof4"]

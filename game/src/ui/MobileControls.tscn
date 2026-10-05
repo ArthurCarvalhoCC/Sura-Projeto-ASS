@@ -43,6 +43,7 @@ theme_override_constants/margin_bottom = 50
 layout_mode = 2
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="MarginContainer/AspectRatioContainer" unique_id=619793673]
+modulate = Color(1, 1, 1, 0.2509804)
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -57,6 +58,7 @@ action_up = &"game_up"
 action_down = &"game_down"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=792985076]
+modulate = Color(1, 1, 1, 0.2509804)
 position = Vector2(519, 252)
 scale = Vector2(2, 2)
 texture_normal = ExtResource("1_al7ov")

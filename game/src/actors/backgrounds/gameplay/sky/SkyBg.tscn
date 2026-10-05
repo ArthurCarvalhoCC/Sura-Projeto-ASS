@@ -1,25 +1,80 @@
 [gd_scene format=3 uid="uid://b0a1gxyecka4h"]
 
 [ext_resource type="Script" uid="uid://b4f33ep1rrgrl" path="res://src/actors/backgrounds/gameplay/sky/SkyBg.cs" id="1_tdwqx"]
+[ext_resource type="Texture2D" uid="uid://b6ybhk7o633r" path="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_1.png" id="2_522pn"]
+[ext_resource type="Texture2D" uid="uid://bgqwl5iamadgj" path="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_2.png" id="3_s8j7a"]
+[ext_resource type="Texture2D" uid="uid://du63iemm3rpbq" path="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_4.png" id="4_ky15b"]
+[ext_resource type="Texture2D" uid="uid://cnunwpvsr54w" path="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_3.png" id="5_nypn5"]
 
 [sub_resource type="Gradient" id="Gradient_3irg7"]
+colors = PackedColorArray(0.6156863, 0.7294118, 0.34901962, 1, 0, 0.14, 0.037333332, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vlew8"]
 gradient = SubResource("Gradient_3irg7")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 1)
 
-[node name="SkyBg" type="CanvasLayer" unique_id=168957984 node_paths=PackedStringArray("_sprite")]
+[node name="SkyBg" type="CanvasLayer" unique_id=168957984 node_paths=PackedStringArray("_sprite", "_parallaxLayer")]
 layer = -5
 script = ExtResource("1_tdwqx")
 _sprite = NodePath("Sprite2D")
-firstColor = Color(0, 0.6999998, 1, 1)
-secondColor = Color(0.4509804, 0.827451, 1, 1)
+_parallaxLayer = NodePath("clouds")
+firstColor = Color(0.08627451, 0.4862745, 0.7882353, 1)
+secondColor = Color(0.57, 0.97133327, 1, 1)
 fillFromX = 1.0
 fillFromY = 1.0
 fillToX = 0.0
 fillToY = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1277600478]
-scale = Vector2(10, 10)
+scale = Vector2(16, 9)
 texture = SubResource("GradientTexture2D_vlew8")
+centered = false
 
 [node name="clouds" type="Node2D" parent="." unique_id=1501370276]
+
+[node name="Parallax2D" type="Parallax2D" parent="clouds" unique_id=300744305]
+scroll_offset = Vector2(320, 320)
+repeat_size = Vector2(480, 480)
+autoscroll = Vector2(10, 5)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Parallax2D" unique_id=1649317487]
+position = Vector2(329.42856, 492.85718)
+texture = ExtResource("2_522pn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="clouds/Parallax2D" unique_id=947348035]
+position = Vector2(262.2857, 308.57147)
+texture = ExtResource("3_s8j7a")
+
+[node name="Sprite2D3" type="Sprite2D" parent="clouds/Parallax2D" unique_id=452205967]
+position = Vector2(343.7143, 351.42862)
+texture = ExtResource("4_ky15b")
+
+[node name="Sprite2D4" type="Sprite2D" parent="clouds/Parallax2D" unique_id=1150223806]
+position = Vector2(429.42856, 512.8572)
+texture = ExtResource("5_nypn5")
+
+[node name="Parallax2D2" type="Parallax2D" parent="clouds" unique_id=544140972]
+scroll_offset = Vector2(320, 320)
+repeat_size = Vector2(480, 480)
+autoscroll = Vector2(5, 10)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=1747422012]
+position = Vector2(1118.5713, 175.42856)
+texture = ExtResource("2_522pn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=399265772]
+position = Vector2(1007.1428, 121.14282)
+texture = ExtResource("3_s8j7a")
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=63922020]
+position = Vector2(1112.857, 288.2857)
+texture = ExtResource("4_ky15b")
+flip_v = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=1033686684]
+position = Vector2(882.85706, 122.57141)
+texture = ExtResource("5_nypn5")
