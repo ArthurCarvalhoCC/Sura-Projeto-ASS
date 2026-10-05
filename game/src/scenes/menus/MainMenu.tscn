@@ -3,6 +3,28 @@
 [ext_resource type="FontFile" uid="uid://bwvfo6t04bpds" path="res://assets/fonts/m6x11plus.ttf" id="1_uhu2c"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/backgrounds/arte_menu.png" id="2_b76ga"]
 
+[sub_resource type="CSharpScript" id="CSharpScript_b76ga"]
+script/source = "using Godot;
+using System;
+
+public partial class VBoxContainer : Godot.VBoxContainer
+{
+    [Export]
+    public Button playButton;
+
+    public override void _Ready()
+    {
+        playButton.Text = Tr(\"MENU_MAIN_PLAY\");
+        playButton.Pressed += OnPlayButtonPressed;
+    }
+
+    private void OnPlayButtonPressed()
+    {
+        TranslationServer.SetLocale(\"en-US\");
+		GD.Print(\"en-US\");
+    }
+}"
+
 [sub_resource type="LabelSettings" id="LabelSettings_vlew8"]
 font = ExtResource("1_uhu2c")
 font_size = 20
@@ -27,6 +49,7 @@ expand_mode = 2
 stretch_mode = 6
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=763306857]
+custom_maximum_size = Vector2(640, -1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,11 +58,31 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer" unique_id=1066657261]
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer" unique_id=1066657261 node_paths=PackedStringArray("playButton")]
 layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+script = SubResource("CSharpScript_b76ga")
+playButton = NodePath("Button")
 
-[node name="TextureButton" type="TextureButton" parent="AspectRatioContainer/VBoxContainer" unique_id=1421213972]
+[node name="Button" type="Button" parent="AspectRatioContainer/VBoxContainer" unique_id=1264058303]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uhu2c")
+theme_override_font_sizes/font_size = 24
+text = "Play"
+
+[node name="Button2" type="Button" parent="AspectRatioContainer/VBoxContainer" unique_id=1581299566]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uhu2c")
+theme_override_font_sizes/font_size = 24
+text = "Options
+"
+
+[node name="Button3" type="Button" parent="AspectRatioContainer/VBoxContainer" unique_id=1597932708]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uhu2c")
+theme_override_font_sizes/font_size = 24
+text = "Exit"
 
 [node name="Label" type="Label" parent="." unique_id=72435122]
 layout_mode = 1
