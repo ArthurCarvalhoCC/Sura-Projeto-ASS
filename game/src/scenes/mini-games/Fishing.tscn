@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="8_0w40j"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="9_b20gu"]
 [ext_resource type="PackedScene" uid="uid://b0a1gxyecka4h" path="res://src/actors/backgrounds/gameplay/sky/SkyBg.tscn" id="13_c22wr"]
+[ext_resource type="Texture2D" uid="uid://dpgluw418akec" path="res://assets/sprites/enviroment/vegetation/arvore_2.png" id="14_lx3hx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_52xgy"]
 load_path = "res://.godot/imported/autotile_wood_floor.png-381170eb21f6321340fba24ac9260be2.ctex"
@@ -870,6 +871,18 @@ physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_b32a3")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8pgb"]
+texture = ExtResource("14_lx3hx")
+0:0/size_in_atlas = Vector2i(13, 11)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-96, 80)
+0:0/0/y_sort_origin = -18
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(56, -16, 144, -16, 144, 8, 56, 8)
+
+[sub_resource type="TileSet" id="TileSet_vlew8"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_d8pgb")
+
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_yaw1v")
 _doorsContainer = NodePath("DoorsContainer")
@@ -914,3 +927,8 @@ fillFromY = 0.0
 fillToY = 1.0
 parallaxOpacity = 0.55
 parallaxModulate = Color(0.43608, 0.69, 0.3588, 1)
+
+[node name="Objects" type="TileMapLayer" parent="YSortElements" unique_id=718054502]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD1//r/AAAAAAAAAADx/wcAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_vlew8")

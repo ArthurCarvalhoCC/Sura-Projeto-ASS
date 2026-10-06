@@ -7,12 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://cnunwpvsr54w" path="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_3.png" id="5_nypn5"]
 
 [sub_resource type="Gradient" id="Gradient_3irg7"]
-colors = PackedColorArray(0.58546007, 0.73, 0.24819998, 1, 0, 0.14, 0.037333332, 1)
+colors = PackedColorArray(0.08627451, 0.4862745, 0.7882353, 1, 0.57, 0.97133327, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vlew8"]
 gradient = SubResource("Gradient_3irg7")
-fill_from = Vector2(1, 0)
-fill_to = Vector2(0, 1)
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0, 0)
 
 [node name="SkyBg" type="CanvasLayer" unique_id=168957984 node_paths=PackedStringArray("_sprite", "_parallaxLayer")]
 layer = -5

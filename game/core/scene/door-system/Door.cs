@@ -13,9 +13,6 @@ public partial class Door : Node2D
 	private bool buttonPressed = true;
 	[Signal]
 	public delegate void SceneChangeRequestEventHandler(Door door);
-	public override void _Ready()
-	{
-	}
 
 	public override void _Process(double delta)
 	{

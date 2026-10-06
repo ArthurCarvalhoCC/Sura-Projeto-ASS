@@ -540,6 +540,7 @@ _player = NodePath("YSortElements/Player")
 y_sort_enabled = true
 
 [node name="Ground" type="TileMapLayer" parent="TileMapLayers" unique_id=1462656105]
+tile_map_data = PackedByteArray("AAABAAUAAQAAAAAAAFABAAcAAQACAAAAAFABAAkAAQAFAAAAAFABAAgAAQAEAAAAAFABAAsAAQAJAAAAAFABAA0AAQANAAAAAFABAA8AAQAPAAAAAFABABAAAQARAAAAAFABABEAAQASAAAAAFA=")
 tile_set = SubResource("TileSet_ycd51")
 
 [node name="Wall" type="TileMapLayer" parent="TileMapLayers" unique_id=20199907]
