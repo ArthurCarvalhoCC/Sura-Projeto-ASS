@@ -3,7 +3,6 @@ using System;
 
 public partial class Main : Node
 {
-	public Player player;
 	[Export]
 	public Node _SceneContainer;
 	[Export]

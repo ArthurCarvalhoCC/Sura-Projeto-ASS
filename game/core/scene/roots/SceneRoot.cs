@@ -12,7 +12,7 @@ public partial class SceneRoot : Node2D
 	{
 		_player.SetNewPosition(Managers.Instance.sceneManager.playerInitialNewSceneCoords);
 		Managers.Instance.sceneManager.FinishSceneChange();
-		_doorsContainer.SceneChangeInfos += OnSceneChangeRequest;
+		_doorsContainer.SceneChangeRequest += OnSceneChangeRequest;
 	}
 
 	public void OnSceneChangeRequest(Vector2I targetCoords, PackedScene targetScene)

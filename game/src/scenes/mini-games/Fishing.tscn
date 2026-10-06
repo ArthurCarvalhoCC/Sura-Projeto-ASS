@@ -883,10 +883,10 @@ texture = ExtResource("14_lx3hx")
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_d8pgb")
 
-[node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
+[node name="Fishing" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_yaw1v")
 _doorsContainer = NodePath("DoorsContainer")
-_player = NodePath("YSortElements/Player")
+_player = NodePath("Objects/Player")
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1319549989]
 y_sort_enabled = true
@@ -911,16 +911,15 @@ script = ExtResource("7_pepbi")
 [node name="Door" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("8_0w40j")]
 position = Vector2(8, -68)
 _targetScenePath = "res://src/scenes/predio/Hall.tscn"
-_targetCoords = Vector2i(452, 216)
 
-[node name="YSortElements" type="Node2D" parent="." unique_id=1987625241]
+[node name="Objects" type="Node2D" parent="." unique_id=1987625241]
 y_sort_enabled = true
 
-[node name="Player" parent="YSortElements" unique_id=25723801 instance=ExtResource("9_b20gu")]
+[node name="Player" parent="Objects" unique_id=25723801 instance=ExtResource("9_b20gu")]
 y_sort_enabled = true
 position = Vector2(-45, -29)
 
-[node name="SkyBg" parent="YSortElements/Player" unique_id=168957984 instance=ExtResource("13_c22wr")]
+[node name="SkyBg" parent="Objects/Player" unique_id=168957984 instance=ExtResource("13_c22wr")]
 firstColor = Color(0.58546007, 0.73, 0.24819998, 1)
 secondColor = Color(0, 0.14, 0.037333332, 1)
 fillFromY = 0.0
@@ -928,7 +927,7 @@ fillToY = 1.0
 parallaxOpacity = 0.55
 parallaxModulate = Color(0.43608, 0.69, 0.3588, 1)
 
-[node name="Objects" type="TileMapLayer" parent="YSortElements" unique_id=718054502]
+[node name="Elements" type="TileMapLayer" parent="Objects" unique_id=718054502]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD1//r/AAAAAAAAAADx/wcAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_vlew8")

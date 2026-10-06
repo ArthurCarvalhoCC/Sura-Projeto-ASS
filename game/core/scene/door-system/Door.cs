@@ -6,13 +6,13 @@ public partial class Door : Node2D
 	[Export]
 	public string _targetScenePath {get; private set;}
 	[Export]
-	public Vector2I _targetCoords {get; private set;}
+	public Vector2I targetCoords {get; private set;}
 	public PackedScene targetScene {get; private set;}
 
 	private bool canTeleport = false;
 	private bool buttonPressed = true;
 	[Signal]
-	public delegate void SceneChangeRequestEventHandler(Door door);
+	public delegate void NodeEnteredEventHandler(Door door);
 
 	public override void _Process(double delta)
 	{
@@ -26,9 +26,9 @@ public partial class Door : Node2D
 			if (buttonPressed)
 			{
 				targetScene = ResourceLoader.Load<PackedScene>(_targetScenePath);
-				EmitSignal(SignalName.SceneChangeRequest, this);
+				EmitSignal(SignalName.NodeEntered, this);
 				GD.Print(_targetScenePath);
-				GD.Print(_targetCoords);
+				GD.Print(targetCoords);
 			}
 		}
 

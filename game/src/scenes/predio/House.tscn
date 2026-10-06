@@ -578,7 +578,7 @@ sources/1 = SubResource("TileSetAtlasSource_vangf")
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_w02m0")
 _doorsContainer = NodePath("DoorsContainer")
-_player = NodePath("YSortElements/Player")
+_player = NodePath("Objects/Player")
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1319549989]
 
@@ -590,20 +590,20 @@ tile_set = SubResource("TileSet_vkido")
 tile_map_data = PackedByteArray("AAD8/wMAAgAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAEAAAADAP3/AAABAAAAAAADAP7/AAABAAEAAAADAP//AAABAAIAAAAIAPv/AAABAAAAAAAIAPz/AAABAAEAAAAJAP3/AAACAAIAAAD8////AgAAAAAAAAD8/wAAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wIAAgAAAAAAAAD9/wQAAgAAAAAAAAD+/wQAAgAAAAAAAAD//wQAAgAAAAAAAAAAAAQAAgAAAAAAAAABAP//AAADAAAAAAABAAQAAgAAAAAAAAACAP//AAAAAAIAAAACAAQAAgAAAAAAAAADAAQAAgAAAAAAAAAEAP3/AAABAAAAAAAEAP7/AAABAAEAAAAEAP//AAABAAIAAAAEAAQAAgAAAAAAAAAFAP3/AAABAAAAAAAFAP7/AAABAAEAAAAFAP//AAABAAIAAAAFAAQAAgAAAAAAAAAGAP3/AAACAAAAAAAGAP7/AAACAAEAAAAGAP//AAACAAIAAAAGAAQAAgAAAAAAAAAHAP7/AAADAAAAAAAHAP//AAADAAEAAAAHAAAAAAADAAIAAAAHAAMAAgAAAAAAAAAIAP3/AAABAAIAAAAIAAMAAgAAAAAAAAAJAPv/AAACAAAAAAAJAPz/AAACAAEAAAAJAAMAAgAAAAAAAAAKAPr/AAADAAAAAAAKAPv/AAADAAEAAAAKAPz/AAADAAIAAAAKAAMAAgAAAAAAAAALAPv/AAAAAAAAAAALAPz/AAAAAAEAAAALAP3/AAAAAAIAAAALAAMAAgAAAAAAAAAMAPv/AAABAAAAAAAMAPz/AAABAAEAAAAMAP3/AAABAAIAAAAMAAMAAgAAAAAAAAANAP7/AgAAAAAAAAANAP//AgAAAAAAAAANAAAAAgAAAAAAAAANAAEAAgAAAAAAAAANAAIAAgAAAAAAAAANAAMAAgAAAAAAAAD9//z/AAAAAAAAAAD9//3/AAAAAAEAAAD+//z/AAABAAAAAAD+//3/AAABAAEAAAD///z/AAABAAAAAAD///3/AAABAAEAAAAAAPz/AAABAAAAAAAAAP3/AAABAAEAAAD9//7/AAAAAAIAAAD+//7/AAABAAIAAAD///7/AAABAAIAAAAAAP7/AAABAAIAAAABAAAAAAADAAEAAAABAAEAAAADAAIAAAABAAMAAgAAAAAAAAA=")
 tile_set = SubResource("TileSet_i7xkn")
 
-[node name="Elements" type="TileMapLayer" parent="TileMapLayers" unique_id=1273356334]
+[node name="GroundElements" type="TileMapLayer" parent="TileMapLayers" unique_id=1273356334]
 tile_map_data = PackedByteArray("AAD+/wAAAQAAAAAAAAAKAP3/AQAGAAAAAAA=")
 tile_set = SubResource("TileSet_prra5")
 
-[node name="YSortElements" type="Node2D" parent="." unique_id=2085905501]
+[node name="Objects" type="Node2D" parent="." unique_id=2085905501]
 y_sort_enabled = true
 
-[node name="Player" parent="YSortElements" unique_id=25723801 instance=ExtResource("3_ljpeu")]
+[node name="Player" parent="Objects" unique_id=25723801 instance=ExtResource("3_ljpeu")]
 y_sort_enabled = true
 position = Vector2(-40, 8)
 
-[node name="DarkBG" parent="YSortElements/Player" unique_id=683168971 instance=ExtResource("7_vangf")]
+[node name="DarkBG" parent="Objects/Player" unique_id=683168971 instance=ExtResource("7_vangf")]
 
-[node name="Objects" type="TileMapLayer" parent="YSortElements" unique_id=101241611]
+[node name="Elements" type="TileMapLayer" parent="Objects" unique_id=101241611]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD9/wMAAQAAAAQAAAD+/wMAAQACAAQAAAACAAEAAQAFAAIAAAAEAAAAAQACAAQAABAFAP7/AQABAAMAAAAFAAEAAQAAAAQAAAAGAAAAAQACAAQAAAAIAP7/AQADAAQAAAAKAPz/AQABAAQAAAAMAP7/AQADAAQAAAD+/wAAAQACAAAAAAAAAP//AQAAAAMAAAA=")
 tile_set = SubResource("TileSet_dcrwh")
@@ -614,4 +614,3 @@ script = ExtResource("4_tha1t")
 [node name="Door1" parent="DoorsContainer" unique_id=594169115 instance=ExtResource("5_w02m0")]
 position = Vector2(168, -52)
 _targetScenePath = "res://src/scenes/predio/Hall.tscn"
-_targetCoords = Vector2i(120, 148)

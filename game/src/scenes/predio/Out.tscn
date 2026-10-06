@@ -534,7 +534,7 @@ sources/1 = SubResource("TileSetAtlasSource_b32a3")
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_l1awk")
 _doorsContainer = NodePath("DoorsContainer")
-_player = NodePath("YSortElements/Player")
+_player = NodePath("Objects/Player")
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1319549989]
 y_sort_enabled = true
@@ -556,11 +556,10 @@ script = ExtResource("5_0rxgo")
 [node name="Door" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("8_y2yhs")]
 position = Vector2(8, -68)
 _targetScenePath = "res://src/scenes/predio/Hall.tscn"
-_targetCoords = Vector2i(452, 216)
 
-[node name="YSortElements" type="Node2D" parent="." unique_id=1987625241]
+[node name="Objects" type="Node2D" parent="." unique_id=1987625241]
 y_sort_enabled = true
 
-[node name="Player" parent="YSortElements" unique_id=25723801 instance=ExtResource("4_y2yhs")]
+[node name="Player" parent="Objects" unique_id=25723801 instance=ExtResource("4_y2yhs")]
 y_sort_enabled = true
 position = Vector2(-45, -29)

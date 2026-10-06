@@ -2,20 +2,19 @@
 
 [ext_resource type="Script" uid="uid://chpm38nxiwkau" path="res://core/managers/Managers.cs" id="1_l1efg"]
 [ext_resource type="Script" uid="uid://dvjdvmiak5yyu" path="res://core/managers/SceneManager.cs" id="1_mclmg"]
-[ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://src/scenes/predio/House.tscn" id="3_8njin"]
 [ext_resource type="Script" uid="uid://bss886sfcb58p" path="res://core/managers/SoundManager.cs" id="4_t7c2y"]
 [ext_resource type="Script" uid="uid://mawthrjqm5yh" path="res://core/managers/DialogManager.cs" id="5_r07fn"]
 [ext_resource type="Script" uid="uid://cfglhxxw8obd1" path="res://core/managers/DataManager.cs" id="6_mut65"]
 
-[node name="Managers" type="Node" unique_id=2068923241 node_paths=PackedStringArray("sceneManager")]
+[node name="Managers" type="Node" unique_id=2068923241 node_paths=PackedStringArray("sceneManager", "audioManager")]
 script = ExtResource("1_l1efg")
 sceneManager = NodePath("SceneManager")
+audioManager = NodePath("AudioManager")
 
 [node name="SceneManager" type="Node" parent="." unique_id=136735442]
 script = ExtResource("1_mclmg")
-_initialScene = ExtResource("3_8njin")
 
-[node name="SoundManager" type="Node" parent="." unique_id=262013122]
+[node name="AudioManager" type="Node" parent="." unique_id=262013122]
 script = ExtResource("4_t7c2y")
 
 [node name="DialogManager" type="Node" parent="." unique_id=1414735365]
