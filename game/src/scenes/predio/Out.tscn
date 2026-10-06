@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dn7o0c1w2d713"]
 
-[ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/SceneRoot.cs" id="1_l1awk"]
+[ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldScene.cs" id="1_l1awk"]
 [ext_resource type="Texture2D" uid="uid://iygbaw57xdjj" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/tile_ceramic.png" id="2_sa53c"]
 [ext_resource type="Texture2D" uid="uid://c0188ixgqipqm" path="res://assets/sprites/enviroment/tiles-sets/directional/street.png" id="2_y2yhs"]
 [ext_resource type="Texture2D" uid="uid://cridgm0g0sui3" path="res://assets/sprites/enviroment/tiles-sets/directional/walls.png" id="3_y2yhs"]

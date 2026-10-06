@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class StateMachine : Node
+public abstract partial class StateMachine : Node
 {
 	private Godot.Collections.Dictionary<string,State> statesList = new();
 	[Export] public State BeginState;
