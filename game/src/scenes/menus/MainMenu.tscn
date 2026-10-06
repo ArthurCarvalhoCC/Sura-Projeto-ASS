@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://tv6vgwfd46qa"]
 
+[ext_resource type="Script" uid="uid://b0hrigxcai3q3" path="res://core/scene/roots/UISceneRoot.cs" id="1_40ju4"]
 [ext_resource type="FontFile" uid="uid://bwvfo6t04bpds" path="res://assets/fonts/m6x11plus.ttf" id="1_uhu2c"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/backgrounds/arte_menu.png" id="2_b76ga"]
 
@@ -36,6 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_40ju4")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=216660387]
 layout_mode = 1

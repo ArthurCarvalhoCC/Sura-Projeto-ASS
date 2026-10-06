@@ -1,12 +1,12 @@
 using Godot;
 using System;
 
-public partial class WorldSceneRoot : SceneRoot
+public partial class WorldSceneRoot : Node2D, ISceneRoot
 {
-	[Export]
-	public DoorsContainer _doorsContainer;
-	[Export]
-	public Player _player;
+	[Export] public AudioStream InitialMusic {get; private set;}
+	[Export] public DoorsContainer _doorsContainer;
+	[Export] public Player _player;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -15,7 +15,7 @@ public partial class WorldSceneRoot : SceneRoot
 		_doorsContainer.SceneChangeRequest += OnSceneChangeRequest;
 	}
 
-	public void OnSceneChangeRequest(Vector2I targetCoords, PackedScene targetScene)
+	public void OnSceneChangeRequest(PackedScene targetScene, Vector2I targetCoords)
 	{
 		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(targetCoords);
 		Managers.Instance.sceneManager.StartSceneChange(targetScene);

@@ -71,7 +71,7 @@ advance_mode = 2
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_v7rlw")
 states/Idle/position = Vector2(402, 115)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_v5qoq")
-states/Walk/position = Vector2(329, 35)
+states/Walk/position = Vector2(417, 6)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_v7rlw")]
 graph_offset = Vector2(0, -39.72803)
 

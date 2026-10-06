@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://chpm38nxiwkau" path="res://core/managers/Managers.cs" id="1_l1efg"]
 [ext_resource type="Script" uid="uid://dvjdvmiak5yyu" path="res://core/managers/SceneManager.cs" id="1_mclmg"]
-[ext_resource type="Script" uid="uid://bss886sfcb58p" path="res://core/managers/SoundManager.cs" id="4_t7c2y"]
+[ext_resource type="Script" uid="uid://bss886sfcb58p" path="res://core/managers/AudioManager.cs" id="4_t7c2y"]
 [ext_resource type="Script" uid="uid://mawthrjqm5yh" path="res://core/managers/DialogManager.cs" id="5_r07fn"]
 [ext_resource type="Script" uid="uid://cfglhxxw8obd1" path="res://core/managers/DataManager.cs" id="6_mut65"]
 

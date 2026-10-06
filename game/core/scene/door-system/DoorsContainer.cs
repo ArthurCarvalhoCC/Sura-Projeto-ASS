@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public partial class DoorsContainer : Node2D
 {
 	[Signal]
-	public delegate void SceneChangeRequestEventHandler(Vector2I coords, PackedScene targetScene);
+	public delegate void SceneChangeRequestEventHandler(PackedScene scene, Vector2I coords);
 	private List<Door> doorsList = new();
 
 	public override void _Ready()
@@ -29,6 +29,6 @@ public partial class DoorsContainer : Node2D
 		
 		GD.Print(door.targetCoords);
 		GD.Print(door.targetScene);
-		EmitSignal(SignalName.SceneChangeRequest, door.targetCoords, door.targetScene);
+		EmitSignal(SignalName.SceneChangeRequest, door.targetScene, door.targetCoords);
 	}
 }
