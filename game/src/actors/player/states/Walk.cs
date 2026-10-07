@@ -29,8 +29,6 @@ public partial class Walk : PlayerState
 
         // movimentação suave
         _player.velocity = _player.velocity.MoveToward(targetVelocity, accelRate * (float)delta);
-
-        
         _player.Velocity = _player.velocity;
         _player.MoveAndSlide();
     }
@@ -38,4 +36,5 @@ public partial class Walk : PlayerState
     {
         
     }
+
 }

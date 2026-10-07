@@ -3,7 +3,9 @@ using System;
 
 public partial class AudioManager : Node
 {
-	// Called when the node enters the scene tree for the first time.
+	public float MasterVolume {get; private set;} = 0f;
+	public float SFXVolume {get; private set;} = 0f;
+	public float MusicVolume {get; private set;} = 0f;
 	public override void _Ready()
 	{
 	}
@@ -12,4 +14,26 @@ public partial class AudioManager : Node
 	public override void _Process(double delta)
 	{
 	}
+
+	#region Called when need 
+	public void PlayMusic()
+	{
+		
+	}
+	public void ChangeMusic()
+	{
+		
+	}
+	public void CleanSceneAudios()
+	{
+		
+	}
+	#endregion 
+	
+	#region Internal Function
+	private void CleanAudio(float time)
+	{
+		
+	}
+	#endregion
 }

@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using Godot.Collections;
 
 public partial class Player : CharacterBody2D
 {
@@ -35,6 +36,7 @@ public partial class Player : CharacterBody2D
 	{
 		GD.Print("State: " + newState);
 		EmitSignal(SignalName.StateChanged, newState);
+		GD.Print(Tr("MENU_MAIN_TITLE"));
 	}
 	public void SetNewPosition(Vector2I position)
 	{

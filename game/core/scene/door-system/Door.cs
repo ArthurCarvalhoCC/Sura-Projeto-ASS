@@ -16,6 +16,7 @@ public partial class Door : Node2D
 
 	public override void _Process(double delta)
 	{
+		
 	}
 
 	private void OnBodyEntered(Node2D body)
@@ -31,7 +32,7 @@ public partial class Door : Node2D
 				GD.Print(targetCoords);
 			}
 		}
-
+		
 
 	}
 
