@@ -10,13 +10,13 @@
 [node name="Main" type="Node" unique_id=1739575294 node_paths=PackedStringArray("_SceneContainer", "_UI", "_SceneTransition")]
 script = ExtResource("1_x8ce0")
 _SceneContainer = NodePath("SceneContainer")
-_UI = NodePath("UI")
-_SceneTransition = NodePath("UI/CanvasLayer/SceneTransition")
+_UI = NodePath("GUI")
+_SceneTransition = NodePath("GUI/CanvasLayer/SceneTransition")
 InitialScene = ExtResource("2_y5upg")
 
 [node name="SceneContainer" type="Node" parent="." unique_id=1015481246]
 
-[node name="UI" type="Control" parent="." unique_id=863204452]
+[node name="GUI" type="Control" parent="." unique_id=863204452]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,12 +26,12 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="CanvasLayer" type="CanvasLayer" parent="UI" unique_id=456768952]
+[node name="CanvasLayer" type="CanvasLayer" parent="GUI" unique_id=456768952]
 
-[node name="HUD" parent="UI/CanvasLayer" unique_id=1656029404 instance=ExtResource("3_3awk8")]
+[node name="HUD" parent="GUI/CanvasLayer" unique_id=1656029404 instance=ExtResource("3_3awk8")]
 
-[node name="PauseMenu" parent="UI/CanvasLayer" unique_id=1914284591 instance=ExtResource("4_2gji6")]
+[node name="PauseMenu" parent="GUI/CanvasLayer" unique_id=1914284591 instance=ExtResource("4_2gji6")]
 
-[node name="SceneTransition" parent="UI/CanvasLayer" unique_id=1518877647 instance=ExtResource("5_vi5dn")]
+[node name="SceneTransition" parent="GUI/CanvasLayer" unique_id=1518877647 instance=ExtResource("5_vi5dn")]
 
-[node name="MobileControls" parent="UI/CanvasLayer" unique_id=1475332507 instance=ExtResource("6_e2s0e")]
+[node name="MobileControls" parent="GUI/CanvasLayer" unique_id=1475332507 instance=ExtResource("6_e2s0e")]
