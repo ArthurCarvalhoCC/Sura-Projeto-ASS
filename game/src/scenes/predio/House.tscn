@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_w02m0"]
 [ext_resource type="Texture2D" uid="uid://d0wrjsiqu214a" path="res://assets/sprites/enviroment/tiles-sets/terrain/autotile_wood_floor.png" id="2_js07b"]
 [ext_resource type="Texture2D" uid="uid://iygbaw57xdjj" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/tile_ceramic.png" id="2_qtxk6"]
+[ext_resource type="AudioStream" uid="uid://b0cob5h4nb4n5" path="res://assets/sounds/bgm/musica.mp3" id="2_t5xth"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_ljpeu"]
 [ext_resource type="Texture2D" uid="uid://b77oh7ke3oxdr" path="res://assets/sprites/enviroment/tiles-sets/directional/black_concrete_wall.png" id="3_svp7o"]
 [ext_resource type="Texture2D" uid="uid://cridgm0g0sui3" path="res://assets/sprites/enviroment/tiles-sets/directional/walls.png" id="3_vangf"]
@@ -293,6 +294,7 @@ sources/1 = SubResource("TileSetAtlasSource_vangf")
 
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_w02m0")
+InitialMusic = ExtResource("2_t5xth")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 
