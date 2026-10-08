@@ -5,14 +5,17 @@ public partial class UISceneRoot : Control, ISceneRoot
 {
 
 	[Export] public AudioStream InitialMusic { get; private set; }
+	public bool hideMobileControls { get; private set; } = false;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Gui.Instance.SetMobileControlsVisible(hideMobileControls);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		
 	}
 	public void OnSceneChangeRequest(PackedScene targetScene, Vector2I targetCoords)
 	{

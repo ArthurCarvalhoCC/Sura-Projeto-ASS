@@ -13,7 +13,7 @@ config_version=5
 config/name="Sura"
 run/main_scene="uid://dp6nuisn70hdp"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
-config/icon="res://assets/sprites/ui/icon.svg"
+config/icon="res://assets/sprites/ui/images/icon.svg"
 
 [autoload]
 
@@ -30,6 +30,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="Sura"
+
+[gui]
+
+theme/custom_font="uid://bwvfo6t04bpds"
 
 [input]
 

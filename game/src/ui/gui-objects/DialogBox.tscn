@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b6wpeegsxt3gu"]
+
+[ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/gui-objects/DialogBox.cs" id="1_xgc7y"]
+[ext_resource type="PackedScene" uid="uid://k3scgje4x8f8" path="res://src/ui/ui-elements/backgrounds/MenuBackground.tscn" id="2_j6kby"]
+
+[sub_resource type="Gradient" id="Gradient_xgc7y"]
+offsets = PackedFloat32Array(0.14754099, 1)
+colors = PackedColorArray(0, 0, 0, 0.79607844, 0, 0, 0, 0.26666668)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j6kby"]
+gradient = SubResource("Gradient_xgc7y")
+fill_from = Vector2(1, 0.7222222)
+
+[node name="DialogBox" type="Control" unique_id=1656029404]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_xgc7y")
+
+[node name="BottomGradient" type="TextureRect" parent="." unique_id=792043686]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_j6kby")
+
+[node name="NinePatchRect" parent="." unique_id=2085347565 instance=ExtResource("2_j6kby")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 89.0
+offset_bottom = 66.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="NinePatchRect" unique_id=696225961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer2" unique_id=1562702497]
+layout_mode = 2
+text = "MEU NOME"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/VBoxContainer2" unique_id=1266253032]
+layout_mode = 2
+text = "AAAAAAAAAAAAA"
