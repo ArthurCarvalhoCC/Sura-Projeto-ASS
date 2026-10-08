@@ -926,7 +926,8 @@ tile_set = SubResource("TileSet_ocxqc")
 script = ExtResource("7_pepbi")
 
 [node name="Door" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("8_0w40j")]
-position = Vector2(8, -68)
+position = Vector2(-480, -64)
+scale = Vector2(4, 8)
 _targetScenePath = "res://src/scenes/predio/Hall.tscn"
 
 [node name="Objects" type="Node2D" parent="." unique_id=1987625241]
