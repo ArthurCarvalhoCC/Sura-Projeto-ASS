@@ -289,7 +289,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="Objects" unique_id=25723801 instance=ExtResource("3_7d7o5")]
 y_sort_enabled = true
-position = Vector2(129, 97)
+position = Vector2(120, 140)
 
 [node name="DarkBG" parent="Objects/Player" unique_id=683168971 instance=ExtResource("5_7d7o5")]
 
@@ -304,6 +304,7 @@ script = ExtResource("4_4bjil")
 [node name="Door1" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("5_5xpf8")]
 position = Vector2(120, 164)
 _targetScenePath = "res://src/scenes/predio/House.tscn"
+targetCoords = Vector2i(168, -34)
 
 [node name="Door" parent="DoorsContainer" unique_id=412336782 instance=ExtResource("5_5xpf8")]
 position = Vector2(272, 164)
