@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b6wpeegsxt3gu"]
 
+[ext_resource type="Theme" uid="uid://iv1blbgmmqht" path="res://src/ui/ui-themes/dialog-box.tres" id="1_4lx7u"]
 [ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/gui-objects/DialogBox.cs" id="1_xgc7y"]
 [ext_resource type="PackedScene" uid="uid://k3scgje4x8f8" path="res://src/ui/ui-elements/backgrounds/MenuBackground.tscn" id="2_j6kby"]
 
@@ -11,7 +12,7 @@ colors = PackedColorArray(0, 0, 0, 0.79607844, 0, 0, 0, 0.26666668)
 gradient = SubResource("Gradient_xgc7y")
 fill_from = Vector2(1, 0.7222222)
 
-[node name="DialogBox" type="Control" unique_id=1656029404]
+[node name="DialogBox" type="Control" unique_id=1656029404 node_paths=PackedStringArray("_DialogName", "_DialogText")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,9 +20,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_4lx7u")
 script = ExtResource("1_xgc7y")
+_DialogName = NodePath("MarginContainer/DialogBackground/MarginContainer/HBoxContainer/Texts/Name")
+_DialogText = NodePath("MarginContainer/DialogBackground/MarginContainer/HBoxContainer/Texts/Text")
+_charactersPerSecond = 20.0
 
-[node name="BottomGradient" type="TextureRect" parent="." unique_id=792043686]
+[node name="Gadrient" type="TextureRect" parent="." unique_id=792043686]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,26 +35,47 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_j6kby")
 
-[node name="NinePatchRect" parent="." unique_id=2085347565 instance=ExtResource("2_j6kby")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 89.0
-offset_bottom = 66.0
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="NinePatchRect" unique_id=696225961]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1964641417]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.5
+anchor_right = 0.95
+anchor_bottom = 0.95
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="DialogBackground" parent="MarginContainer" unique_id=2085347565 instance=ExtResource("2_j6kby")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/DialogBackground" unique_id=529227820]
+clip_contents = true
+layout_mode = 0
+offset_right = 544.0
+offset_bottom = 41.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/DialogBackground/MarginContainer" unique_id=368193570]
+layout_mode = 2
+
+[node name="Texts" type="VBoxContainer" parent="MarginContainer/DialogBackground/MarginContainer/HBoxContainer" unique_id=696225961]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer2" unique_id=1562702497]
+[node name="Name" type="Label" parent="MarginContainer/DialogBackground/MarginContainer/HBoxContainer/Texts" unique_id=1562702497]
 layout_mode = 2
-text = "MEU NOME"
+size_flags_vertical = 1
+text = "Name"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/VBoxContainer2" unique_id=1266253032]
+[node name="Text" type="RichTextLabel" parent="MarginContainer/DialogBackground/MarginContainer/HBoxContainer/Texts" unique_id=1266253032]
 layout_mode = 2
-text = "AAAAAAAAAAAAA"
+text = "Current text."
+fit_content = true
