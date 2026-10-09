@@ -3,15 +3,8 @@
 [ext_resource type="Script" uid="uid://b0hrigxcai3q3" path="res://core/scene/roots/UISceneRoot.cs" id="2_4w8w4"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/images/arte_menu.png" id="3_pqkav"]
 [ext_resource type="Texture2D" uid="uid://2dh60k5ua5tb" path="res://assets/sprites/ui/backgrounds/menu_background.png" id="4_igu8k"]
-[ext_resource type="Theme" uid="uid://cwu3y8e3x8flp" path="res://src/ui/ui-themes/title.tres" id="6_pqkav"]
-
-[sub_resource type="Theme" id="Theme_uw1h8"]
-Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/colors/font_shadow_color = Color(0, 0, 0, 0.83137256)
-Label/constants/outline_size = 0
-Label/constants/shadow_offset_x = 1
-Label/constants/shadow_offset_y = 1
-Label/constants/shadow_outline_size = 2
+[ext_resource type="Theme" uid="uid://dln4snlg0em4s" path="res://src/ui/ui-themes/theme-configs.tres" id="5_4w8w4"]
+[ext_resource type="Theme" uid="uid://cwu3y8e3x8flp" path="res://src/ui/ui-themes/theme-main-menu.tres" id="6_pqkav"]
 
 [node name="TitleScreen" type="Control" unique_id=1303787038]
 layout_mode = 3
@@ -46,6 +39,7 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Sections" unique_id=770484771]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -152,7 +146,6 @@ layout_mode = 2
 text = "Quit"
 
 [node name="Settings" type="Control" parent="Sections" unique_id=166331216]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -174,23 +167,161 @@ text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Load" type="Control" parent="Sections" unique_id=2085128285]
-visible = false
+[node name="ConfigSections" type="TabContainer" parent="Sections/Settings" unique_id=1036081554]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.4
+anchor_right = 0.3
+anchor_bottom = 0.4
+theme = ExtResource("5_4w8w4")
+tab_alignment = 1
+current_tab = 0
 
-[node name="Confirm" type="Control" parent="Sections" unique_id=1053667661]
+[node name="Video" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1780847512]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_igu8k")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Video" unique_id=1599935044]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 74.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer" unique_id=1484030158]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer" unique_id=1048249153]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer" unique_id=246318669]
+layout_mode = 2
+
+[node name="FullScreen" type="Label" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1633513004]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="VSync" type="Label" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=719541168]
+layout_mode = 2
+text = "Effects Volume"
+
+[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer" unique_id=544782956]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1952515366]
+layout_mode = 2
+
+[node name="CheckButton2" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=852212089]
+layout_mode = 2
+
+[node name="Audio" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1907341676]
 visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_igu8k")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Audio" unique_id=5970265]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 108.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer" unique_id=1409679308]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer" unique_id=983946519]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2051574266]
+layout_mode = 2
+
+[node name="MasterVolume" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2058455020]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="SFX" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1016884873]
+layout_mode = 2
+text = "Effects Volume"
+
+[node name="Music" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=236938468]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="AmbientVolume" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=787857538]
+layout_mode = 2
+text = "Ambient"
+
+[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1421168943]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=272489009]
+layout_mode = 2
+
+[node name="HSlider2" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1936868956]
+layout_mode = 2
+
+[node name="HSlider3" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=231307804]
+layout_mode = 2
+
+[node name="HSlider4" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=338998045]
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=354120095]
+layout_mode = 2
+text = "Settings"
+
+[node name="Language" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1417671382]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_igu8k")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Language" unique_id=727161987]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-theme = SubResource("Theme_uw1h8")
+
+[node name="Options" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Language/MarginContainer" unique_id=669574320]
+layout_mode = 2
+alignment = 1
+
+[node name="Video" type="Button" parent="Sections/Settings/ConfigSections/Language/MarginContainer/Options" unique_id=1662985953]
+layout_mode = 2
+text = "Play"
+
+[node name="Settings" type="Button" parent="Sections/Settings/ConfigSections/Language/MarginContainer/Options" unique_id=1095343482]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Sections/Settings/ConfigSections/Language/MarginContainer/Options" unique_id=434729480]
+layout_mode = 2
+text = "Quit"

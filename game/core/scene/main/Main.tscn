@@ -1,44 +1,327 @@
 [gd_scene format=3 uid="uid://dp6nuisn70hdp"]
 
-[ext_resource type="Script" uid="uid://jbaf2ixqdi1r" path="res://core/scene/main/Main.cs" id="1_x8ce0"]
-[ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://src/scenes/predio/House.tscn" id="2_y5upg"]
-[ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/gui-objects/DialogBox.tscn" id="3_3awk8"]
-[ext_resource type="Script" uid="uid://dbwcudkvi3wx5" path="res://core/scene/main/Gui.cs" id="3_y5upg"]
-[ext_resource type="PackedScene" uid="uid://2ip8o25cvq52" path="res://src/ui/gui-objects/PauseMenu.tscn" id="4_2gji6"]
-[ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/gui-objects/SceneTransition.tscn" id="5_vi5dn"]
-[ext_resource type="PackedScene" uid="uid://dwid5ckfdpkln" path="res://src/ui/gui-objects/MobileControls.tscn" id="6_e2s0e"]
+[ext_resource type="Theme" uid="uid://cwu3y8e3x8flp" path="res://src/ui/ui-themes/theme-main-menu.tres" id="1_cvorv"]
+[ext_resource type="Script" uid="uid://b0hrigxcai3q3" path="res://core/scene/roots/UISceneRoot.cs" id="2_x8ce0"]
+[ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/images/arte_menu.png" id="3_y5upg"]
+[ext_resource type="Texture2D" uid="uid://2dh60k5ua5tb" path="res://assets/sprites/ui/backgrounds/menu_background.png" id="4_3awk8"]
+[ext_resource type="Theme" uid="uid://dln4snlg0em4s" path="res://src/ui/ui-themes/theme-configs.tres" id="5_2gji6"]
 
-[node name="Main" type="Node" unique_id=1739575294 node_paths=PackedStringArray("_sceneContainer", "_GUI")]
-script = ExtResource("1_x8ce0")
-_sceneContainer = NodePath("SceneContainer")
-_GUI = NodePath("GUI")
-InitialScene = ExtResource("2_y5upg")
-
-[node name="SceneContainer" type="Node" parent="." unique_id=1015481246]
-
-[node name="GUI" type="Control" parent="." unique_id=863204452 node_paths=PackedStringArray("_MobileControls", "_DialogBox", "_sceneTransition")]
+[node name="TitleScreen" type="Control" unique_id=1303787038]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_filter = 2
-script = ExtResource("3_y5upg")
-_MobileControls = NodePath("CanvasLayer/MobileControls")
-_DialogBox = NodePath("CanvasLayer/DialogBox")
-_sceneTransition = NodePath("CanvasLayer/SceneTransition")
+mouse_filter = 1
+theme = ExtResource("1_cvorv")
+script = ExtResource("2_x8ce0")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="GUI" unique_id=512455076]
+[node name="Background" type="TextureRect" parent="." unique_id=216660387]
+modulate = Color(0.27, 0.27, 0.27, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_y5upg")
+expand_mode = 2
+stretch_mode = 6
 
-[node name="PauseMenu" parent="GUI/CanvasLayer" unique_id=1914284591 instance=ExtResource("4_2gji6")]
+[node name="Sections" type="Control" parent="." unique_id=1312439135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 
-[node name="DialogBox" parent="GUI/CanvasLayer" unique_id=1656029404 instance=ExtResource("3_3awk8")]
+[node name="Main" type="Control" parent="Sections" unique_id=770484771]
 visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 
-[node name="SceneTransition" parent="GUI/CanvasLayer" unique_id=1518877647 instance=ExtResource("5_vi5dn")]
-z_index = 1
+[node name="Title" type="Label" parent="Sections/Main" unique_id=1824440175]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 17.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.39477164, 0.61, 0.16469999, 1)
+text = "Surá"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MobileControls" parent="GUI/CanvasLayer" unique_id=1475332507 instance=ExtResource("6_e2s0e")]
+[node name="Subtitle" type="Label" parent="Sections/Main" unique_id=293376445]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.3
+anchor_right = 0.5
+anchor_bottom = 0.3
+offset_left = -129.5
+offset_top = -32.5
+offset_right = 129.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "- Projeto A.S.S. -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="Sections/Main" unique_id=72435122]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.98
+anchor_right = 0.02
+anchor_bottom = 0.98
+offset_top = -21.0
+offset_right = 27.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 1
+theme_override_font_sizes/font_size = 20
+text = "v0.1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="NinePatchRect" parent="Sections/Main" unique_id=572168119]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.5
+anchor_right = 0.4
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+texture = ExtResource("4_3awk8")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Main/Background" unique_id=691323014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="VBoxContainer" parent="Sections/Main/Background/MarginContainer" unique_id=1661208750]
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2134570910]
+layout_mode = 2
+text = "Play"
+
+[node name="Settings" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2024437638]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2126108363]
+layout_mode = 2
+text = "Quit"
+
+[node name="Settings" type="Control" parent="Sections" unique_id=166331216]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Title" type="Label" parent="Sections/Settings" unique_id=1102465478]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.08
+anchor_right = 0.363
+anchor_bottom = 0.097
+offset_right = -184.96002
+offset_bottom = -65.16
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfigSections" type="TabContainer" parent="Sections/Settings" unique_id=1036081554]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.4
+anchor_right = 0.3
+anchor_bottom = 0.4
+theme = ExtResource("5_2gji6")
+tab_alignment = 1
+current_tab = 0
+
+[node name="Video" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1780847512]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_3awk8")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Video" unique_id=1599935044]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 74.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer" unique_id=1484030158]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer" unique_id=1048249153]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer" unique_id=246318669]
+layout_mode = 2
+
+[node name="FullScreen" type="Label" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1633513004]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="VSync" type="Label" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=719541168]
+layout_mode = 2
+text = "Effects Volume"
+
+[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer" unique_id=544782956]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1952515366]
+layout_mode = 2
+
+[node name="CheckButton2" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=852212089]
+layout_mode = 2
+
+[node name="Audio" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1907341676]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_3awk8")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Audio" unique_id=5970265]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 108.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer" unique_id=1409679308]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer" unique_id=983946519]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2051574266]
+layout_mode = 2
+
+[node name="MasterVolume" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2058455020]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="SFX" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1016884873]
+layout_mode = 2
+text = "Effects Volume"
+
+[node name="Music" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=236938468]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="AmbientVolume" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=787857538]
+layout_mode = 2
+text = "Ambient"
+
+[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1421168943]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=272489009]
+layout_mode = 2
+
+[node name="HSlider2" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1936868956]
+layout_mode = 2
+
+[node name="HSlider3" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=231307804]
+layout_mode = 2
+
+[node name="HSlider4" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=338998045]
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=354120095]
+layout_mode = 2
+text = "Settings"
+
+[node name="Language" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1417671382]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_3awk8")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Language" unique_id=727161987]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Language/MarginContainer" unique_id=669574320]
+layout_mode = 2
+alignment = 1
+
+[node name="Video" type="Button" parent="Sections/Settings/ConfigSections/Language/MarginContainer/Options" unique_id=1662985953]
+layout_mode = 2
+text = "Play"
+
+[node name="Settings" type="Button" parent="Sections/Settings/ConfigSections/Language/MarginContainer/Options" unique_id=1095343482]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Sections/Settings/ConfigSections/Language/MarginContainer/Options" unique_id=434729480]
+layout_mode = 2
+text = "Quit"
