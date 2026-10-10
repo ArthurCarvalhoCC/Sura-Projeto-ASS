@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://2ip8o25cvq52"]
 
+[ext_resource type="Theme" uid="uid://cwu3y8e3x8flp" path="res://src/ui/ui-themes/title.tres" id="1_fwm3s"]
+
 [node name="PauseMenu" type="Control" unique_id=1914284591]
 layout_mode = 3
 anchors_preset = 15
@@ -7,4 +9,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+mouse_filter = 1
+theme = ExtResource("1_fwm3s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1248352759]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.15294118)

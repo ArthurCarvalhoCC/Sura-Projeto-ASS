@@ -3,13 +3,20 @@
 [ext_resource type="StyleBox" uid="uid://dbjnj05mwl6av" path="res://src/ui/ui-themes/selected_button.tres" id="1_idfop"]
 [ext_resource type="FontFile" uid="uid://bwvfo6t04bpds" path="res://assets/fonts/m6x11plus.ttf" id="1_jfobv"]
 [ext_resource type="StyleBox" uid="uid://dokrduvu3mwgl" path="res://src/ui/ui-themes/pressed_button.tres" id="2_agxu3"]
+[ext_resource type="Texture2D" uid="uid://cvaodcxea5lkj" path="res://assets/sprites/enviroment/tiles-sets/terrain/autotile_grass.png" id="3_erfj6"]
+[ext_resource type="Texture2D" uid="uid://cxesbh1yoqhv" path="res://assets/sprites/ui/backgrounds/button_background.png" id="3_lwpf4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dah37"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6xhum"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlew8"]
+texture = ExtResource("3_lwpf4")
+region_rect = Rect2(0, 0, 32, 32)
+
 [resource]
 default_font = ExtResource("1_jfobv")
+default_font_size = 16
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
@@ -33,6 +40,7 @@ Button/styles/focus = ExtResource("1_idfop")
 Button/styles/hover = ExtResource("1_idfop")
 Button/styles/normal = SubResource("StyleBoxEmpty_6xhum")
 Button/styles/pressed = ExtResource("2_agxu3")
+HSlider/icons/tick = ExtResource("3_erfj6")
 Label/colors/font_shadow_color = Color(0, 0, 0, 0.7607843)
 Label/constants/outline_size = 6
 Label/constants/shadow_offset_x = 2
@@ -43,3 +51,9 @@ MarginContainer/constants/margin_bottom = 16
 MarginContainer/constants/margin_left = 16
 MarginContainer/constants/margin_right = 12
 MarginContainer/constants/margin_top = 12
+TabContainer/colors/font_selected_color = Color(0.95, 0.95, 0.95, 1)
+TabContainer/colors/font_unselected_color = Color(0.7, 0.7, 0.7, 1)
+TabContainer/styles/tab_focus = SubResource("StyleBoxTexture_vlew8")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_vlew8")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_vlew8")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_vlew8")
