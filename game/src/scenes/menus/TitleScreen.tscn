@@ -338,7 +338,6 @@ grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="Sections/Settings/ConfigSections/Language/MarginContainer" unique_id=885873377]
 layout_mode = 2
-columns = 2
 
 [node name="Portuguese" parent="Sections/Settings/ConfigSections/Language/MarginContainer/GridContainer" unique_id=346491034 instance=ExtResource("6_pqkav")]
 layout_mode = 2
@@ -365,6 +364,7 @@ icon = ExtResource("10_84d0x")
 LocaleCode = "en-US"
 
 [node name="Russian" parent="Sections/Settings/ConfigSections/Language/MarginContainer/GridContainer" unique_id=956149222 instance=ExtResource("6_pqkav")]
+visible = false
 layout_mode = 2
 text = "Русский"
 icon = ExtResource("11_6kvge")
