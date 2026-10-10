@@ -1,0 +1,27 @@
+[gd_resource type="Theme" format=3 uid="uid://b4klmymd1wye1"]
+
+[ext_resource type="FontFile" uid="uid://bwvfo6t04bpds" path="res://assets/fonts/m6x11plus.ttf" id="1_d8kve"]
+[ext_resource type="Texture2D" uid="uid://sisr17d42mhu" path="res://assets/sprites/ui/menu/buttons/background-button/btn_bg_enabled.png" id="2_6nth5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4w8w4"]
+texture = ExtResource("2_6nth5")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pqkav"]
+
+[resource]
+default_font = ExtResource("1_d8kve")
+default_font_size = 12
+Button/constants/outline_size = 4
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxTexture_4w8w4")
+Button/styles/pressed = SubResource("StyleBoxTexture_pqkav")
+MarginContainer/constants/margin_bottom = 16
+MarginContainer/constants/margin_left = 16
+MarginContainer/constants/margin_right = 16
+MarginContainer/constants/margin_top = 16

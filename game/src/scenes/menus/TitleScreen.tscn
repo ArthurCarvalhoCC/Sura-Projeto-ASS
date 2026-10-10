@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://tv6vgwfd46qa"]
 
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_hy3qt"]
 [ext_resource type="Script" uid="uid://b0hrigxcai3q3" path="res://core/scene/roots/UISceneRoot.cs" id="2_4w8w4"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/images/arte_menu.png" id="3_pqkav"]
-[ext_resource type="Texture2D" uid="uid://2dh60k5ua5tb" path="res://assets/sprites/ui/backgrounds/menu_background.png" id="4_igu8k"]
-[ext_resource type="Theme" uid="uid://dln4snlg0em4s" path="res://src/ui/ui-themes/theme-configs.tres" id="5_4w8w4"]
-[ext_resource type="Theme" uid="uid://cwu3y8e3x8flp" path="res://src/ui/ui-themes/title.tres" id="6_pqkav"]
+[ext_resource type="Texture2D" uid="uid://dnrkha1nyaosr" path="res://assets/sprites/ui/menu/backgrounds/bg_menu.png" id="4_4w8w4"]
+[ext_resource type="Texture2D" uid="uid://clgfyfbf8aoe6" path="res://assets/sprites/ui/menu/backgrounds/bg_menu2.png" id="5_pqkav"]
 
 [node name="TitleScreen" type="Control" unique_id=1303787038]
 layout_mode = 3
@@ -14,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("6_pqkav")
+theme = ExtResource("1_hy3qt")
 script = ExtResource("2_4w8w4")
 
 [node name="Background" type="TextureRect" parent="." unique_id=216660387]
@@ -39,7 +39,6 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Sections" unique_id=770484771]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -114,7 +113,7 @@ anchor_bottom = 0.5
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
-texture = ExtResource("4_igu8k")
+texture = ExtResource("4_4w8w4")
 region_rect = Rect2(0, 0, 32, 32)
 patch_margin_left = 9
 patch_margin_top = 9
@@ -146,6 +145,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="Settings" type="Control" parent="Sections" unique_id=166331216]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -174,15 +174,15 @@ anchor_left = 0.3
 anchor_top = 0.4
 anchor_right = 0.3
 anchor_bottom = 0.4
-theme = ExtResource("5_4w8w4")
 tab_alignment = 1
-current_tab = 0
+current_tab = 2
 
 [node name="Video" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1780847512]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 mouse_filter = 1
-texture = ExtResource("4_igu8k")
+texture = ExtResource("5_pqkav")
 region_rect = Rect2(0, 0, 32, 32)
 patch_margin_left = 9
 patch_margin_top = 9
@@ -208,7 +208,7 @@ layout_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="Full Screen" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1952515366]
+[node name="FullScreen" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1952515366]
 layout_mode = 2
 text = "Full Screen"
 
@@ -221,7 +221,7 @@ visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 mouse_filter = 1
-texture = ExtResource("4_igu8k")
+texture = ExtResource("4_4w8w4")
 region_rect = Rect2(0, 0, 32, 32)
 patch_margin_left = 9
 patch_margin_top = 9
@@ -289,11 +289,10 @@ value = 50.0
 rounded = true
 
 [node name="Language" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1417671382]
-visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 mouse_filter = 1
-texture = ExtResource("4_igu8k")
+texture = ExtResource("4_4w8w4")
 region_rect = Rect2(0, 0, 32, 32)
 patch_margin_left = 9
 patch_margin_top = 9
