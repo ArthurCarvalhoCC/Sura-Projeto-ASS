@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0ebkspcb8n0s"]
 
-[ext_resource type="Script" uid="uid://v462tg4vwmd6" path="res://src/ui/gui-objects/SceneTransition.cs" id="1_llan4"]
+[ext_resource type="Script" uid="uid://v462tg4vwmd6" path="res://src/ui/ui-objects/SceneTransition.cs" id="1_llan4"]
 
 [node name="SceneTransition" type="Control" unique_id=1518877647 node_paths=PackedStringArray("_fade")]
 layout_mode = 3

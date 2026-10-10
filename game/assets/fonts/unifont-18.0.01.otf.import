@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c7onhxkdjpnuy"
-path="res://.godot/imported/DungeonFont.ttf-39cc87582f4e87b176cc14098ace8cc9.fontdata"
+uid="uid://dyvebtdjo0fvq"
+path="res://.godot/imported/unifont-18.0.01.otf-c239728b1bc634e089396e11f97a33ec.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/DungeonFont.ttf"
-dest_files=["res://.godot/imported/DungeonFont.ttf-39cc87582f4e87b176cc14098ace8cc9.fontdata"]
+source_file="res://assets/fonts/unifont-18.0.01.otf"
+dest_files=["res://.godot/imported/unifont-18.0.01.otf-c239728b1bc634e089396e11f97a33ec.fontdata"]
 
 [params]
 
@@ -27,15 +27,10 @@ subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
-fallbacks=[Resource("uid://dyvebtdjo0fvq", "res://assets/fonts/unifont-18.0.01.otf")]
+fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "Nova Configuração",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

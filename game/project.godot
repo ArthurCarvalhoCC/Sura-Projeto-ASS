@@ -25,9 +25,9 @@ Managers="*uid://ft6sytpqo0f7"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 
@@ -85,7 +85,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/translate/languages.en_US.translation", "res://assets/translate/languages.es.translation", "res://assets/translate/languages.pt_BR.translation")
+locale/translations=PackedStringArray("res://assets/translate/languages.en_US.translation", "res://assets/translate/languages.es.translation", "res://assets/translate/languages.pt_BR.translation", "res://assets/translate/languages.ru.translation")
 
 [layer_names]
 

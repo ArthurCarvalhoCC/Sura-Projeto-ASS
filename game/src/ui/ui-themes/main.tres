@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://bwvfo6t04bpds" path="res://assets/fonts/m6x11plus.ttf" id="1_d8kve"]
 [ext_resource type="Texture2D" uid="uid://cud2d5hcapim2" path="res://assets/sprites/ui/menu/buttons/check-button/check_button_on.png" id="1_fq72g"]
 [ext_resource type="Texture2D" uid="uid://cc7br73mddvno" path="res://assets/sprites/ui/menu/buttons/background-button/btn_bg_disabled.png" id="1_q857r"]
+[ext_resource type="Texture2D" uid="uid://brenycc6p647a" path="res://assets/sprites/ui/menu/buttons/background-button/btn_bg_pressed.png" id="2_0cc1x"]
 [ext_resource type="Texture2D" uid="uid://sisr17d42mhu" path="res://assets/sprites/ui/menu/buttons/background-button/btn_bg_enabled.png" id="2_6nth5"]
 [ext_resource type="Texture2D" uid="uid://dsfjcw3d3pf1n" path="res://assets/sprites/ui/menu/buttons/check-box/btn-check-on-disabled.png" id="2_g8vse"]
 [ext_resource type="Texture2D" uid="uid://bgpnvo5h3t4fl" path="res://assets/sprites/ui/menu/buttons/check-button/check_button_on_disabled.png" id="2_ja2a6"]
@@ -37,7 +38,7 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_niv3e"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4w8w4"]
 texture = ExtResource("3_axkkf")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
@@ -47,6 +48,22 @@ region_rect = Rect2(0, 0, 16, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wyege"]
 texture = ExtResource("2_6nth5")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_niv3e"]
+texture = ExtResource("2_0cc1x")
+texture_margin_left = 4.0
+texture_margin_top = 6.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ya247"]
+texture = ExtResource("3_axkkf")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -102,7 +119,7 @@ Button/constants/outline_size = 4
 Button/styles/disabled = SubResource("StyleBoxTexture_axkkf")
 Button/styles/focus = SubResource("StyleBoxTexture_8ymfm")
 Button/styles/hover = SubResource("StyleBoxTexture_8ymfm")
-Button/styles/hover_pressed = SubResource("StyleBoxTexture_niv3e")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_4w8w4")
 Button/styles/normal = SubResource("StyleBoxTexture_wyege")
 Button/styles/pressed = SubResource("StyleBoxTexture_niv3e")
 CheckBox/icons/checked = ExtResource("1_5bsaa")
@@ -113,6 +130,7 @@ CheckButton/icons/checked = ExtResource("1_fq72g")
 CheckButton/icons/checked_disabled = ExtResource("2_ja2a6")
 CheckButton/icons/unchecked = ExtResource("3_g4f23")
 CheckButton/icons/unchecked_disabled = ExtResource("4_5bsaa")
+CheckButton/styles/pressed = SubResource("StyleBoxTexture_ya247")
 HSlider/icons/grabber = ExtResource("4_q857r")
 HSlider/icons/grabber_disabled = ExtResource("6_j41sx")
 HSlider/icons/grabber_highlight = ExtResource("7_j41sx")

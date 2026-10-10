@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6wpeegsxt3gu"]
 
-[ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/gui-objects/DialogBox.cs" id="1_xgc7y"]
+[ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/ui-objects/DialogBox.cs" id="1_xgc7y"]
 [ext_resource type="Texture2D" uid="uid://clgfyfbf8aoe6" path="res://assets/sprites/ui/menu/backgrounds/bg_menu2.png" id="2_dp5bt"]
 
 [sub_resource type="Gradient" id="Gradient_xgc7y"]
