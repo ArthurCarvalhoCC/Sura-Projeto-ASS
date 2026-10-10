@@ -15,7 +15,7 @@ public partial class DialogBox : Control
 
     public override void _Ready()
     {
-        Hide();
+        //Hide();
     }
 
     public override void _Process(double delta)

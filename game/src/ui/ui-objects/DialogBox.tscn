@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b6wpeegsxt3gu"]
 
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_o2gjm"]
 [ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/ui-objects/DialogBox.cs" id="1_xgc7y"]
 [ext_resource type="Texture2D" uid="uid://clgfyfbf8aoe6" path="res://assets/sprites/ui/menu/backgrounds/bg_menu2.png" id="2_dp5bt"]
 
@@ -19,6 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_o2gjm")
 script = ExtResource("1_xgc7y")
 _DialogName = NodePath("MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts/Name")
 _DialogText = NodePath("MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts/Text")
@@ -71,14 +73,19 @@ layout_mode = 2
 [node name="Texts" type="VBoxContainer" parent="MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer" unique_id=696225961]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 16
 
 [node name="Name" type="Label" parent="MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts" unique_id=1562702497]
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 16
 text = "Name"
 
 [node name="Text" type="RichTextLabel" parent="MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts" unique_id=1266253032]
 layout_mode = 2
-text = "Current text."
+text = "Current text.
+sdfsdfsddfs
+wfdffffffffffffff
+asdsadas
+asdasd
+ads"
 fit_content = true

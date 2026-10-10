@@ -78,6 +78,13 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(0, 2, 16, 12)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2gjm"]
+texture = ExtResource("4_6nth5")
+texture_margin_left = 4.0
+texture_margin_top = 6.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcpel"]
 texture = ExtResource("9_io5n0")
 texture_margin_left = 4.0
@@ -140,6 +147,8 @@ MarginContainer/constants/margin_bottom = 16
 MarginContainer/constants/margin_left = 16
 MarginContainer/constants/margin_right = 16
 MarginContainer/constants/margin_top = 16
+RichTextLabel/constants/outline_size = 4
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_o2gjm")
 TabContainer/constants/outline_size = 4
 TabContainer/constants/side_margin = 16
 TabContainer/constants/tab_separation = 2
