@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://b0hrigxcai3q3" path="res://core/scene/roots/UISceneRoot.cs" id="2_4w8w4"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/images/arte_menu.png" id="3_pqkav"]
 [ext_resource type="Texture2D" uid="uid://dnrkha1nyaosr" path="res://assets/sprites/ui/menu/backgrounds/bg_menu.png" id="4_4w8w4"]
-[ext_resource type="Texture2D" uid="uid://clgfyfbf8aoe6" path="res://assets/sprites/ui/menu/backgrounds/bg_menu2.png" id="5_pqkav"]
 
 [node name="TitleScreen" type="Control" unique_id=1303787038]
 layout_mode = 3
@@ -18,7 +17,6 @@ theme = ExtResource("1_hy3qt")
 script = ExtResource("2_4w8w4")
 
 [node name="Background" type="TextureRect" parent="." unique_id=216660387]
-modulate = Color(0.27, 0.27, 0.27, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,6 +37,7 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Sections" unique_id=770484771]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,7 +58,8 @@ offset_right = 20.0
 offset_bottom = 17.0
 grow_horizontal = 2
 mouse_filter = 1
-theme_override_colors/font_color = Color(0.39477164, 0.61, 0.16469999, 1)
+theme_override_colors/font_color = Color(0.80752003, 0.98, 0.5488, 1)
+theme_override_font_sizes/font_size = 64
 text = "Surá"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -114,7 +114,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
 texture = ExtResource("4_4w8w4")
-region_rect = Rect2(0, 0, 32, 32)
+region_rect = Rect2(0, 0, 16, 16)
 patch_margin_left = 9
 patch_margin_top = 9
 patch_margin_right = 9
@@ -145,7 +145,6 @@ layout_mode = 2
 text = "Quit"
 
 [node name="Settings" type="Control" parent="Sections" unique_id=166331216]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -153,6 +152,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Sections/Settings" unique_id=1722227062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27058825)
 
 [node name="Title" type="Label" parent="Sections/Settings" unique_id=1102465478]
 layout_mode = 1
@@ -163,6 +171,7 @@ anchor_right = 0.363
 anchor_bottom = 0.097
 offset_right = -184.96002
 offset_bottom = -65.16
+theme_override_font_sizes/font_size = 48
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -174,16 +183,14 @@ anchor_left = 0.3
 anchor_top = 0.4
 anchor_right = 0.3
 anchor_bottom = 0.4
-tab_alignment = 1
-current_tab = 2
+current_tab = 0
 
 [node name="Video" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1780847512]
-visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 mouse_filter = 1
-texture = ExtResource("5_pqkav")
-region_rect = Rect2(0, 0, 32, 32)
+texture = ExtResource("4_4w8w4")
+region_rect = Rect2(0, 0, 16, 16)
 patch_margin_left = 9
 patch_margin_top = 9
 patch_margin_right = 9
@@ -222,7 +229,7 @@ custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 mouse_filter = 1
 texture = ExtResource("4_4w8w4")
-region_rect = Rect2(0, 0, 32, 32)
+region_rect = Rect2(0, 0, 16, 16)
 patch_margin_left = 9
 patch_margin_top = 9
 patch_margin_right = 9
@@ -289,11 +296,12 @@ value = 50.0
 rounded = true
 
 [node name="Language" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1417671382]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 mouse_filter = 1
 texture = ExtResource("4_4w8w4")
-region_rect = Rect2(0, 0, 32, 32)
+region_rect = Rect2(0, 0, 16, 16)
 patch_margin_left = 9
 patch_margin_top = 9
 patch_margin_right = 9
@@ -301,8 +309,8 @@ patch_margin_bottom = 9
 metadata/_tab_index = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Language" unique_id=727161987]
-layout_mode = 1
-anchors_preset = 15
+visible = false
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
