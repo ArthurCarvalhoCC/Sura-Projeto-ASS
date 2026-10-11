@@ -37,5 +37,4 @@ public partial class Main : Node
 			new Vector2(0, 0)
 		);
 	}
-
 }
