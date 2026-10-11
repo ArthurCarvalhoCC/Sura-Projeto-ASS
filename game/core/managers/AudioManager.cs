@@ -7,8 +7,7 @@ public partial class AudioManager : Node
 {
 	public static AudioManager Instance { get; private set; }
 	private Dictionary< string, SoundQueue > _soundQueueByName = new Dictionary< string, SoundQueue >();
-	// Keeps the manager's current track so ChangeMusic can stop or replace it.
-	private AudioStream _currentMusic;
+	private AudioStream _currentMusic; // Keeps the manager's current track so ChangeMusic can stop or replace it.
 	public float MasterVolume {get; private set;} = 0f;
 	public float SFXVolume {get; private set;} = 0f;
 	public float MusicVolume {get; private set;} = 0f;

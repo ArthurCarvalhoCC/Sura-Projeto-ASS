@@ -16,7 +16,7 @@ public partial class SoundQueue : Node
 	{
 		if (GetChildCount() == 0)
 		{
-			_musicPlayer = new AudioStreamPlayer { Name = "MusicPlayer" };
+			_musicPlayer = new AudioStreamPlayer { Name = "MusicPlayer" }; 
 			AddChild(_musicPlayer);
 		}
 		else if (GetChild(0) is AudioStreamPlayer audioStreamPlayer)
@@ -30,7 +30,7 @@ public partial class SoundQueue : Node
 				duplicate.Name = $"SFXPlayer{i}";
 				AddChild(duplicate);
 				_audioStreamPlayers.Add(duplicate);
-			}
+			} //--> Temporário, ideal é criar um node próprio pro SFX Pool
 		}
 		else
 		{
@@ -52,12 +52,12 @@ public partial class SoundQueue : Node
 			return;
 		}
 
-		_musicPlayer.Stop();
+		_musicPlayer.Stop(); // Stop any currently playing music before starting the new track.
 		_musicPlayer.Stream = stream; 
 		_musicPlayer.Play();
 	}
 
-	public void StopMusic()
+	public void StopMusic() //Stops the music playback and clears the stream to free resources.
 	{
 		_musicPlayer.Stop();
 		_musicPlayer.Stream = null;
