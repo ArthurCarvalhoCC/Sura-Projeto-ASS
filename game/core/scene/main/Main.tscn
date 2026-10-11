@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dp6nuisn70hdp"]
 
 [ext_resource type="Script" uid="uid://jbaf2ixqdi1r" path="res://core/scene/main/Main.cs" id="1_x8ce0"]
-[ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="2_y5upg"]
+[ext_resource type="PackedScene" uid="uid://bnvwsvlke0uhv" path="res://src/scenes/predio/Lobby.tscn" id="2_2gji6"]
 [ext_resource type="Texture2D" uid="uid://b6lxy22it13pm" path="res://assets/sprites/ui/cursor/cursor_arrow.png" id="3_2gji6"]
 [ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/ui-objects/DialogBox.tscn" id="3_3awk8"]
 [ext_resource type="Script" uid="uid://dbwcudkvi3wx5" path="res://core/scene/main/Gui.cs" id="3_y5upg"]
@@ -14,7 +14,7 @@
 script = ExtResource("1_x8ce0")
 _sceneContainer = NodePath("SceneContainer")
 _GUI = NodePath("GUI")
-InitialScene = ExtResource("2_y5upg")
+InitialScene = ExtResource("2_2gji6")
 cursorNormalSprite = ExtResource("3_2gji6")
 cursorClickSprite = ExtResource("4_vi5dn")
 
