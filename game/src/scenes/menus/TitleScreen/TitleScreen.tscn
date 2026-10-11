@@ -305,7 +305,7 @@ LocaleCode = "en-US"
 layout_mode = 2
 text = "日本語"
 icon = ExtResource("10_84d0x")
-LocaleCode = "en-US"
+LocaleCode = "ja"
 
 [node name="Russian" parent="Sections/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=956149222 instance=ExtResource("6_pqkav")]
 layout_mode = 2
