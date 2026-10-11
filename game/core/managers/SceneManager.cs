@@ -28,7 +28,9 @@ public partial class SceneManager : Node
     {
         if (_currentScene != null)
         {
+
             Tween fadeOut = _transitionNode.FadeOut();
+            _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Disabled; // Para o processamento do sceneContainer
 
             fadeOut.Finished += () =>
             {
@@ -46,7 +48,9 @@ public partial class SceneManager : Node
     }
     public void FinishSceneChange()
     {
-        _transitionNode.FadeIn();
+        // Volta o processamento do SceneContainer para o padrão
+        _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Inherit;
+        Tween fadeIn = _transitionNode.FadeIn();
     }
 
     public void SetPlayerInitialNewSceneCoords(Vector2I coords)

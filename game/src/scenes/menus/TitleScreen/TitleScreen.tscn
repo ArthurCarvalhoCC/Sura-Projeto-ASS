@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://tv6vgwfd46qa"]
 
 [ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_hy3qt"]
-[ext_resource type="Script" uid="uid://b0hrigxcai3q3" path="res://core/scene/roots/UISceneRoot.cs" id="2_4w8w4"]
+[ext_resource type="Script" uid="uid://cwf53ulum62im" path="res://src/scenes/menus/TitleScreen/TitleScreen.cs" id="2_oyxc4"]
+[ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://src/scenes/predio/House.tscn" id="3_lvs3x"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/images/arte_menu.png" id="3_pqkav"]
 [ext_resource type="Texture2D" uid="uid://dnrkha1nyaosr" path="res://assets/sprites/ui/menu/backgrounds/bg_menu.png" id="4_4w8w4"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/ui-themes/label_title_font.tres" id="5_4w8w4"]
@@ -22,7 +23,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_hy3qt")
-script = ExtResource("2_4w8w4")
+script = ExtResource("2_oyxc4")
+targetScene = ExtResource("3_lvs3x")
 
 [node name="Background" type="TextureRect" parent="." unique_id=216660387]
 layout_mode = 1
@@ -45,7 +47,6 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Sections" unique_id=770484771]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -154,9 +155,10 @@ text = "MENU_MAIN_QUIT"
 
 [node name="Credits" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=1269362336]
 layout_mode = 2
-text = "Credits"
+text = "MENU_MAIN_CREDITS"
 
 [node name="Settings" type="Control" parent="Sections" unique_id=166331216]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -172,7 +174,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.27058825)
+color = Color(0, 0, 0, 0.4392157)
 
 [node name="Title" type="Label" parent="Sections/Settings" unique_id=1102465478]
 layout_mode = 1
@@ -369,3 +371,5 @@ layout_mode = 2
 text = "Русский"
 icon = ExtResource("11_6kvge")
 LocaleCode = "ru"
+
+[connection signal="pressed" from="Sections/Main/Background/MarginContainer/Options/Play" to="." method="OnPlayPressed"]
