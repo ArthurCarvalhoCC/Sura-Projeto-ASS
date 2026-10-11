@@ -1,0 +1,375 @@
+[gd_scene format=3 uid="uid://tv6vgwfd46qa"]
+
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_hy3qt"]
+[ext_resource type="Script" uid="uid://cwf53ulum62im" path="res://src/scenes/menus/TitleScreen/TitleScreen.cs" id="2_oyxc4"]
+[ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://src/scenes/predio/House.tscn" id="3_lvs3x"]
+[ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/images/arte_menu.png" id="3_pqkav"]
+[ext_resource type="Texture2D" uid="uid://dnrkha1nyaosr" path="res://assets/sprites/ui/menu/backgrounds/bg_menu.png" id="4_4w8w4"]
+[ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/ui-themes/label_title_font.tres" id="5_4w8w4"]
+[ext_resource type="PackedScene" uid="uid://bctrmisjk2dkf" path="res://src/ui/ui-elements/translation-button/TranslationButton.tscn" id="6_pqkav"]
+[ext_resource type="Texture2D" uid="uid://svqfn43iico2" path="res://assets/sprites/ui/menu/flags/flag-brazil.png" id="7_3jiru"]
+[ext_resource type="Texture2D" uid="uid://bx3hx5g71iv18" path="res://assets/sprites/ui/menu/flags/flag-mexico.png" id="8_2lu03"]
+[ext_resource type="Texture2D" uid="uid://mq754pqea777" path="res://assets/sprites/ui/menu/flags/flag-eua.png" id="9_84d0x"]
+[ext_resource type="Texture2D" uid="uid://clbe60qkvhivm" path="res://assets/sprites/ui/menu/flags/flag-japan.png" id="10_84d0x"]
+[ext_resource type="Texture2D" uid="uid://b5pgai18r57nq" path="res://assets/sprites/ui/menu/flags/flag-russian.png" id="11_6kvge"]
+
+[node name="TitleScreen" type="Control" unique_id=1303787038]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_hy3qt")
+script = ExtResource("2_oyxc4")
+targetScene = ExtResource("3_lvs3x")
+
+[node name="Background" type="TextureRect" parent="." unique_id=216660387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pqkav")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Sections" type="Control" parent="." unique_id=1312439135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Main" type="Control" parent="Sections" unique_id=770484771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Title" type="Label" parent="Sections/Main" unique_id=1824440175]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 17.0
+grow_horizontal = 2
+mouse_filter = 1
+theme = ExtResource("5_4w8w4")
+theme_override_colors/font_color = Color(0.80752003, 0.98, 0.5488, 1)
+text = "Surá"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Sections/Main" unique_id=293376445]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.3
+anchor_right = 0.5
+anchor_bottom = 0.3
+offset_left = -129.5
+offset_top = -32.5
+offset_right = 129.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "- Projeto A.S.S. -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="Sections/Main" unique_id=72435122]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.98
+anchor_right = 0.02
+anchor_bottom = 0.98
+offset_top = -21.0
+offset_right = 27.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 1
+theme_override_font_sizes/font_size = 20
+text = "v0.1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="NinePatchRect" parent="Sections/Main" unique_id=572168119]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.5
+anchor_right = 0.4
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+texture = ExtResource("4_4w8w4")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Main/Background" unique_id=691323014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="VBoxContainer" parent="Sections/Main/Background/MarginContainer" unique_id=1661208750]
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2134570910]
+layout_mode = 2
+text = "MENU_MAIN_PLAY"
+
+[node name="Settings" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2024437638]
+layout_mode = 2
+text = "MENU_MAIN_SETTINGS"
+
+[node name="Credits" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=1269362336]
+layout_mode = 2
+text = "MENU_MAIN_CREDITS"
+
+[node name="Quit" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2126108363]
+layout_mode = 2
+text = "MENU_MAIN_QUIT"
+
+[node name="Settings" type="Control" parent="Sections" unique_id=166331216]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Sections/Settings" unique_id=1722227062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4392157)
+
+[node name="Title" type="Label" parent="Sections/Settings" unique_id=1102465478]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -231.0
+offset_right = 231.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme = ExtResource("5_4w8w4")
+text = "MENU_MAIN_SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfigSections" type="TabContainer" parent="Sections/Settings" unique_id=1036081554]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.4
+anchor_right = 0.3
+anchor_bottom = 0.4
+current_tab = 2
+tab_0/title = "MENU_SETTINGS_VIDEO"
+tab_1/title = "MENU_SETTINGS_AUDIO"
+tab_2/title = "MENU_SETTINGS_LANGUAGE"
+
+[node name="Video" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1780847512]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_4w8w4")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 0
+metadata/_tab_name = "MENU_SETTINGS_VIDEO"
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Video" unique_id=1599935044]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 74.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer" unique_id=1484030158]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer" unique_id=1048249153]
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer" unique_id=544782956]
+layout_mode = 2
+alignment = 1
+
+[node name="FullScreen" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1952515366]
+layout_mode = 2
+text = "SETTINGS_DISPLAY_FULLSCREEN"
+
+[node name="VSync" type="CheckButton" parent="Sections/Settings/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=852212089]
+layout_mode = 2
+text = "SETTINGS_VSYNC"
+
+[node name="Audio" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1907341676]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_4w8w4")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 1
+metadata/_tab_name = "MENU_SETTINGS_AUDIO"
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Audio" unique_id=5970265]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 108.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer" unique_id=1409679308]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer" unique_id=983946519]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2051574266]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="MasterVolume" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2058455020]
+layout_mode = 2
+text = "SETTINGS_MASTER_VOLUME"
+
+[node name="SFX" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1016884873]
+layout_mode = 2
+text = "SETTINGS_SFX_VOLUME"
+
+[node name="Music" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=236938468]
+layout_mode = 2
+text = "SETTINGS_MUSIC_VOLUME"
+
+[node name="Ambient" type="Label" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=787857538]
+layout_mode = 2
+text = "SETTINGS_AMBIENT_VOLUME"
+
+[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1421168943]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=272489009]
+layout_mode = 2
+value = 50.0
+rounded = true
+
+[node name="HSlider2" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1936868956]
+layout_mode = 2
+value = 50.0
+rounded = true
+
+[node name="HSlider3" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=231307804]
+layout_mode = 2
+value = 50.0
+rounded = true
+
+[node name="HSlider4" type="HSlider" parent="Sections/Settings/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=338998045]
+layout_mode = 2
+value = 50.0
+rounded = true
+
+[node name="Language" type="NinePatchRect" parent="Sections/Settings/ConfigSections" unique_id=1417671382]
+custom_minimum_size = Vector2(256, 160)
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("4_4w8w4")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+metadata/_tab_index = 2
+metadata/_tab_name = "MENU_SETTINGS_LANGUAGE"
+
+[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/ConfigSections/Language" unique_id=727161987]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Sections/Settings/ConfigSections/Language/MarginContainer" unique_id=885873377]
+layout_mode = 2
+
+[node name="Portuguese" parent="Sections/Settings/ConfigSections/Language/MarginContainer/GridContainer" unique_id=346491034 instance=ExtResource("6_pqkav")]
+layout_mode = 2
+text = "Português"
+icon = ExtResource("7_3jiru")
+
+[node name="Spanish" parent="Sections/Settings/ConfigSections/Language/MarginContainer/GridContainer" unique_id=1809683220 instance=ExtResource("6_pqkav")]
+layout_mode = 2
+text = "Español"
+icon = ExtResource("8_2lu03")
+LocaleCode = "es"
+
+[node name="English" parent="Sections/Settings/ConfigSections/Language/MarginContainer/GridContainer" unique_id=2054638765 instance=ExtResource("6_pqkav")]
+layout_mode = 2
+text = "English"
+icon = ExtResource("9_84d0x")
+LocaleCode = "en-US"
+
+[node name="Japanese" parent="Sections/Settings/ConfigSections/Language/MarginContainer/GridContainer" unique_id=570878379 instance=ExtResource("6_pqkav")]
+visible = false
+layout_mode = 2
+text = "日本語"
+icon = ExtResource("10_84d0x")
+LocaleCode = "en-US"
+
+[node name="Russian" parent="Sections/Settings/ConfigSections/Language/MarginContainer/GridContainer" unique_id=956149222 instance=ExtResource("6_pqkav")]
+visible = false
+layout_mode = 2
+text = "Русский"
+icon = ExtResource("11_6kvge")
+LocaleCode = "ru"
+
+[connection signal="pressed" from="Sections/Main/Background/MarginContainer/Options/Play" to="." method="OnPlayPressed"]

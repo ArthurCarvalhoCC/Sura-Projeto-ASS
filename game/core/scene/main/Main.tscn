@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://dp6nuisn70hdp"]
 
 [ext_resource type="Script" uid="uid://jbaf2ixqdi1r" path="res://core/scene/main/Main.cs" id="1_x8ce0"]
-
-[ext_resource type="PackedScene" uid="uid://doqy6re6xexlb" path="res://src/scenes/mini-games/Fishing.tscn" id="2_y5upg"]
-
-[ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/gui-objects/DialogBox.tscn" id="3_3awk8"]
+[ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="2_y5upg"]
+[ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/ui-objects/DialogBox.tscn" id="3_3awk8"]
 [ext_resource type="Script" uid="uid://dbwcudkvi3wx5" path="res://core/scene/main/Gui.cs" id="3_y5upg"]
-[ext_resource type="PackedScene" uid="uid://2ip8o25cvq52" path="res://src/ui/gui-objects/PauseMenu.tscn" id="4_2gji6"]
-[ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/gui-objects/SceneTransition.tscn" id="5_vi5dn"]
-[ext_resource type="PackedScene" uid="uid://dwid5ckfdpkln" path="res://src/ui/gui-objects/MobileControls.tscn" id="6_e2s0e"]
+[ext_resource type="PackedScene" uid="uid://2ip8o25cvq52" path="res://src/ui/ui-objects/PauseMenu.tscn" id="4_2gji6"]
+[ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/ui-objects/SceneTransition.tscn" id="5_vi5dn"]
+[ext_resource type="PackedScene" uid="uid://dwid5ckfdpkln" path="res://src/ui/ui-objects/MobileControls.tscn" id="6_e2s0e"]
 
 [node name="Main" type="Node" unique_id=1739575294 node_paths=PackedStringArray("_sceneContainer", "_GUI")]
 script = ExtResource("1_x8ce0")
@@ -36,11 +34,14 @@ _sceneTransition = NodePath("CanvasLayer/SceneTransition")
 [node name="CanvasLayer" type="CanvasLayer" parent="GUI" unique_id=512455076]
 
 [node name="PauseMenu" parent="GUI/CanvasLayer" unique_id=1914284591 instance=ExtResource("4_2gji6")]
+visible = false
 
 [node name="DialogBox" parent="GUI/CanvasLayer" unique_id=1656029404 instance=ExtResource("3_3awk8")]
 visible = false
 
 [node name="SceneTransition" parent="GUI/CanvasLayer" unique_id=1518877647 instance=ExtResource("5_vi5dn")]
 z_index = 1
+fadeInDuration = 1.0
+fadeOutDuration = 0.5
 
 [node name="MobileControls" parent="GUI/CanvasLayer" unique_id=1475332507 instance=ExtResource("6_e2s0e")]
