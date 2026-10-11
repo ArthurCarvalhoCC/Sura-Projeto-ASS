@@ -149,13 +149,13 @@ text = "MENU_MAIN_PLAY"
 layout_mode = 2
 text = "MENU_MAIN_SETTINGS"
 
-[node name="Quit" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2126108363]
-layout_mode = 2
-text = "MENU_MAIN_QUIT"
-
 [node name="Credits" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=1269362336]
 layout_mode = 2
 text = "MENU_MAIN_CREDITS"
+
+[node name="Quit" type="Button" parent="Sections/Main/Background/MarginContainer/Options" unique_id=2126108363]
+layout_mode = 2
+text = "MENU_MAIN_QUIT"
 
 [node name="Settings" type="Control" parent="Sections" unique_id=166331216]
 visible = false
