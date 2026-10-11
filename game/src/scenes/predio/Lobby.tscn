@@ -239,6 +239,7 @@ position = Vector2(334, 92)
 [node name="DarkBG" parent="Objects/Player" unique_id=683168971 instance=ExtResource("6_4jr8t")]
 
 [node name="Elements" type="TileMapLayer" parent="Objects" unique_id=1602495323]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAYAAgAAQADAAMAAAAYAA8AAQADAAQAAAAbAA8AAQADAAQAAAAUAA4AAQAAAAQAAAAVAA4AAQACAAQAAAATAA0AAQACAAQAABATAA4AAQACAAQAABAVAA0AAQACAAQAAAAbAAwAAQAEAAQAAAAbAAsAAQAEAAQAAAAaAAsAAQAEAAQAAAAaAAwAAQAEAAQAAAA=")
 tile_set = SubResource("TileSet_4bjil")
 
@@ -254,4 +255,5 @@ targetCoords = Vector2i(273, 150)
 [node name="Door" parent="DoorsContainer" unique_id=412336782 instance=ExtResource("8_gac65")]
 position = Vector2(416, 272)
 scale = Vector2(2, 1)
-_targetScenePath = "res://src/scenes/predio/Out.tscn"
+_targetScenePath = "res://src/scenes/street/Wheel.tscn"
+targetCoords = Vector2i(-40, 105)
