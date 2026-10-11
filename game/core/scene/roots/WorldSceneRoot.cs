@@ -14,6 +14,7 @@ public partial class WorldSceneRoot : Node2D, ISceneRoot
 		Gui.Instance.SetMobileControlsVisible(hideMobileControls);
 		_player.SetNewPosition(Managers.Instance.sceneManager.playerInitialNewSceneCoords);
 		Managers.Instance.sceneManager.FinishSceneChange();
+		Managers.Instance.audioManager.PlayMusic(InitialMusic);
 		_doorsContainer.SceneChangeRequest += OnSceneChangeRequest;
 	}
 

@@ -34,6 +34,7 @@ public partial class SceneManager : Node
 
             fadeOut.Finished += () =>
             {
+                Managers.Instance.audioManager.CleanSceneAudios();
                 _currentScene.QueueFree();
                 ContinueSceneChange(scene);
             };
