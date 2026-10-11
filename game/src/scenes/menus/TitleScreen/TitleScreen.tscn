@@ -37,7 +37,7 @@ texture = ExtResource("3_pqkav")
 expand_mode = 2
 stretch_mode = 6
 
-[node name="Sections" type="Control" parent="." unique_id=1312439135]
+[node name="Pages" type="Control" parent="." unique_id=1312439135]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,8 +46,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Main" type="Control" parent="Sections" unique_id=770484771]
-visible = false
+[node name="Main" type="Control" parent="Pages" unique_id=770484771]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Version" type="Label" parent="Sections/Main" unique_id=72435122]
+[node name="Version" type="Label" parent="Pages/Main" unique_id=72435122]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.02
@@ -74,7 +73,7 @@ text = "v0.1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Sections/Main" unique_id=98634546]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Main" unique_id=98634546]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -82,23 +81,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Main/MarginContainer" unique_id=1974624487]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Main/MarginContainer" unique_id=1974624487]
 layout_mode = 2
+size_flags_horizontal = 4
 
-[node name="Logo" type="VBoxContainer" parent="Sections/Main/MarginContainer/VBoxContainer" unique_id=61915357]
+[node name="Logo" type="VBoxContainer" parent="Pages/Main/MarginContainer/VBoxContainer" unique_id=61915357]
 layout_mode = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="Sections/Main/MarginContainer/VBoxContainer/Logo" unique_id=1824440175]
+[node name="Title" type="Label" parent="Pages/Main/MarginContainer/VBoxContainer/Logo" unique_id=1824440175]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("5_4w8w4")
 theme_override_colors/font_color = Color(0.80752003, 0.98, 0.5488, 1)
-text = "Surá"
+text = "- Surá -"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Subtitle" type="Label" parent="Sections/Main/MarginContainer/VBoxContainer/Logo" unique_id=293376445]
+[node name="Subtitle" type="Label" parent="Pages/Main/MarginContainer/VBoxContainer/Logo" unique_id=293376445]
 layout_mode = 2
 mouse_filter = 1
 theme_override_constants/shadow_outline_size = 3
@@ -107,35 +107,35 @@ text = "- Projeto A.S.S. -"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Menu" type="PanelContainer" parent="Sections/Main/MarginContainer/VBoxContainer" unique_id=1260719358]
+[node name="Menu" type="PanelContainer" parent="Pages/Main/MarginContainer/VBoxContainer" unique_id=1260719358]
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="Sections/Main/MarginContainer/VBoxContainer/Menu" unique_id=691323014]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Main/MarginContainer/VBoxContainer/Menu" unique_id=691323014]
 layout_mode = 2
 
-[node name="Options" type="VBoxContainer" parent="Sections/Main/MarginContainer/VBoxContainer/Menu/MarginContainer" unique_id=1661208750]
+[node name="Options" type="VBoxContainer" parent="Pages/Main/MarginContainer/VBoxContainer/Menu/MarginContainer" unique_id=1661208750]
 layout_mode = 2
 alignment = 1
 
-[node name="Play" type="Button" parent="Sections/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=2134570910]
+[node name="Play" type="Button" parent="Pages/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=2134570910]
 layout_mode = 2
 text = "MENU_MAIN_PLAY"
 
-[node name="Settings" type="Button" parent="Sections/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=2024437638]
+[node name="Settings" type="Button" parent="Pages/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=2024437638]
 layout_mode = 2
 text = "MENU_MAIN_SETTINGS"
 
-[node name="Credits" type="Button" parent="Sections/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=1269362336]
+[node name="Credits" type="Button" parent="Pages/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=1269362336]
 layout_mode = 2
 text = "MENU_MAIN_CREDITS"
 
-[node name="Quit" type="Button" parent="Sections/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=2126108363]
+[node name="Quit" type="Button" parent="Pages/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options" unique_id=2126108363]
 layout_mode = 2
 text = "MENU_MAIN_QUIT"
 
-[node name="Settings" type="Control" parent="Sections" unique_id=166331216]
+[node name="Settings" type="Control" parent="Pages" unique_id=166331216]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -144,7 +144,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="ColorRect" type="ColorRect" parent="Sections/Settings" unique_id=1722227062]
+[node name="ColorRect" type="ColorRect" parent="Pages/Settings" unique_id=1722227062]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -153,7 +153,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.4392157)
 
-[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings" unique_id=1123926399]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Settings" unique_id=1123926399]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -161,7 +161,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Sections/Settings/MarginContainer" unique_id=1102465478]
+[node name="Title" type="Label" parent="Pages/Settings/MarginContainer" unique_id=1102465478]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -170,7 +170,7 @@ text = "MENU_MAIN_SETTINGS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ConfigSections" type="TabContainer" parent="Sections/Settings/MarginContainer" unique_id=1036081554]
+[node name="ConfigSections" type="TabContainer" parent="Pages/Settings/MarginContainer" unique_id=1036081554]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -181,140 +181,179 @@ tab_0/title = "MENU_VIDEO_TITLE"
 tab_1/title = "MENU_AUDIO_TITLE"
 tab_2/title = "MENU_LANGUAGE_TITLE"
 
-[node name="Video" type="PanelContainer" parent="Sections/Settings/MarginContainer/ConfigSections" unique_id=1757746494]
+[node name="Video" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=1757746494]
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "MENU_VIDEO_TITLE"
 
-[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Video" unique_id=1599935044]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Video" unique_id=1599935044]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Video/MarginContainer" unique_id=1484030158]
-layout_mode = 2
-alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer" unique_id=1048249153]
-layout_mode = 2
-
-[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer" unique_id=544782956]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Video/MarginContainer" unique_id=1484030158]
 layout_mode = 2
 alignment = 1
 
-[node name="FullScreen" type="CheckButton" parent="Sections/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1952515366]
+[node name="HBoxContainer" type="HBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer" unique_id=1048249153]
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer" unique_id=544782956]
+layout_mode = 2
+alignment = 1
+
+[node name="FullScreen" type="CheckButton" parent="Pages/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1952515366]
 layout_mode = 2
 text = "SETTINGS_DISPLAY_FULLSCREEN"
 
-[node name="VSync" type="CheckButton" parent="Sections/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=852212089]
+[node name="VSync" type="CheckButton" parent="Pages/Settings/MarginContainer/ConfigSections/Video/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=852212089]
 layout_mode = 2
 text = "SETTINGS_VSYNC"
 
-[node name="Audio" type="PanelContainer" parent="Sections/Settings/MarginContainer/ConfigSections" unique_id=1160609111]
+[node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=1160609111]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"
 
-[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Audio" unique_id=5970265]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio" unique_id=5970265]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer" unique_id=1409679308]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer" unique_id=1409679308]
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer" unique_id=983946519]
+[node name="HBoxContainer" type="HBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer" unique_id=983946519]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2051574266]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2051574266]
 layout_mode = 2
 theme_override_constants/separation = 6
 alignment = 1
 
-[node name="MasterVolume" type="Label" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2058455020]
+[node name="MasterVolume" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2058455020]
 layout_mode = 2
 text = "SETTINGS_MASTER_VOLUME"
 
-[node name="SFX" type="Label" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1016884873]
+[node name="SFX" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1016884873]
 layout_mode = 2
 text = "SETTINGS_SFX_VOLUME"
 
-[node name="Music" type="Label" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=236938468]
+[node name="Music" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=236938468]
 layout_mode = 2
 text = "SETTINGS_MUSIC_VOLUME"
 
-[node name="Ambient" type="Label" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=787857538]
+[node name="Ambient" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=787857538]
 layout_mode = 2
 text = "SETTINGS_AMBIENT_VOLUME"
 
-[node name="Buttons" type="VBoxContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1421168943]
+[node name="Buttons" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1421168943]
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="HSlider" type="HSlider" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=272489009]
+[node name="HSlider" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=272489009]
 layout_mode = 2
 size_flags_vertical = 4
 value = 50.0
 rounded = true
 
-[node name="HSlider2" type="HSlider" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1936868956]
+[node name="HSlider2" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1936868956]
 layout_mode = 2
 value = 50.0
 rounded = true
 
-[node name="HSlider3" type="HSlider" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=231307804]
+[node name="HSlider3" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=231307804]
 layout_mode = 2
 value = 50.0
 rounded = true
 
-[node name="HSlider4" type="HSlider" parent="Sections/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=338998045]
+[node name="HSlider4" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=338998045]
 layout_mode = 2
 value = 50.0
 rounded = true
 
-[node name="Language" type="PanelContainer" parent="Sections/Settings/MarginContainer/ConfigSections" unique_id=358491666]
+[node name="Language" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=358491666]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 metadata/_tab_name = "MENU_LANGUAGE_TITLE"
 
-[node name="MarginContainer" type="MarginContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Language" unique_id=727161987]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Language" unique_id=727161987]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="Sections/Settings/MarginContainer/ConfigSections/Language/MarginContainer" unique_id=885873377]
+[node name="GridContainer" type="GridContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Language/MarginContainer" unique_id=885873377]
 layout_mode = 2
 columns = 2
 
-[node name="Portuguese" parent="Sections/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=346491034 instance=ExtResource("6_pqkav")]
+[node name="Portuguese" parent="Pages/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=346491034 instance=ExtResource("6_pqkav")]
 layout_mode = 2
 text = "Português"
 icon = ExtResource("7_3jiru")
 
-[node name="Spanish" parent="Sections/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=1809683220 instance=ExtResource("6_pqkav")]
+[node name="Spanish" parent="Pages/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=1809683220 instance=ExtResource("6_pqkav")]
 layout_mode = 2
 text = "Español"
 icon = ExtResource("8_2lu03")
 LocaleCode = "es"
 
-[node name="English" parent="Sections/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=2054638765 instance=ExtResource("6_pqkav")]
+[node name="English" parent="Pages/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=2054638765 instance=ExtResource("6_pqkav")]
 layout_mode = 2
 text = "English"
 icon = ExtResource("9_84d0x")
 LocaleCode = "en-US"
 
-[node name="Japanese" parent="Sections/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=570878379 instance=ExtResource("6_pqkav")]
+[node name="Japanese" parent="Pages/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=570878379 instance=ExtResource("6_pqkav")]
 layout_mode = 2
 text = "日本語"
 icon = ExtResource("10_84d0x")
 LocaleCode = "ja"
 
-[node name="Russian" parent="Sections/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=956149222 instance=ExtResource("6_pqkav")]
+[node name="Russian" parent="Pages/Settings/MarginContainer/ConfigSections/Language/MarginContainer/GridContainer" unique_id=956149222 instance=ExtResource("6_pqkav")]
 layout_mode = 2
 text = "Русский"
 icon = ExtResource("11_6kvge")
 LocaleCode = "ru"
 
-[node name="CancelButton" parent="Sections/Settings/MarginContainer" unique_id=1676564578 instance=ExtResource("12_oyxc4")]
+[node name="CancelButton" parent="Pages/Settings/MarginContainer" unique_id=1676564578 instance=ExtResource("12_oyxc4")]
 layout_mode = 2
 offset_transform_enabled = true
 
-[connection signal="pressed" from="Sections/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options/Play" to="." method="OnPlayPressed"]
+[node name="Credits" type="Control" parent="Pages" unique_id=863185914]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Pages/Credits" unique_id=962070980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Credits" unique_id=1574202931]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Pages/Credits/MarginContainer" unique_id=2059016742]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("5_4w8w4")
+text = "MENU_MAIN_CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CancelButton" parent="Pages/Credits/MarginContainer" unique_id=1529505432 instance=ExtResource("12_oyxc4")]
+layout_mode = 2
+offset_transform_enabled = true
+
+[connection signal="pressed" from="Pages/Main/MarginContainer/VBoxContainer/Menu/MarginContainer/Options/Play" to="." method="OnPlayPressed"]
