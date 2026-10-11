@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bctrmisjk2dkf"]
+
+[ext_resource type="Script" uid="uid://t8486fkiqjr1" path="res://src/ui/ui-elements/translation-button/TranslationButton.cs" id="1_7dcdb"]
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_g0pl1"]
+
+[node name="TranslationButton" type="Button" unique_id=346491034]
+theme = ExtResource("1_g0pl1")
+script = ExtResource("1_7dcdb")
+LocaleCode = "pt-BR"

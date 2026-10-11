@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://b6wpeegsxt3gu"]
+
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_o2gjm"]
+[ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/ui-objects/DialogBox.cs" id="1_xgc7y"]
+[ext_resource type="Texture2D" uid="uid://clgfyfbf8aoe6" path="res://assets/sprites/ui/menu/backgrounds/bg_menu2.png" id="2_dp5bt"]
+
+[sub_resource type="Gradient" id="Gradient_xgc7y"]
+offsets = PackedFloat32Array(0.14754099, 1)
+colors = PackedColorArray(0, 0, 0, 0.79607844, 0, 0, 0, 0.26666668)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j6kby"]
+gradient = SubResource("Gradient_xgc7y")
+fill_from = Vector2(1, 0.7222222)
+
+[node name="DialogBox" type="Control" unique_id=1656029404 node_paths=PackedStringArray("_DialogName", "_DialogText")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_o2gjm")
+script = ExtResource("1_xgc7y")
+_DialogName = NodePath("MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts/Name")
+_DialogText = NodePath("MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts/Text")
+_charactersPerSecond = 20.0
+
+[node name="Gadrient" type="TextureRect" parent="." unique_id=792043686]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_j6kby")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1964641417]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.5
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=1588705329]
+layout_mode = 2
+texture = ExtResource("2_dp5bt")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/NinePatchRect" unique_id=529227820]
+clip_contents = true
+layout_mode = 0
+offset_right = 544.0
+offset_bottom = 74.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/NinePatchRect/MarginContainer2" unique_id=368193570]
+layout_mode = 2
+
+[node name="Texts" type="VBoxContainer" parent="MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer" unique_id=696225961]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts" unique_id=1562702497]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 16
+text = "Name"
+
+[node name="Text" type="RichTextLabel" parent="MarginContainer/NinePatchRect/MarginContainer2/HBoxContainer/Texts" unique_id=1266253032]
+layout_mode = 2
+text = "Current text.
+sdfsdfsddfs
+wfdffffffffffffff
+asdsadas
+asdasd
+ads"
+fit_content = true
