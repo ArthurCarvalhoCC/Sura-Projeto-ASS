@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://d12gycuwibnkx" path="res://assets/sprites/ui/menu/tabs/tab_focus.png" id="10_fq72g"]
 [ext_resource type="Texture2D" uid="uid://sqaxnyjok8iv" path="res://assets/sprites/ui/menu/tabs/tab_selected.png" id="11_ja2a6"]
 [ext_resource type="Texture2D" uid="uid://bcum3f7vrgvpj" path="res://assets/sprites/ui/menu/tabs/tab_unselected.png" id="12_g4f23"]
+[ext_resource type="Texture2D" uid="uid://dnrkha1nyaosr" path="res://assets/sprites/ui/menu/backgrounds/bg_menu.png" id="18_ya247"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_axkkf"]
 texture = ExtResource("1_q857r")
@@ -78,6 +79,13 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(0, 2, 16, 12)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlew8"]
+texture = ExtResource("18_ya247")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2gjm"]
 texture = ExtResource("4_6nth5")
 texture_margin_left = 4.0
@@ -123,6 +131,7 @@ default_font_size = 12
 Button/colors/font_hover_pressed_color = Color(0.71, 0.71, 0.71, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
 Button/constants/outline_size = 4
+Button/font_sizes/font_size = 24
 Button/styles/disabled = SubResource("StyleBoxTexture_axkkf")
 Button/styles/focus = SubResource("StyleBoxTexture_8ymfm")
 Button/styles/hover = SubResource("StyleBoxTexture_8ymfm")
@@ -133,6 +142,7 @@ CheckBox/icons/checked = ExtResource("1_5bsaa")
 CheckBox/icons/checked_disabled = ExtResource("2_g8vse")
 CheckBox/icons/unchecked = ExtResource("3_nb35f")
 CheckBox/icons/unchecked_disabled = ExtResource("4_ph54k")
+CheckButton/font_sizes/font_size = 24
 CheckButton/icons/checked = ExtResource("1_fq72g")
 CheckButton/icons/checked_disabled = ExtResource("2_ja2a6")
 CheckButton/icons/unchecked = ExtResource("3_g4f23")
@@ -143,15 +153,17 @@ HSlider/icons/grabber_disabled = ExtResource("6_j41sx")
 HSlider/icons/grabber_highlight = ExtResource("7_j41sx")
 HSlider/styles/slider = SubResource("StyleBoxTexture_0g30r")
 Label/constants/outline_size = 4
+Label/font_sizes/font_size = 24
 MarginContainer/constants/margin_bottom = 16
 MarginContainer/constants/margin_left = 16
 MarginContainer/constants/margin_right = 16
 MarginContainer/constants/margin_top = 16
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_vlew8")
 RichTextLabel/constants/outline_size = 4
 RichTextLabel/styles/normal = SubResource("StyleBoxTexture_o2gjm")
 TabContainer/constants/outline_size = 4
-TabContainer/constants/side_margin = 16
 TabContainer/constants/tab_separation = 2
+TabContainer/font_sizes/font_size = 24
 TabContainer/styles/tab_disabled = SubResource("StyleBoxTexture_wcpel")
 TabContainer/styles/tab_focus = SubResource("StyleBoxTexture_io5n0")
 TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_io5n0")
