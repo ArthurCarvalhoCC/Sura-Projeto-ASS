@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cwf53ulum62im" path="res://src/scenes/menus/TitleScreen/TitleScreen.cs" id="2_oyxc4"]
 [ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://src/scenes/predio/House.tscn" id="3_lvs3x"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/images/arte_menu.png" id="3_pqkav"]
+[ext_resource type="AudioStream" uid="uid://b0cob5h4nb4n5" path="res://assets/sounds/bgm/musica.mp3" id="4_lvs3x"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/ui-themes/label_title_font.tres" id="5_4w8w4"]
 [ext_resource type="PackedScene" uid="uid://bctrmisjk2dkf" path="res://src/ui/ui-elements/translation-button/TranslationButton.tscn" id="6_pqkav"]
 [ext_resource type="Texture2D" uid="uid://svqfn43iico2" path="res://assets/sprites/ui/menu/flags/flag-brazil.png" id="7_3jiru"]
@@ -28,6 +29,7 @@ targetScene = ExtResource("3_lvs3x")
 Main = NodePath("Pages/Main")
 Settings = NodePath("Pages/Settings")
 Credits = NodePath("Pages/Credits")
+InitialMusic = ExtResource("4_lvs3x")
 
 [node name="Background" type="TextureRect" parent="." unique_id=216660387]
 layout_mode = 1
