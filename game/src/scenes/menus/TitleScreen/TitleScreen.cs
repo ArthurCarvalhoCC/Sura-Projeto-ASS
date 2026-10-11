@@ -5,6 +5,9 @@ public partial class TitleScreen : UISceneRoot
 {
 	[Export] private PackedScene targetScene;
     // Called when the node enters the scene tree for the first time.
+	[Export] private Control Main;
+	[Export] private Control Settings;
+	[Export] private Control Credits;
     public override void _Ready()
     {
         base._Ready();
