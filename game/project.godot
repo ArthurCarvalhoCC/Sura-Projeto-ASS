@@ -13,7 +13,9 @@ config_version=5
 config/name="Sura"
 run/main_scene="uid://dp6nuisn70hdp"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
-config/icon="res://assets/sprites/ui/images/icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="uid://x745r0ktcegk"
 
 [autoload]
 
@@ -25,7 +27,7 @@ window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 
@@ -83,7 +85,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/translate/languages.en_US.translation", "res://assets/translate/languages.es.translation", "res://assets/translate/languages.pt_BR.translation")
+locale/translations=PackedStringArray("res://assets/translate/languages.en_US.translation", "res://assets/translate/languages.es.translation", "res://assets/translate/languages.pt_BR.translation", "res://assets/translate/languages.ru.translation")
 
 [layer_names]
 
@@ -102,3 +104,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

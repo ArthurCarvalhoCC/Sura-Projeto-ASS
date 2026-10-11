@@ -11,12 +11,6 @@ public partial class UISceneRoot : Control, ISceneRoot
 	{
 		Gui.Instance.SetMobileControlsVisible(hideMobileControls);
 	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		
-	}
 	public void OnSceneChangeRequest(PackedScene targetScene, Vector2I targetCoords)
 	{
 		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(targetCoords);
