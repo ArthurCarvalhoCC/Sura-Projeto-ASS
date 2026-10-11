@@ -289,7 +289,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="Objects" unique_id=25723801 instance=ExtResource("3_7d7o5")]
 y_sort_enabled = true
-position = Vector2(120, 140)
+position = Vector2(120, 149)
 
 [node name="DarkBG" parent="Objects/Player" unique_id=683168971 instance=ExtResource("5_7d7o5")]
 
@@ -310,3 +310,4 @@ targetCoords = Vector2i(168, -34)
 position = Vector2(272, 164)
 scale = Vector2(2, 1)
 _targetScenePath = "res://src/scenes/predio/Lobby.tscn"
+targetCoords = Vector2i(334, 92)
