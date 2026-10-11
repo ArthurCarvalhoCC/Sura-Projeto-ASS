@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b5pgai18r57nq" path="res://assets/sprites/ui/menu/flags/flag-russian.png" id="11_6kvge"]
 [ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-elements/cancel-button/CancelButton.tscn" id="12_oyxc4"]
 
-[node name="TitleScreen" type="Control" unique_id=1303787038]
+[node name="TitleScreen" type="Control" unique_id=1303787038 node_paths=PackedStringArray("Main", "Settings", "Credits")]
 auto_translate_mode = 1
 layout_mode = 3
 anchors_preset = 15
@@ -25,6 +25,9 @@ mouse_filter = 1
 theme = ExtResource("1_hy3qt")
 script = ExtResource("2_oyxc4")
 targetScene = ExtResource("3_lvs3x")
+Main = NodePath("Pages/Main")
+Settings = NodePath("Pages/Settings")
+Credits = NodePath("Pages/Credits")
 
 [node name="Background" type="TextureRect" parent="." unique_id=216660387]
 layout_mode = 1

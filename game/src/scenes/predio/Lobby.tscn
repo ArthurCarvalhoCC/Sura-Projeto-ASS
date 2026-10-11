@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bnvwsvlke0uhv"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_uq6v6"]
+[ext_resource type="AudioStream" uid="uid://bflxv3tlv7xcv" path="res://assets/sounds/music/musica.mp3" id="2_3b6xm"]
 [ext_resource type="Texture2D" uid="uid://iygbaw57xdjj" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/tile_ceramic.png" id="2_gygs3"]
 [ext_resource type="Texture2D" uid="uid://cridgm0g0sui3" path="res://assets/sprites/enviroment/tiles-sets/directional/walls.png" id="2_on8tu"]
 [ext_resource type="Texture2D" uid="uid://d0wrjsiqu214a" path="res://assets/sprites/enviroment/tiles-sets/terrain/autotile_wood_floor.png" id="2_qeums"]
@@ -212,6 +213,7 @@ sources/1 = SubResource("TileSetAtlasSource_4jr8t")
 
 [node name="Lobby" type="Node2D" unique_id=2710396 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_uq6v6")
+InitialMusic = ExtResource("2_3b6xm")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 
