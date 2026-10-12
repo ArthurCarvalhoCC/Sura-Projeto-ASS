@@ -58,4 +58,14 @@ public partial class SceneManager : Node
     {
         playerInitialNewSceneCoords = coords;
     }
+    public void QuitGame() // TEMPORARY POSITION !!!
+    {
+        Tween fadeOut = _transitionNode.FadeOut();
+        _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Disabled;
+
+        fadeOut.Finished += () => // save logic is going to be here
+        {
+            GetTree().Quit();
+        };
+    }
 }
