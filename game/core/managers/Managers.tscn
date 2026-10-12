@@ -7,10 +7,12 @@
 [ext_resource type="Script" uid="uid://mawthrjqm5yh" path="res://core/managers/DialogManager.cs" id="5_r07fn"]
 [ext_resource type="Script" uid="uid://cfglhxxw8obd1" path="res://core/managers/DataManager.cs" id="6_mut65"]
 
-[node name="Managers" type="Node" unique_id=2068923241 node_paths=PackedStringArray("sceneManager", "audioManager")]
+[node name="Managers" type="Node" unique_id=2068923241 node_paths=PackedStringArray("_sceneManager", "_audioManager", "_dialogManager", "_dataManager")]
 script = ExtResource("1_l1efg")
-sceneManager = NodePath("SceneManager")
-audioManager = NodePath("AudioManager")
+_sceneManager = NodePath("SceneManager")
+_audioManager = NodePath("AudioManager")
+_dialogManager = NodePath("DialogManager")
+_dataManager = NodePath("DataManager")
 
 [node name="SceneManager" type="Node" parent="." unique_id=136735442]
 script = ExtResource("1_mclmg")
