@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqcqui0mghcur"
-path="res://.godot/imported/urso_chama_chama.webp-5087a126ff090bb00dbcbb254b9677b7.ctex"
+uid="uid://x745r0ktcegk"
+path="res://.godot/imported/arte_menu.png-ace1b78239a6e3b02249222f15000f69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/images/urso_chama_chama.webp"
-dest_files=["res://.godot/imported/urso_chama_chama.webp-5087a126ff090bb00dbcbb254b9677b7.ctex"]
+source_file="res://assets/sprites/ui/backgrounds/arte_menu.png"
+dest_files=["res://.godot/imported/arte_menu.png-ace1b78239a6e3b02249222f15000f69.ctex"]
 
 [params]
 

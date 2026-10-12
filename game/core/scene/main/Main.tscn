@@ -43,6 +43,7 @@ _sceneTransition = NodePath("CanvasLayer/SceneTransition")
 visible = false
 
 [node name="DialogBox" parent="GUI/CanvasLayer" unique_id=1656029404 instance=ExtResource("3_3awk8")]
+visible = false
 
 [node name="SceneTransition" parent="GUI/CanvasLayer" unique_id=1518877647 instance=ExtResource("5_vi5dn")]
 z_index = 1

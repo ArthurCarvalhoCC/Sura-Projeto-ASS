@@ -11,11 +11,13 @@ config_version=5
 [application]
 
 config/name="Sura"
+config/version="v0.2-alpha"
 run/main_scene="uid://dp6nuisn70hdp"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
-config/icon="uid://x745r0ktcegk"
+boot_splash/stretch_mode=0
+config/icon="uid://mmw5qgj3vajj"
 
 [autoload]
 
