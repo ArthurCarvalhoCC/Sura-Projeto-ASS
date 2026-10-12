@@ -14,13 +14,12 @@ public partial class TitleScreen : UISceneRoot
     }
 	public void OnPlayPressed()
 	{
-		GD.Print("aaa");
-		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(new Vector2I(0,0));
-		Managers.Instance.sceneManager.StartSceneChange(targetScene);
+		Managers.Instance._sceneManager.SetPlayerInitialNewSceneCoords(new Vector2I(0,0));
+		Managers.Instance._sceneManager.StartSceneChange(targetScene);
 	}
 	public void OnReturnPressed(Control currentTab, Control targetMenu)
 	{
-		currentTab.Hide();
+		Settings.Hide();
 		targetMenu.Show();
 	}
 }

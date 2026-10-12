@@ -13,7 +13,7 @@ public partial class UISceneRoot : Control, ISceneRoot
 	}
 	public void OnSceneChangeRequest(PackedScene targetScene, Vector2I targetCoords)
 	{
-		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(targetCoords);
-		Managers.Instance.sceneManager.StartSceneChange(targetScene);
+		Managers.Instance._sceneManager.SetPlayerInitialNewSceneCoords(targetCoords);
+		Managers.Instance._sceneManager.StartSceneChange(targetScene);
 	}
 }
