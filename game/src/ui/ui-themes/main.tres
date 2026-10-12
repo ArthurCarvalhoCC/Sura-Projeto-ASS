@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dey78vc1rgl8v" path="res://assets/sprites/ui/menu/slider/slider_full.png" id="17_niv3e"]
 [ext_resource type="Texture2D" uid="uid://dd62lpdf4d8vr" path="res://assets/sprites/ui/menu/slider/slider_highlight.png" id="18_dpc62"]
 [ext_resource type="Texture2D" uid="uid://dnrkha1nyaosr" path="res://assets/sprites/ui/menu/backgrounds/bg_menu.png" id="18_ya247"]
+[ext_resource type="Texture2D" uid="uid://dbo51mqd806t6" path="res://assets/sprites/ui/menu/backgrounds/bg_protrait.png" id="21_dpc62"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_axkkf"]
 texture = ExtResource("1_q857r")
@@ -105,11 +106,11 @@ texture_margin_right = 7.0
 texture_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2gjm"]
-texture = ExtResource("4_6nth5")
-texture_margin_left = 4.0
-texture_margin_top = 6.0
-texture_margin_right = 4.0
-texture_margin_bottom = 6.0
+texture = ExtResource("21_dpc62")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcpel"]
 texture = ExtResource("9_io5n0")
