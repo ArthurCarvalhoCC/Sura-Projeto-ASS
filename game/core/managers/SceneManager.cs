@@ -5,7 +5,7 @@ public partial class SceneManager : Node
     private Node _sceneContainerNode;
     private SceneTransition _transitionNode;
     private Node _currentScene;
-    public Vector2I playerInitialNewSceneCoords {get; private set;}
+    public Vector2I playerInitialNewSceneCoords { get; private set; }
 
     public void SetSceneContainerNode(Node sceneConteiner)
     {
@@ -30,7 +30,7 @@ public partial class SceneManager : Node
         {
 
             Tween fadeOut = _transitionNode.FadeOut();
-            _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Disabled; // Para o processamento do sceneContainer
+            FreezeSceneProcess(true); // Para o processamento do sceneContainer
 
             fadeOut.Finished += () =>
             {
@@ -50,7 +50,7 @@ public partial class SceneManager : Node
     public void FinishSceneChange()
     {
         // Volta o processamento do SceneContainer para o padrão
-        _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Inherit;
+        FreezeSceneProcess(false);
         Tween fadeIn = _transitionNode.FadeIn();
     }
 
@@ -58,14 +58,21 @@ public partial class SceneManager : Node
     {
         playerInitialNewSceneCoords = coords;
     }
-    public void QuitGame() // TEMPORARY POSITION !!!
+    public void QuitGame() // TEMPORARY POSITION !!! In the future, the objetive is change this function for a "global game state manager"
     {
         Tween fadeOut = _transitionNode.FadeOut();
-        _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Disabled;
-
         fadeOut.Finished += () => // save logic is going to be here
         {
             GetTree().Quit();
         };
+    }
+    public void FreezeSceneProcess(bool turnOn)
+    {
+        if (turnOn)
+        {
+            _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Disabled;
+            return;
+        }
+        _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Inherit;
     }
 }

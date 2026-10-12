@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_fwm3s"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/ui-themes/label_title_font.tres" id="2_0d1cm"]
 [ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-elements/cancel-button/CancelButton.tscn" id="2_1rt07"]
+[ext_resource type="Script" uid="uid://d30lu5ruvbga5" path="res://src/ui/ui-objects/PauseMenu.cs" id="2_fsqkj"]
 
 [node name="PauseMenu" type="Control" unique_id=1914284591]
 layout_mode = 3
@@ -13,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_fwm3s")
+script = ExtResource("2_fsqkj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1248352759]
 layout_mode = 1
@@ -63,3 +65,5 @@ theme_override_font_sizes/font_size = 32
 text = "MENU_PAUSE_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/CancelButton" to="." method="OnReturnPressed"]
