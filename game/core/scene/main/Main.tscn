@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://b0cob5h4nb4n5" path="res://assets/sounds/bgm/musica.mp3" id="5_e2s0e"]
 [ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/ui-objects/SceneTransition.tscn" id="5_vi5dn"]
 [ext_resource type="PackedScene" uid="uid://dwid5ckfdpkln" path="res://src/ui/ui-objects/MobileControls.tscn" id="6_e2s0e"]
+[ext_resource type="Script" uid="uid://vuyofbte1yrr" path="res://src/scenes/debug/DebugSceneShortcut.cs" id="11_e2s0e"]
+[ext_resource type="PackedScene" uid="uid://dcnb4qvq36ter" path="res://src/scenes/debug/debug.tscn" id="12_wof2s"]
 
 [node name="Main" type="Node" unique_id=1739575294 node_paths=PackedStringArray("_sceneContainer", "_GUI")]
 script = ExtResource("1_x8ce0")
@@ -19,6 +21,10 @@ InitialScene = ExtResource("2_2gji6")
 cursorNormalSprite = ExtResource("3_2gji6")
 cursorClickSprite = ExtResource("4_vi5dn")
 initialMusic = ExtResource("5_e2s0e")
+
+[node name="DebugSceneShortcut" type="Node" parent="." unique_id=1938938547]
+script = ExtResource("11_e2s0e")
+_debugScene = ExtResource("12_wof2s")
 
 [node name="SceneContainer" type="Node" parent="." unique_id=1015481246]
 
