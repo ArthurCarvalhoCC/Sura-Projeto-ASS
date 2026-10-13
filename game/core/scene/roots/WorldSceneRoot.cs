@@ -11,7 +11,7 @@ public partial class WorldSceneRoot : Node2D, ISceneRoot
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Gui.Instance.SetMobileControlsVisible(hideMobileControls);
+		Gui.Instance._mobileControls.SetMobileControlsVisible(hideMobileControls);
 		_player.SetNewPosition(Managers.Instance._sceneManager.playerInitialNewSceneCoords);
 		Managers.Instance._sceneManager.FinishSceneChange();
 		Managers.Instance._audioManager.PlayMusic(InitialMusic);

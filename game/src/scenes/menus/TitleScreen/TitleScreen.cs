@@ -8,6 +8,7 @@ public partial class TitleScreen : UISceneRoot
 	[Export] private Control Main;
 	[Export] private Control Settings;
 	[Export] private Control Credits;
+	
     public override void _Ready()
     {
         base._Ready();

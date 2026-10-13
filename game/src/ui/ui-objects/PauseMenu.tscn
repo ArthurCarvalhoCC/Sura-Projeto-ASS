@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_fwm3s"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/ui-themes/label_title_font.tres" id="2_0d1cm"]
-[ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-elements/cancel-button/CancelButton.tscn" id="2_1rt07"]
 [ext_resource type="Script" uid="uid://d30lu5ruvbga5" path="res://src/ui/ui-objects/PauseMenu.cs" id="2_fsqkj"]
+[ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="3_1rt07"]
 
 [node name="PauseMenu" type="Control" unique_id=1914284591]
 layout_mode = 3
@@ -15,6 +15,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_fwm3s")
 script = ExtResource("2_fsqkj")
+_mainMenuScene = ExtResource("3_1rt07")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1248352759]
 layout_mode = 1
@@ -23,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.15294118)
+color = Color(0, 0, 0, 0.30588236)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1913403277]
 layout_mode = 1
@@ -33,31 +34,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=211573418]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=754988458]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=1810958381]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=764944046]
-layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 24
 alignment = 1
 
-[node name="Resume" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1499277126]
-layout_mode = 2
-text = "MENU_PAUSE_RESUME"
-
-[node name="MainMenu" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1383806124]
-layout_mode = 2
-text = "MENU_PAUSE_MAIN_MENU"
-
-[node name="CancelButton" parent="MarginContainer" unique_id=1676564578 instance=ExtResource("2_1rt07")]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer" unique_id=254978223]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=254978223]
 layout_mode = 2
 size_flags_vertical = 0
 theme = ExtResource("2_0d1cm")
@@ -66,4 +49,25 @@ text = "MENU_PAUSE_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/CancelButton" to="." method="OnReturnPressed"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=211573418]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer" unique_id=1810958381]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer" unique_id=764944046]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1499277126]
+layout_mode = 2
+text = "MENU_PAUSE_RESUME"
+
+[node name="MainMenu" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1383806124]
+layout_mode = 2
+text = "MENU_PAUSE_MAIN_MENU"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Resume" to="." method="OnResumePressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/MainMenu" to="." method="OnMainMenuPressed"]

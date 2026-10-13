@@ -28,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://dbo51mqd806t6" path="res://assets/sprites/ui/menu/backgrounds/bg_protrait.png" id="21_dpc62"]
 [ext_resource type="Texture2D" uid="uid://b8fa411vhsfpp" path="res://assets/sprites/ui/menu/scroll-bar/grabber.png" id="26_t3q8n"]
 [ext_resource type="Texture2D" uid="uid://c4rfc3gtrbmpu" path="res://assets/sprites/ui/menu/scroll-bar/grabber_highlight.png" id="27_6xbwy"]
+[ext_resource type="Texture2D" uid="uid://bu4r4f243kduh" path="res://assets/sprites/ui/mobile-controls/joystick_background.png" id="28_7ko41"]
+[ext_resource type="Texture2D" uid="uid://2ynbmsvvyej" path="res://assets/sprites/ui/mobile-controls/joystick_button.png" id="29_pcdof"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_axkkf"]
 texture = ExtResource("1_q857r")
@@ -132,6 +134,8 @@ expand_margin_top = 2.0
 region_rect = Rect2(0, 0, 16, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fq72g"]
+content_margin_left = 10.0
+content_margin_right = 10.0
 texture = ExtResource("11_ja2a6")
 texture_margin_left = 4.0
 texture_margin_top = 5.0
@@ -172,6 +176,18 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 corner_detail = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_al7ov"]
+texture = ExtResource("28_7ko41")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivroo"]
+texture = ExtResource("29_pcdof")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b32gh"]
+texture = ExtResource("28_7ko41")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yucqy"]
+texture = ExtResource("29_pcdof")
 
 [resource]
 default_font = ExtResource("1_d8kve")
@@ -229,3 +245,7 @@ VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_5wbwy")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_5wbwy")
 VScrollBar/styles/scroll = SubResource("StyleBoxFlat_t3q8n")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_t3q8n")
+VirtualJoystick/styles/normal_joystick = SubResource("StyleBoxTexture_al7ov")
+VirtualJoystick/styles/normal_tip = SubResource("StyleBoxTexture_ivroo")
+VirtualJoystick/styles/pressed_joystick = SubResource("StyleBoxTexture_b32gh")
+VirtualJoystick/styles/pressed_tip = SubResource("StyleBoxTexture_yucqy")
