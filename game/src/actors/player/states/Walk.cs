@@ -16,7 +16,7 @@ public partial class Walk : PlayerState
         if (_player.direction == Vector2.Zero) Machine.TransitionTo("idle");
         else {
             _player._animTree.Set("parameters/Walk/blend_position", _player.direction);
-            _player._animTree.Set("parameters/Idle/blend_position", _player.direction);   
+            _player._animTree.Set("parameters/Idle/blend_position", _player.direction);  
         }
     }
     public override void PhysicsUpdate(double delta)
@@ -31,6 +31,9 @@ public partial class Walk : PlayerState
         _player.velocity = _player.velocity.MoveToward(targetVelocity, accelRate * (float)delta);
         _player.Velocity = _player.velocity;
         _player.MoveAndSlide();
+
+        if (_player.direction != Vector2.Zero && _player.Velocity.LengthSquared() > 1f)
+            _player.TryPlayFootstep(); //safeguard pro sfx não tocar quando o player estiver preso numa parede
     }
     public override void Exit()
     {

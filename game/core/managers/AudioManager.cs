@@ -1,70 +1,73 @@
 using Godot;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 public partial class AudioManager : Node
 {
-	public static AudioManager Instance { get; private set; }
-	private Dictionary< string, SoundQueue > _soundQueueByName = new Dictionary< string, SoundQueue >();
-	private AudioStream _currentMusic; // Keeps the manager's current track so ChangeMusic can stop or replace it.
-	public float MasterVolume {get; private set;} = 0f;
-	public float SFXVolume {get; private set;} = 0f;
-	public float MusicVolume {get; private set;} = 0f;
+    public static AudioManager Instance { get; private set; }
 
-	public override void _Ready()
-	{
-		Instance = this;
-		// Resolve the playback queue once; AudioManager owns music decisions, while the queue handles playback.
-		_soundQueueByName.Add("SoundQueue", GetNode<SoundQueue>("SoundQueue"));
-	}
+    private AudioStreamPlayer _musicA, _musicB, _activeMusic;
+    private SoundPool _sfxPool;
+    private Tween _musicTween;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    public override void _Ready()
+    {
+        Instance = this;
+        _musicA = GetNode<AudioStreamPlayer>("MusicPlayerA");
+        _musicB = GetNode<AudioStreamPlayer>("MusicPlayerB");
+        _sfxPool = GetNode<SoundPool>("SoundPool");
+        _activeMusic = _musicA;
+    }
+    public void PlayMusic(AudioStream music, float fadeTime = 1f)
+    {
+        if (music == null)
+        {
+            GD.PushError("AudioManager.PlayMusic: recebi 'null' como música nesta cena. Mantendo a música da ultima cena com este recurso");
+            return;
+        }
 
-	#region Called when needed 
-	public void PlayMusic(AudioStream Music)
-	{
-		// Avoid restarting the same track when a scene requests it again.
-		if (_currentMusic == Music)
+        GD.Print($"AudioManager.PlayMusic received '{music.ResourcePath}'.");
+
+        if (_activeMusic.Playing && _activeMusic.Stream == music)
 		{
-			return; // Atualmente, _currentMusic provavelmente é limpo na troca de cena
-		}
+			return; // (fix para o bug do aúdio não mantendo quando uma cena passa o mesmo aúdio da anterior)
+		} 
 
-		_currentMusic = Music;
-		ChangeMusic();
-	}
+        var old = _activeMusic;
+        _activeMusic = (old == _musicA) ? _musicB : _musicA; // alterna entre os dois players de música
 
-	public void ChangeMusic()
-	{
-		SoundQueue soundQueue = _soundQueueByName["SoundQueue"];
-		// A missing track means music should stop; otherwise delegate playback to SoundQueue.
-		if (_currentMusic == null)
-		{
-			soundQueue.StopMusic();
-			return;
-		}
+        _activeMusic.Stream = music;
+        _activeMusic.VolumeDb = -80f;
+        _activeMusic.Play();
+        GD.Print($"Assigned '{music.ResourcePath}' to '{_activeMusic.GetPath()}'; playing={_activeMusic.Playing}.");
 
-		soundQueue.PlayMusic(_currentMusic);
-	}
+        _musicTween?.Kill(); // corta qualquer tween de fade anterior
+        _musicTween = CreateTween().SetParallel();
+        _musicTween.TweenProperty(_activeMusic, "volume_db", 0f, fadeTime);
+        _musicTween.TweenProperty(old, "volume_db", -80f, fadeTime);
+        _musicTween.Chain().TweenCallback(Callable.From(old.Stop));
+    }
 
-	public void PlaySFX(AudioStream sound)
-	{
-		// Keep SFX requests routed through the manager rather than exposing the queue to scenes.
-		_soundQueueByName["SoundQueue"].PlaySFX(sound);
-	}
+    public void StopMusic(float fadeTime = 1f)
+    {
+        _musicTween?.Kill();
+        _musicTween = CreateTween();
+        _musicTween.TweenProperty(_activeMusic, "volume_db", -80f, fadeTime);
+        _musicTween.TweenCallback(Callable.From(_activeMusic.Stop));
+    }
 
-	public void CleanSceneAudios()
-	{
-		_soundQueueByName["SoundQueue"].CleanSceneAudios();
-	}
-	#endregion 
+	// a categoria passada abaixo como string deve ser o nome de um dos nós dentro do SoundPool (SoundQueue's)
+	// justamente para diferenciar o tipo de sfx (como UI, Passos, Interações, etc)
+    public void PlaySFX(AudioStream sound, string category = "Default",
+                        float pitch = 1f, float volumeDb = 0f)
+        => _sfxPool.Play(category, sound, pitch, volumeDb);
+	// o padrão agora é Default, mas se precisar diferenciar, siga os comentários acima.
 	
-	#region Internal Function
-	private async Task CleanAudio(float time)
+
+	// Para o slider de volume das configurações
+    public void SetBusVolume(string bus, float linear)
 	{
+	    int busIndex = AudioServer.GetBusIndex(bus);
+	    float clampedVolume = Mathf.Clamp(linear, 0f, 1f); 
+	    float volumeDb = clampedVolume == 0f ? -80f : Mathf.LinearToDb(clampedVolume);
+	    AudioServer.SetBusVolumeDb(busIndex, volumeDb);
 	}
-	#endregion
 }
