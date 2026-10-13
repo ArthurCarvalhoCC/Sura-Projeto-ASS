@@ -81,25 +81,25 @@ region_rect = Rect2(0, 0, 16, 16)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxunw"]
 texture = ExtResource("17_niv3e")
 texture_margin_left = 4.0
-texture_margin_top = 5.0
+texture_margin_top = 4.0
 texture_margin_right = 4.0
-texture_margin_bottom = 5.0
+texture_margin_bottom = 4.0
 region_rect = Rect2(0, 0, 16, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t3q8n"]
 texture = ExtResource("18_dpc62")
 texture_margin_left = 4.0
-texture_margin_top = 5.0
+texture_margin_top = 4.0
 texture_margin_right = 4.0
-texture_margin_bottom = 5.0
+texture_margin_bottom = 4.0
 region_rect = Rect2(0, 0, 16, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xbwy"]
 texture = ExtResource("4_6nth5")
 texture_margin_left = 4.0
-texture_margin_top = 5.0
+texture_margin_top = 4.0
 texture_margin_right = 4.0
-texture_margin_bottom = 5.0
+texture_margin_bottom = 4.0
 region_rect = Rect2(0, 0, 16, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlew8"]
@@ -202,11 +202,12 @@ Button/styles/hover = SubResource("StyleBoxTexture_8ymfm")
 Button/styles/hover_pressed = SubResource("StyleBoxTexture_4w8w4")
 Button/styles/normal = SubResource("StyleBoxTexture_wyege")
 Button/styles/pressed = SubResource("StyleBoxTexture_niv3e")
+CheckBox/font_sizes/font_size = 8
 CheckBox/icons/checked = ExtResource("1_5bsaa")
 CheckBox/icons/checked_disabled = ExtResource("2_g8vse")
 CheckBox/icons/unchecked = ExtResource("3_nb35f")
 CheckBox/icons/unchecked_disabled = ExtResource("4_ph54k")
-CheckButton/font_sizes/font_size = 12
+CheckButton/font_sizes/font_size = 8
 CheckButton/icons/checked = ExtResource("1_fq72g")
 CheckButton/icons/checked_disabled = ExtResource("2_ja2a6")
 CheckButton/icons/unchecked = ExtResource("3_g4f23")
@@ -219,7 +220,7 @@ HSlider/styles/grabber_area = SubResource("StyleBoxTexture_rxunw")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_t3q8n")
 HSlider/styles/slider = SubResource("StyleBoxTexture_6xbwy")
 Label/constants/outline_size = 4
-Label/font_sizes/font_size = 10
+Label/font_sizes/font_size = 8
 MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 4
 MarginContainer/constants/margin_right = 4
