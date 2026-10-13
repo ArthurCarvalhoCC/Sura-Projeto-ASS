@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bb6xs2r7frspy" path="res://assets/sprites/enviroment/tiles-sets/tile-maps/_tilemap_casa.png" id="5_js07b"]
 [ext_resource type="PackedScene" uid="uid://chkj6usa2bgcg" path="res://core/scene/door-system/Door.tscn" id="5_w02m0"]
 [ext_resource type="PackedScene" uid="uid://crqmtowod1w7i" path="res://src/actors/backgrounds/gameplay/dark/DarkBg.tscn" id="7_vangf"]
+[ext_resource type="PackedScene" uid="uid://dc842lcjgi4y" path="res://core/scene/interaction-system/interact_box.tscn" id="13_xne3g"]
+[ext_resource type="Script" uid="uid://5ngtdvhj8pg8" path="res://core/scene/interaction-system/handlers/TestInteractionHandler.cs" id="14_vkido"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5xth"]
 texture = ExtResource("3_t5xth")
@@ -333,3 +335,14 @@ script = ExtResource("4_tha1t")
 position = Vector2(168, -52)
 _targetScenePath = "res://src/scenes/predio/Hall.tscn"
 targetCoords = Vector2i(120, 140)
+
+[node name="InteractionsContainer" type="Node2D" parent="." unique_id=1256931497]
+
+[node name="TestInteraction" parent="InteractionsContainer" unique_id=1438785819 instance=ExtResource("13_xne3g")]
+position = Vector2(-1, 33)
+
+[node name="Interactions" type="Node" parent="InteractionsContainer" unique_id=230198877]
+
+[node name="TestInteractionHandler" type="Node" parent="InteractionsContainer/Interactions" unique_id=151793911 node_paths=PackedStringArray("box")]
+script = ExtResource("14_vkido")
+box = NodePath("../../TestInteraction")
