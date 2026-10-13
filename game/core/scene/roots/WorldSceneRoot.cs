@@ -11,16 +11,16 @@ public partial class WorldSceneRoot : Node2D, ISceneRoot
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Gui.Instance.SetMobileControlsVisible(hideMobileControls);
-		_player.SetNewPosition(Managers.Instance.sceneManager.playerInitialNewSceneCoords);
-		Managers.Instance.sceneManager.FinishSceneChange();
-		Managers.Instance.audioManager.PlayMusic(InitialMusic);
+		Gui.Instance._mobileControls.SetMobileControlsVisible(hideMobileControls);
+		_player.SetNewPosition(Managers.Instance._sceneManager.playerInitialNewSceneCoords);
+		Managers.Instance._sceneManager.FinishSceneChange();
+		Managers.Instance._audioManager.PlayMusic(InitialMusic);
 		_doorsContainer.SceneChangeRequest += OnSceneChangeRequest;
 	}
 
 	public void OnSceneChangeRequest(PackedScene targetScene, Vector2I targetCoords)
 	{
-		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(targetCoords);
-		Managers.Instance.sceneManager.StartSceneChange(targetScene);
+		Managers.Instance._sceneManager.SetPlayerInitialNewSceneCoords(targetCoords);
+		Managers.Instance._sceneManager.StartSceneChange(targetScene);
 	}
 }

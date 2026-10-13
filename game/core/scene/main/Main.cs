@@ -9,6 +9,7 @@ public partial class Main : Node
 	[Export] private Vector2I initialPlayerCoords;
 	[Export] private Texture2D cursorNormalSprite;
 	[Export] private Texture2D cursorClickSprite;
+	[Export] private AudioStream initialMusic;
 	
 
 	// Called when the node enters the scene tree for the first time.
@@ -16,12 +17,15 @@ public partial class Main : Node
 	{
 		TranslationServer.SetLocale("pt_BR");
 
-		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(initialPlayerCoords);
+		Managers.Instance._sceneManager.SetPlayerInitialNewSceneCoords(initialPlayerCoords);
 
-		Managers.Instance.sceneManager.SetTransitionNode(_GUI.GetSceneTransition());
-		Managers.Instance.sceneManager.SetSceneContainerNode(_sceneContainer);
-		Managers.Instance.sceneManager.LoadInitialScene(InitialScene);
+		Managers.Instance._sceneManager.SetTransitionNode(_GUI.GetSceneTransition());
+		Managers.Instance._sceneManager.SetSceneContainerNode(_sceneContainer);
+		Managers.Instance._sceneManager.LoadInitialScene(InitialScene);
+		
 		SetCursorSprites(cursorNormalSprite, cursorClickSprite);
+
+		Managers.Instance._audioManager.PlayMusic(initialMusic);
 	}
 	private void SetCursorSprites(Texture2D normalCursor, Texture2D clickCursor)
 	{

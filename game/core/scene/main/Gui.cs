@@ -4,9 +4,10 @@ using System;
 public partial class Gui : Control
 {
 	public static Gui Instance { get; private set; }
-	[Export] private Control _MobileControls;
-	[Export] private DialogBox _DialogBox;
-	[Export] private SceneTransition _sceneTransition;
+	[Export] public MobileControls _mobileControls { get; private set; }
+	[Export] public DialogBox _dialogBox { get; private set; }
+	[Export] public SceneTransition _sceneTransition { get; private set; }
+	[Export] public PauseMenu _pauseMenu { get; private set; }
 	public override void _Ready()
 	{
 		Instance = this;
@@ -15,8 +16,5 @@ public partial class Gui : Control
 	{
 		return _sceneTransition;
 	}
-	public void SetMobileControlsVisible(bool turn)
-	{
-		_MobileControls.Visible = turn;
-	}
+
 }

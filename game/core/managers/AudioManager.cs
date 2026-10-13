@@ -30,7 +30,7 @@ public partial class AudioManager : Node
 		// Avoid restarting the same track when a scene requests it again.
 		if (_currentMusic == Music)
 		{
-			return;
+			return; // Atualmente, _currentMusic provavelmente é limpo na troca de cena
 		}
 
 		_currentMusic = Music;

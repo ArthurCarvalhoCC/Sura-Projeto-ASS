@@ -2,7 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_fwm3s"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/ui-themes/label_title_font.tres" id="2_0d1cm"]
-[ext_resource type="Texture2D" uid="uid://clgfyfbf8aoe6" path="res://assets/sprites/ui/menu/backgrounds/bg_menu2.png" id="3_1rt07"]
+[ext_resource type="Script" uid="uid://d30lu5ruvbga5" path="res://src/ui/ui-objects/PauseMenu.cs" id="2_fsqkj"]
+[ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="3_1rt07"]
 
 [node name="PauseMenu" type="Control" unique_id=1914284591]
 layout_mode = 3
@@ -13,6 +14,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_fwm3s")
+script = ExtResource("2_fsqkj")
+_mainMenuScene = ExtResource("3_1rt07")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1248352759]
 layout_mode = 1
@@ -21,49 +24,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.15294118)
+color = Color(0, 0, 0, 0.30588236)
 
-[node name="Label" type="Label" parent="." unique_id=254978223]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.1
-anchor_right = 0.5
-anchor_bottom = 0.1
-offset_left = -101.5
-offset_right = 101.5
-offset_bottom = 33.0
-grow_horizontal = 2
-theme = ExtResource("2_0d1cm")
-theme_override_font_sizes/font_size = 32
-text = "MENU_PAUSE_TITLE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1301299689]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer" unique_id=732774065]
-custom_minimum_size = Vector2(192, 128)
-layout_mode = 2
-texture = ExtResource("3_1rt07")
-patch_margin_left = 7
-patch_margin_top = 7
-patch_margin_right = 7
-patch_margin_bottom = 7
-
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/NinePatchRect" unique_id=1810958381]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1913403277]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,15 +34,40 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/NinePatchRect/MarginContainer" unique_id=764944046]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=754988458]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=254978223]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_0d1cm")
+theme_override_font_sizes/font_size = 32
+text = "MENU_PAUSE_TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=211573418]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer" unique_id=1810958381]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer" unique_id=764944046]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Resume" type="Button" parent="CenterContainer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1499277126]
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1499277126]
 layout_mode = 2
 text = "MENU_PAUSE_RESUME"
 
-[node name="MainMenu" type="Button" parent="CenterContainer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1383806124]
+[node name="MainMenu" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1383806124]
 layout_mode = 2
 text = "MENU_PAUSE_MAIN_MENU"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Resume" to="." method="OnResumePressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/MainMenu" to="." method="OnMainMenuPressed"]

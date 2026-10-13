@@ -8,19 +8,36 @@ public partial class TitleScreen : UISceneRoot
 	[Export] private Control Main;
 	[Export] private Control Settings;
 	[Export] private Control Credits;
+	
     public override void _Ready()
     {
         base._Ready();
     }
 	public void OnPlayPressed()
 	{
-		GD.Print("aaa");
-		Managers.Instance.sceneManager.SetPlayerInitialNewSceneCoords(new Vector2I(0,0));
-		Managers.Instance.sceneManager.StartSceneChange(targetScene);
+		Managers.Instance._sceneManager.SetPlayerInitialNewSceneCoords(new Vector2I(0,0));
+		Managers.Instance._sceneManager.StartSceneChange(targetScene);
 	}
-	public void OnReturnPressed(Control currentTab, Control targetMenu)
+	public void OnReturnPressed()
 	{
-		currentTab.Hide();
-		targetMenu.Show();
+		Settings.Hide();
+		Credits.Hide();
+		Main.Show();
+	}
+	public void OnCreditsPressed()
+	{
+		Settings.Hide();
+		Credits.Show();
+		Main.Hide();
+	}
+	public void OnSettingsPressed()
+	{
+		Settings.Show();
+		Credits.Hide();
+		Main.Hide();
+	}
+	public void OnQuitPressed()
+	{
+		Managers.Instance._sceneManager.QuitGame();
 	}
 }
