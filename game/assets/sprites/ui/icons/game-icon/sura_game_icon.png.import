@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3n1vpt53cuju"
-path="res://.godot/imported/sura_game_icon_v2.png-424c6603c78a585649e3335ea136e6d4.ctex"
+uid="uid://doq6r81u1md3b"
+path="res://.godot/imported/sura_game_icon.png-658fc96665a10c44dc7f88a20e8631f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/icons/sura_game_icon_v2.png"
-dest_files=["res://.godot/imported/sura_game_icon_v2.png-424c6603c78a585649e3335ea136e6d4.ctex"]
+source_file="res://assets/sprites/ui/icons/game-icon/sura_game_icon.png"
+dest_files=["res://.godot/imported/sura_game_icon.png-658fc96665a10c44dc7f88a20e8631f1.ctex"]
 
 [params]
 

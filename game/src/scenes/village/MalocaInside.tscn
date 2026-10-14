@@ -84,9 +84,9 @@ tile_set = ExtResource("6_5bulr")
 script = ExtResource("7_0gcl5")
 
 [node name="Door" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("8_kwoni")]
-position = Vector2(0, 8)
 scale = Vector2(2, 1)
-_targetScenePath = "res://src/scenes/predio/Hall.tscn"
+_targetScenePath = "res://src/scenes/mini-games/Fishing.tscn"
+targetCoords = Vector2i(-400, -64)
 
 [node name="Objects" type="Node2D" parent="." unique_id=1987625241]
 y_sort_enabled = true

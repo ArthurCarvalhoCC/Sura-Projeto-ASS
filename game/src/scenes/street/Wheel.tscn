@@ -142,9 +142,10 @@ tile_set = ExtResource("6_hfiq4")
 script = ExtResource("10_ca02n")
 
 [node name="Door" parent="DoorsContainer" unique_id=1684345977 instance=ExtResource("11_epx3g")]
-position = Vector2(-40, -80)
-scale = Vector2(16, 4)
-_targetScenePath = "res://src/scenes/predio/Hall.tscn"
+position = Vector2(0, -80)
+scale = Vector2(24, 4)
+_targetScenePath = "res://src/scenes/village/MalocaInside.tscn"
+targetCoords = Vector2i(0, 16)
 
 [node name="Objects" type="Node2D" parent="." unique_id=1987625241]
 y_sort_enabled = true
@@ -160,5 +161,5 @@ parallaxOpacity = 0.55
 
 [node name="Elements" type="TileMapLayer" parent="Objects" unique_id=718054502]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD1/wAAAAAAAAAAAAADAPr/AAAAAAAAAAANAPj/AAAAAAAAABARAAIAAAAAAAAAABDr//b/AAAAAAAAABD0//f/AAAAAAAAABD4/wIAAAAAAAAAABACAAEAAAAAAAAAAAAPAPv/AAAAAAAAAAD7//f/AAAAAAAAAAD5//v/AAAAAAAAABABAP3/AAAAAAAAAAD6//z/AAAAAAAAAAAPAAMAAAAAAAAAABA=")
+tile_map_data = PackedByteArray("AAD1/wAAAAAAAAAAAAADAPr/AAAAAAAAAAANAPj/AAAAAAAAABARAAIAAAAAAAAAABDr//b/AAAAAAAAABD0//f/AAAAAAAAABD4/wIAAAAAAAAAABACAAEAAAAAAAAAAAAPAPv/AAAAAAAAAAD7//f/AAAAAAAAAAD5//v/AAAAAAAAABD6//z/AAAAAAAAAAAPAAMAAAAAAAAAABAEAP3/AAAAAAAAABA=")
 tile_set = SubResource("TileSet_vlew8")
