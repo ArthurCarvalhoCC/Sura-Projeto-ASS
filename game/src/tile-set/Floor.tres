@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d0wrjsiqu214a" path="res://assets/sprites/enviroment/tiles-sets/terrain/wood/autotile_wood_floor.png" id="1_wsglm"]
 [ext_resource type="Texture2D" uid="uid://cpl8j2yjchfej" path="res://assets/sprites/enviroment/tiles-sets/terrain/wood/autotile_wood_floor_v2.png" id="2_nnmwo"]
+[ext_resource type="Texture2D" uid="uid://87ihoaor4yuc" path="res://assets/sprites/enviroment/tiles-sets/directional/walls/gray_tiles.png" id="3_nnmwo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iostq"]
 texture = ExtResource("1_wsglm")
@@ -671,6 +672,10 @@ texture = ExtResource("2_nnmwo")
 11:3/0/terrains_peering_bit/top_left_corner = 0
 11:3/0/terrains_peering_bit/top_side = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71ynj"]
+texture = ExtResource("3_nnmwo")
+0:0/0 = 0
+
 [resource]
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Wood1"
@@ -679,3 +684,4 @@ terrain_set_0/terrain_1/name = "Wood2"
 terrain_set_0/terrain_1/color = Color(0.96, 0.32000002, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_iostq")
 sources/1 = SubResource("TileSetAtlasSource_4h6dr")
+sources/2 = SubResource("TileSetAtlasSource_71ynj")
