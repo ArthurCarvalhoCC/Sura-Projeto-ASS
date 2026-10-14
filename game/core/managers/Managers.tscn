@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://chpm38nxiwkau" path="res://core/managers/Managers.cs" id="1_l1efg"]
 [ext_resource type="Script" uid="uid://dvjdvmiak5yyu" path="res://core/managers/SceneManager.cs" id="1_mclmg"]
+[ext_resource type="Script" uid="uid://gna4dg33rgt6" path="res://core/managers/SoundPool.cs" id="4_mut65"]
 [ext_resource type="Script" uid="uid://er16oy7mqgo5" path="res://core/managers/SoundQueue.cs" id="4_r07fn"]
 [ext_resource type="Script" uid="uid://bss886sfcb58p" path="res://core/managers/AudioManager.cs" id="4_t7c2y"]
 [ext_resource type="Script" uid="uid://mawthrjqm5yh" path="res://core/managers/DialogManager.cs" id="5_r07fn"]
@@ -18,12 +19,32 @@ _dataManager = NodePath("DataManager")
 script = ExtResource("1_mclmg")
 
 [node name="AudioManager" type="Node" parent="." unique_id=262013122]
+process_mode = 3
 script = ExtResource("4_t7c2y")
 
-[node name="SoundQueue" type="Node" parent="AudioManager" unique_id=1404370322]
+[node name="MusicPlayerA" type="AudioStreamPlayer" parent="AudioManager" unique_id=1049945370]
+bus = &"Music"
+
+[node name="MusicPlayerB" type="AudioStreamPlayer" parent="AudioManager" unique_id=581569014]
+bus = &"Music"
+
+[node name="SoundPool" type="Node" parent="AudioManager" unique_id=513516905]
+script = ExtResource("4_mut65")
+
+[node name="Default" type="Node" parent="AudioManager/SoundPool" unique_id=1404370322]
 script = ExtResource("4_r07fn")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundQueue" unique_id=1320046511]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/Default" unique_id=1320046511]
+
+[node name="Footsteps" type="Node" parent="AudioManager/SoundPool" unique_id=122689380]
+script = ExtResource("4_r07fn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/Footsteps" unique_id=779423577]
+
+[node name="UI" type="Node" parent="AudioManager/SoundPool" unique_id=2109766578]
+script = ExtResource("4_r07fn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/UI" unique_id=1206366662]
 
 [node name="DialogManager" type="Node" parent="." unique_id=1414735365]
 script = ExtResource("5_r07fn")

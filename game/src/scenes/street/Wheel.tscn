@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dtnb036pxfa8"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_ggbgm"]
+[ext_resource type="AudioStream" uid="uid://cgv6sgpgmtty1" path="res://assets/sounds/bgm/1_Aldeia_Externo/1_Aldeia_Externo_loop.mp3" id="2_nehrs"]
 [ext_resource type="TileSet" uid="uid://b6suvumrlciuf" path="res://src/tile-set/Grass.tres" id="2_w6xyj"]
 [ext_resource type="Texture2D" uid="uid://c0188ixgqipqm" path="res://assets/sprites/enviroment/tiles-sets/directional/street.png" id="2_xsgj2"]
 [ext_resource type="Texture2D" uid="uid://b2ntv8yefttcw" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/tile_dirt.png" id="6_uakc7"]
@@ -202,6 +203,7 @@ sources/0 = SubResource("TileSetAtlasSource_d8pgb")
 
 [node name="Wheel" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_ggbgm")
+InitialMusic = ExtResource("2_nehrs")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 
