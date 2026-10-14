@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv3m5mmlr51bl"
-path="res://.godot/imported/wall_to_floor_wood_transition.png-5419c70f1b2e223308856f12c89137e7.ctex"
+uid="uid://b53uqylte1inu"
+path="res://.godot/imported/gray_smooth_wall.png-8453e4a1acd8d1e31b71670e0c3e6678.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/enviroment/tiles-sets/terrain/wood/wall_to_floor_wood_transition.png"
-dest_files=["res://.godot/imported/wall_to_floor_wood_transition.png-5419c70f1b2e223308856f12c89137e7.ctex"]
+source_file="res://assets/sprites/enviroment/tiles-sets/directional/walls/gray_smooth_wall.png"
+dest_files=["res://.godot/imported/gray_smooth_wall.png-8453e4a1acd8d1e31b71670e0c3e6678.ctex"]
 
 [params]
 

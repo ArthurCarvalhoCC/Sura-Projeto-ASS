@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cridgm0g0sui3"
-path="res://.godot/imported/walls.png-f0964d96f69daea21790f441c9f66d47.ctex"
+uid="uid://uj6if01d5dpv"
+path="res://.godot/imported/internal_village_wall.png-2d12536491e2ec4c59622c710406e931.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/enviroment/tiles-sets/directional/walls.png"
-dest_files=["res://.godot/imported/walls.png-f0964d96f69daea21790f441c9f66d47.ctex"]
+source_file="res://assets/sprites/enviroment/tiles-sets/directional/walls/internal_village_wall.png"
+dest_files=["res://.godot/imported/internal_village_wall.png-2d12536491e2ec4c59622c710406e931.ctex"]
 
 [params]
 

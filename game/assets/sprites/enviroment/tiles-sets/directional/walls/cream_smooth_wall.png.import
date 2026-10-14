@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckuu1ocdojaio"
-path="res://.godot/imported/straw_wall.png-dd12621009e6d6275bb87cda563be9c0.ctex"
+uid="uid://dcq31tkjhlpjl"
+path="res://.godot/imported/cream_smooth_wall.png-67761974ecf1cd3eda8c0b0a929cad89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/enviroment/tiles-sets/directional/straw_wall.png"
-dest_files=["res://.godot/imported/straw_wall.png-dd12621009e6d6275bb87cda563be9c0.ctex"]
+source_file="res://assets/sprites/enviroment/tiles-sets/directional/walls/cream_smooth_wall.png"
+dest_files=["res://.godot/imported/cream_smooth_wall.png-67761974ecf1cd3eda8c0b0a929cad89.ctex"]
 
 [params]
 

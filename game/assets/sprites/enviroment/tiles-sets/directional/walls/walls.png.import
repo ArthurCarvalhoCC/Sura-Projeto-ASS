@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b77oh7ke3oxdr"
-path="res://.godot/imported/black_concrete_wall.png-ebc1b644037a63edeac9011d798365d3.ctex"
+uid="uid://cridgm0g0sui3"
+path="res://.godot/imported/walls.png-735f118db3c61ffca8b751a013eaabaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/enviroment/tiles-sets/directional/black_concrete_wall.png"
-dest_files=["res://.godot/imported/black_concrete_wall.png-ebc1b644037a63edeac9011d798365d3.ctex"]
+source_file="res://assets/sprites/enviroment/tiles-sets/directional/walls/walls.png"
+dest_files=["res://.godot/imported/walls.png-735f118db3c61ffca8b751a013eaabaa.ctex"]
 
 [params]
 
