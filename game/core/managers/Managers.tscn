@@ -38,13 +38,11 @@ script = ExtResource("4_r07fn")
 
 [node name="Footsteps" type="Node" parent="AudioManager/SoundPool" unique_id=122689380]
 script = ExtResource("4_r07fn")
-_playerCount = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/Footsteps" unique_id=779423577]
 
 [node name="UI" type="Node" parent="AudioManager/SoundPool" unique_id=2109766578]
 script = ExtResource("4_r07fn")
-_playerCount = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/UI" unique_id=1206366662]
 
