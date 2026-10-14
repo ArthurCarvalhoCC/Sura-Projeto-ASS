@@ -236,12 +236,10 @@ _data = {
 collision_mask = 2
 up_direction = Vector2(0, 1)
 script = ExtResource("1_faapv")
-MoveSpd = 100.0
+MoveSpd = 35.0
 _animTree = NodePath("AnimationTree")
 _collision = NodePath("Collision")
 _camera = NodePath("Camera")
-acceleration = 100.0
-fricttion = 500.0
 FootstepAudio = ExtResource("2_v2xrw")
 StepInterval = 0.4
 
