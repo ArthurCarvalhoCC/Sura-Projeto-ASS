@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2i4whps7jci8"
-path="res://.godot/imported/jails.png-15677931db6abcd66e0e1f69ad8e9150.ctex"
+uid="uid://ec08s4lfsg54"
+path="res://.godot/imported/jaula_suspensa.png-8599381c4fc4fa2a29f35c1f83b30621.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/enviroment/objects/jails.png"
-dest_files=["res://.godot/imported/jails.png-15677931db6abcd66e0e1f69ad8e9150.ctex"]
+source_file="res://assets/sprites/enviroment/objects/jails/jaula_suspensa.png"
+dest_files=["res://.godot/imported/jaula_suspensa.png-8599381c4fc4fa2a29f35c1f83b30621.ctex"]
 
 [params]
 
