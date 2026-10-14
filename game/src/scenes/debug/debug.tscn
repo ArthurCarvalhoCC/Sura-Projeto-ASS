@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dcnb4qvq36ter"]
 
-[ext_resource type="Texture2D" uid="uid://d0wrjsiqu214a" path="res://assets/sprites/enviroment/tiles-sets/terrain/autotile_wood_floor.png" id="1_ufasb"]
+[ext_resource type="Texture2D" uid="uid://d0wrjsiqu214a" path="res://assets/sprites/enviroment/tiles-sets/terrain/wood/autotile_wood_floor.png" id="1_ufasb"]
 [ext_resource type="Texture2D" uid="uid://iygbaw57xdjj" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/tile_ceramic.png" id="2_rplrb"]
 [ext_resource type="Texture2D" uid="uid://cridgm0g0sui3" path="res://assets/sprites/enviroment/tiles-sets/directional/walls.png" id="3_ia287"]
 [ext_resource type="Texture2D" uid="uid://bot8keonjx78x" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/dark_wall.png" id="4_r0hvd"]
