@@ -54,6 +54,7 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Pages" unique_id=770484771]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -142,7 +143,6 @@ mouse_default_cursor_shape = 2
 text = "MENU_MAIN_QUIT"
 
 [node name="Settings" type="Control" parent="Pages" unique_id=166331216]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -185,7 +185,7 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-current_tab = 1
+current_tab = 2
 clip_tabs = false
 use_hidden_tabs_for_min_size = true
 tab_0/title = "MENU_VIDEO_TITLE"
@@ -224,6 +224,7 @@ layout_mode = 2
 text = "SETTINGS_VSYNC"
 
 [node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1160609111]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"
@@ -288,7 +289,6 @@ value = 50.0
 rounded = true
 
 [node name="Language" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=358491666]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 metadata/_tab_name = "MENU_LANGUAGE_TITLE"
@@ -296,6 +296,8 @@ metadata/_tab_name = "MENU_LANGUAGE_TITLE"
 [node name="ScrollContainer" type="ScrollContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Language" unique_id=569797816]
 layout_mode = 2
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+scroll_hint_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Language/ScrollContainer" unique_id=727161987]
 layout_mode = 2

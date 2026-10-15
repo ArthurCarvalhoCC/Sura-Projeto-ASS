@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dp6nuisn70hdp"]
 
 [ext_resource type="Script" uid="uid://jbaf2ixqdi1r" path="res://core/scene/main/Main.cs" id="1_x8ce0"]
-[ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="2_2gji6"]
+[ext_resource type="PackedScene" uid="uid://doqy6re6xexlb" path="res://src/scenes/mini-games/Fishing.tscn" id="2_vi5dn"]
 [ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/ui-objects/DialogBox.tscn" id="3_3awk8"]
 [ext_resource type="AudioStream" uid="uid://b54mqb331dfks" path="res://assets/sounds/bgm/menu.mp3" id="3_vi5dn"]
 [ext_resource type="Script" uid="uid://dbwcudkvi3wx5" path="res://core/scene/main/Gui.cs" id="3_y5upg"]
@@ -15,7 +15,7 @@
 script = ExtResource("1_x8ce0")
 _sceneContainer = NodePath("SceneContainer")
 _GUI = NodePath("GUI")
-InitialScene = ExtResource("2_2gji6")
+InitialScene = ExtResource("2_vi5dn")
 initialMusic = ExtResource("3_vi5dn")
 
 [node name="DebugSceneShortcut" type="Node" parent="." unique_id=1938938547]
