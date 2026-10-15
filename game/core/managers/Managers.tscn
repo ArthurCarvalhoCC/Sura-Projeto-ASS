@@ -7,13 +7,15 @@
 [ext_resource type="Script" uid="uid://bss886sfcb58p" path="res://core/managers/AudioManager.cs" id="4_t7c2y"]
 [ext_resource type="Script" uid="uid://mawthrjqm5yh" path="res://core/managers/DialogManager.cs" id="5_r07fn"]
 [ext_resource type="Script" uid="uid://cfglhxxw8obd1" path="res://core/managers/DataManager.cs" id="6_mut65"]
+[ext_resource type="Script" uid="uid://crt4bxv23ok0" path="res://core/managers/InventoryManager.cs" id="7_invmg"]
 
-[node name="Managers" type="Node" unique_id=2068923241 node_paths=PackedStringArray("_sceneManager", "_audioManager", "_dialogManager", "_dataManager")]
+[node name="Managers" type="Node" unique_id=2068923241 node_paths=PackedStringArray("_sceneManager", "_audioManager", "_dialogManager", "_dataManager", "_inventoryManager")]
 script = ExtResource("1_l1efg")
 _sceneManager = NodePath("SceneManager")
 _audioManager = NodePath("AudioManager")
 _dialogManager = NodePath("DialogManager")
 _dataManager = NodePath("DataManager")
+_inventoryManager = NodePath("InventoryManager")
 
 [node name="SceneManager" type="Node" parent="." unique_id=136735442]
 script = ExtResource("1_mclmg")
@@ -51,3 +53,6 @@ script = ExtResource("5_r07fn")
 
 [node name="DataManager" type="Node" parent="." unique_id=1935553314]
 script = ExtResource("6_mut65")
+
+[node name="InventoryManager" type="Node" parent="." unique_id=1935553315]
+script = ExtResource("7_invmg")

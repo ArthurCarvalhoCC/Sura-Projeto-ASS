@@ -10,6 +10,7 @@ public partial class UISceneRoot : Control, ISceneRoot
 	public override void _Ready()
 	{
 		Gui.Instance._mobileControls.SetMobileControlsVisible(hideMobileControls);
+		Gui.Instance._hotBar.Hide();
 		Managers.Instance._sceneManager.FinishSceneChange();
 		Managers.Instance._audioManager.PlayMusic(InitialMusic);
 	}
