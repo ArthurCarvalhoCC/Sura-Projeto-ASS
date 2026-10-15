@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bu21ihpect0l5"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_52xgy"]
-[ext_resource type="AudioStream" uid="uid://b0cob5h4nb4n5" path="res://assets/sounds/bgm/musica.mp3" id="2_plpdg"]
+[ext_resource type="AudioStream" uid="uid://b54mqb331dfks" path="res://assets/sounds/bgm/menu.mp3" id="2_vkd22"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_7d7o5"]
 [ext_resource type="TileSet" uid="uid://72llwced8jf5" path="res://src/tile-set/Floor.tres" id="3_vkd22"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_4bjil"]
@@ -59,6 +59,7 @@ sources/1 = SubResource("TileSetAtlasSource_83v6i")
 
 [node name="Hall" type="Node2D" unique_id=2710396 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_52xgy")
+InitialMusic = ExtResource("2_vkd22")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 
@@ -73,7 +74,7 @@ tile_map_data = PackedByteArray("AAADAAkAAwABAAMAAAAEAAkAAwADAAAAAAAFAAkAAwADAAA
 tile_set = ExtResource("4_vkd22")
 
 [node name="GroundElements" type="TileMapLayer" parent="TileMapLayers" unique_id=1891632746]
-tile_map_data = PackedByteArray("AAAcAA0AAAAGAAMAAFAQAAkAAQAEAAAAAAAHAAkAAQAGAAAAAAA=")
+tile_map_data = PackedByteArray("AAAcAA0AAAAGAAMAAFAHAAkAAQAGAAAAAAA=")
 tile_set = SubResource("TileSet_ng7cj")
 
 [node name="Objects" type="Node2D" parent="." unique_id=1919109815]
@@ -87,7 +88,7 @@ position = Vector2(120, 149)
 
 [node name="Elements" type="TileMapLayer" parent="Objects" unique_id=113902391]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD//wYABgAAAAAAAAD+/wcACgAAAAAAAAAKAAMADQAAAAAAAAAMAAQADAAAAAAAAAAHAAQADAAAAAAAAAAMAAkADAAAAAAAAAACAAkADAAAAAAAAAACAAQADAAAAAAAAAAHAAMABwAAAAAAAAAMAAMABwAAAAAAAAACAAMABwAAAAAAAAANAAUACwAAAAAAAAAAAAUACwAAAAAAAAAAAAgACwAAAAAAAAANAAgACwAAAAAAAAAQAAkACQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wYABgAAAAAAAAD+/wcACgAAAAAAAAAKAAMADQAAAAAAAAAMAAQADAAAAAAAAAAHAAQADAAAAAAAAAAMAAkADAAAAAAAAAACAAkADAAAAAAAAAACAAQADAAAAAAAAAAHAAMABwAAAAAAAAAMAAMABwAAAAAAAAACAAMABwAAAAAAAAANAAUACwAAAAAAAAAAAAUACwAAAAAAAAAAAAgACwAAAAAAAAANAAgACwAAAAAAAAAQAAoACQAAAAAAAAA=")
 tile_set = ExtResource("8_vkd22")
 
 [node name="DoorsContainer" type="Node2D" parent="." unique_id=469260652]
@@ -99,7 +100,7 @@ _targetScenePath = "res://src/scenes/predio/House.tscn"
 targetCoords = Vector2i(168, -34)
 
 [node name="Door" parent="DoorsContainer" unique_id=412336782 instance=ExtResource("5_5xpf8")]
-position = Vector2(272, 164)
+position = Vector2(272, 172)
 scale = Vector2(2, 1)
 _targetScenePath = "res://src/scenes/predio/Lobby.tscn"
 targetCoords = Vector2i(334, 92)
