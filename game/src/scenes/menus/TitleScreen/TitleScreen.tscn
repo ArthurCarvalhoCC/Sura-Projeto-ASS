@@ -54,7 +54,6 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Pages" unique_id=770484771]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -143,6 +142,7 @@ mouse_default_cursor_shape = 2
 text = "MENU_MAIN_QUIT"
 
 [node name="Settings" type="Control" parent="Pages" unique_id=166331216]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -185,7 +185,7 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-current_tab = 1
+current_tab = 0
 clip_tabs = false
 use_hidden_tabs_for_min_size = true
 tab_0/title = "MENU_VIDEO_TITLE"
@@ -193,7 +193,6 @@ tab_1/title = "MENU_AUDIO_TITLE"
 tab_2/title = "MENU_LANGUAGE_TITLE"
 
 [node name="Video" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1757746494]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "MENU_VIDEO_TITLE"
@@ -226,6 +225,7 @@ layout_mode = 2
 text = "SETTINGS_VSYNC"
 
 [node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1160609111]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"
