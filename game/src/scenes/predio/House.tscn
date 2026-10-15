@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://ngjl4nr6nlq3"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_w02m0"]
-[ext_resource type="AudioStream" uid="uid://b0cob5h4nb4n5" path="res://assets/sounds/bgm/musica.mp3" id="2_t5xth"]
+
+[ext_resource type="AudioStream" uid="uid://bhq1uvprvoasq" path="res://assets/sounds/bgm/2_Aldeia_Interno/2_Aldeia_Interno_loop.mp3" id="2_vkido"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_ljpeu"]
 [ext_resource type="TileSet" uid="uid://72llwced8jf5" path="res://src/tile-set/Floor.tres" id="3_qy20u"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_tha1t"]
@@ -61,7 +62,7 @@ sources/1 = SubResource("TileSetAtlasSource_nvrdr")
 
 [node name="House" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_w02m0")
-InitialMusic = ExtResource("2_t5xth")
+InitialMusic = ExtResource("2_vkido")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 

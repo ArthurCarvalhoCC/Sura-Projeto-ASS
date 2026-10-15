@@ -3,7 +3,7 @@ using System;
 
 public partial class WorldSceneRoot : Node2D, ISceneRoot
 {
-	[Export] public AudioStream InitialMusic {get; private set;}
+	[Export] public AudioStream InitialMusic { get; set; }
 	[Export] public DoorsContainer _doorsContainer;
 	[Export] public Player _player;
 	public bool hideMobileControls { get; private set; } = true;

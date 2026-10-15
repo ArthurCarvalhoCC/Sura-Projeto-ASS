@@ -59,7 +59,6 @@ sources/1 = SubResource("TileSetAtlasSource_4jr8t")
 
 [node name="Lobby" type="Node2D" unique_id=2710396 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_uq6v6")
-InitialMusic = ExtResource("2_3b6xm")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 

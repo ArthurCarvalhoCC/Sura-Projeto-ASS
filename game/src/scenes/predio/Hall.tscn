@@ -59,7 +59,6 @@ sources/1 = SubResource("TileSetAtlasSource_83v6i")
 
 [node name="Hall" type="Node2D" unique_id=2710396 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_52xgy")
-InitialMusic = ExtResource("2_plpdg")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 

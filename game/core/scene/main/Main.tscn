@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://jbaf2ixqdi1r" path="res://core/scene/main/Main.cs" id="1_x8ce0"]
 [ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="2_2gji6"]
-[ext_resource type="Texture2D" uid="uid://b6lxy22it13pm" path="res://assets/sprites/ui/cursor/cursor_arrow.png" id="3_2gji6"]
 [ext_resource type="PackedScene" uid="uid://b6wpeegsxt3gu" path="res://src/ui/ui-objects/DialogBox.tscn" id="3_3awk8"]
+[ext_resource type="AudioStream" uid="uid://b54mqb331dfks" path="res://assets/sounds/bgm/menu.mp3" id="3_vi5dn"]
 [ext_resource type="Script" uid="uid://dbwcudkvi3wx5" path="res://core/scene/main/Gui.cs" id="3_y5upg"]
 [ext_resource type="PackedScene" uid="uid://2ip8o25cvq52" path="res://src/ui/ui-objects/PauseMenu.tscn" id="4_2gji6"]
-[ext_resource type="Texture2D" uid="uid://2gt2ykhp1hax" path="res://assets/sprites/ui/cursor/cursor_pointing_hand.png" id="4_vi5dn"]
-[ext_resource type="AudioStream" uid="uid://b0cob5h4nb4n5" path="res://assets/sounds/bgm/musica.mp3" id="5_e2s0e"]
 [ext_resource type="PackedScene" uid="uid://c0ebkspcb8n0s" path="res://src/ui/ui-objects/SceneTransition.tscn" id="5_vi5dn"]
 [ext_resource type="PackedScene" uid="uid://dwid5ckfdpkln" path="res://src/ui/ui-objects/MobileControls.tscn" id="6_e2s0e"]
 [ext_resource type="Script" uid="uid://vuyofbte1yrr" path="res://src/scenes/debug/DebugSceneShortcut.cs" id="11_e2s0e"]
@@ -18,9 +16,7 @@ script = ExtResource("1_x8ce0")
 _sceneContainer = NodePath("SceneContainer")
 _GUI = NodePath("GUI")
 InitialScene = ExtResource("2_2gji6")
-cursorNormalSprite = ExtResource("3_2gji6")
-cursorClickSprite = ExtResource("4_vi5dn")
-initialMusic = ExtResource("5_e2s0e")
+initialMusic = ExtResource("3_vi5dn")
 
 [node name="DebugSceneShortcut" type="Node" parent="." unique_id=1938938547]
 script = ExtResource("11_e2s0e")

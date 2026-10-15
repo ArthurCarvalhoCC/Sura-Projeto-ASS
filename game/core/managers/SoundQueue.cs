@@ -1,110 +1,66 @@
 using Godot;
-using System;
 using System.Collections.Generic;
 
 [Tool]
 public partial class SoundQueue : Node
 {
-	private int _next = 0;
-	private List<AudioStreamPlayer> _audioStreamPlayers = new List<AudioStreamPlayer>(); 
-	[Export] private int Count { get; set;} = 1;
-	// Music uses its own player so SFX playback and scene cleanup cannot interrupt it.
-	private AudioStreamPlayer _musicPlayer;
+    [Export] private int _playerCount = 8;
+    [Export] private StringName _bus = "SFX";
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		if (GetChildCount() == 0)
-		{
-			_musicPlayer = new AudioStreamPlayer { Name = "MusicPlayer" }; 
-			AddChild(_musicPlayer);
-		}
-		else if (GetChild(0) is AudioStreamPlayer audioStreamPlayer)
-		{
-			_musicPlayer = audioStreamPlayer;
+    private readonly List<AudioStreamPlayer> _players = new();
+    private int _next = 0;
 
-			// Build the initial SFX pool from the configured player.
-			for (int i = 0; i < Count; i++)
+    public override void _Ready()
+    {
+        if (Engine.IsEditorHint()) //nem te conto como descobri
+		{
+			return;
+		}  
+
+        var template = GetChild<AudioStreamPlayer>(0); //molde para os demais players
+        template.Bus = _bus;
+        _players.Add(template);
+
+        for (int i = 1; i < _playerCount; i++) // começa à partir da template acima
+        {
+            var copy = (AudioStreamPlayer)template.Duplicate();
+            AddChild(copy);
+            _players.Add(copy);
+        }
+    }
+
+    public void Play(AudioStream stream, float pitchScale = 1f, float volumeDb = 0f)
+    {
+        // procura o próximo player livre, a partir do "rodízio"
+        for (int i = 0; i < _players.Count; i++)
+        {
+            int idx = (_next + i) % _players.Count;
+            if (_players[idx].Playing) // se estiver tocando, pula para o próximo
 			{
-				AudioStreamPlayer duplicate = (AudioStreamPlayer)audioStreamPlayer.Duplicate();
-				duplicate.Name = $"SFXPlayer{i}";
-				AddChild(duplicate);
-				_audioStreamPlayers.Add(duplicate);
-			} //--> Temporário, ideal é criar um node próprio pro SFX Pool
-		}
-		else
-		{
-			GD.PushError("SoundQueue requires an AudioStreamPlayer child for music playback.");
-		}
-	}
+				continue;
+			} 
+            Fire(_players[idx], stream, pitchScale, volumeDb);
+            _next = (idx + 1) % _players.Count;
+            return;
+        }
 
-	public void PlayMusic(AudioStream stream)
-	{
-		// Null music requests stop the current track.
-		if (stream == null)
-		{
-			StopMusic();
-			return;
-		}
+        // todos ocupados: reaproveita o próximo do rodízio (corta o mais antigo)
+        Fire(_players[_next], stream, pitchScale, volumeDb);
+        _next = (_next + 1) % _players.Count;
+    }
 
-		if (_musicPlayer.Stream == stream && _musicPlayer.Playing) // Avoid restarting the same track when a scene requests it again.
-		{
-			return;
-		}
+    private static void Fire(AudioStreamPlayer p, AudioStream s, float pitch, float vol)
+    { //evita repetir essas quatro linhas legais na função acima. "Dispara" sfx direto no player.
+        p.Stream = s; //troca a música e reaplica os parâmetros restantes
+        p.PitchScale = pitch; 
+        p.VolumeDb = vol;
+        p.Play();
+    }
 
-		_musicPlayer.Stop(); // Stop any currently playing music before starting the new track.
-		_musicPlayer.Stream = stream; 
-		_musicPlayer.Play();
-	}
-
-	public void StopMusic() //Stops the music playback and clears the stream to free resources.
-	{
-		_musicPlayer.Stop();
-		_musicPlayer.Stream = null;
-	}
-
-	public void PlaySFX(AudioStream stream)
-	{
-		if (stream == null)
-		{
-			GD.PushError("Cannot play an SFX without an audio stream.");
-			return;
-		}
-
-		AudioStreamPlayer player = GetAvailableSfxPlayer(); // Get an available player from the pool or create a new one if all are busy.
-		player.Stream = stream;
-		player.Play();
-	}
-
-	public void CleanSceneAudios()
-	{
-		// Reset only SFX players; music persists across scene changes.
-		foreach (AudioStreamPlayer player in _audioStreamPlayers)
-		{
-			player.Stop();
-			player.Stream = null;
-		}
-
-		_next = 0;
-	}
-
-	private AudioStreamPlayer GetAvailableSfxPlayer()
-	{
-		// Reuse idle players first, creating another only when all pooled players are busy.
-		for (int i = 0; i < _audioStreamPlayers.Count; i++)
-		{
-			int index = (_next + i) % _audioStreamPlayers.Count;
-			if (!_audioStreamPlayers[index].Playing)
-			{
-				_next = (index + 1) % _audioStreamPlayers.Count;
-				return _audioStreamPlayers[index];
-			}
-		}
-
-		AudioStreamPlayer player = new AudioStreamPlayer { Name = $"SFXPlayer{_audioStreamPlayers.Count}" };
-		AddChild(player);
-		_audioStreamPlayers.Add(player);
-		_next = 0;
-		return player;
-	}
+    public override string[] _GetConfigurationWarnings()
+    {
+        if (GetChildCount() == 0 || GetChild(0) is not AudioStreamPlayer)
+            return new[] { "1st child node NEEDS to be and AudioStreamPlayer" };
+        return System.Array.Empty<string>();
+    }
 }
