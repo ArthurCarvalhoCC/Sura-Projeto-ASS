@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://tv6vgwfd46qa"]
 
-[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_hy3qt"]
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_hy3qt"]
 [ext_resource type="Script" uid="uid://cwf53ulum62im" path="res://src/scenes/menus/TitleScreen/TitleScreen.cs" id="2_oyxc4"]
 [ext_resource type="PackedScene" uid="uid://ngjl4nr6nlq3" path="res://src/scenes/predio/House.tscn" id="3_lvs3x"]
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/backgrounds/arte_menu.png" id="3_pqkav"]
 [ext_resource type="AudioStream" uid="uid://b54mqb331dfks" path="res://assets/sounds/bgm/menu.mp3" id="4_wis7l"]
-[ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/ui-themes/label_title_font.tres" id="5_4w8w4"]
-[ext_resource type="PackedScene" uid="uid://bctrmisjk2dkf" path="res://src/ui/ui-elements/translation-button/TranslationButton.tscn" id="6_pqkav"]
+[ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/themes/label_title_font.tres" id="5_4w8w4"]
+[ext_resource type="PackedScene" uid="uid://bctrmisjk2dkf" path="res://src/ui/menu-nodes/translation-button/TranslationButton.tscn" id="6_pqkav"]
 [ext_resource type="Texture2D" uid="uid://svqfn43iico2" path="res://assets/sprites/ui/menu/flags/flag-brazil.png" id="7_3jiru"]
 [ext_resource type="Texture2D" uid="uid://bx3hx5g71iv18" path="res://assets/sprites/ui/menu/flags/flag-mexico.png" id="8_2lu03"]
 [ext_resource type="Texture2D" uid="uid://mq754pqea777" path="res://assets/sprites/ui/menu/flags/flag-eua.png" id="9_84d0x"]
 [ext_resource type="Texture2D" uid="uid://clbe60qkvhivm" path="res://assets/sprites/ui/menu/flags/flag-japan.png" id="10_84d0x"]
 [ext_resource type="Texture2D" uid="uid://b5pgai18r57nq" path="res://assets/sprites/ui/menu/flags/flag-russian.png" id="11_6kvge"]
-[ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-elements/cancel-button/CancelButton.tscn" id="12_oyxc4"]
+[ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/menu-nodes/cancel-button/CancelButton.tscn" id="12_oyxc4"]
 [ext_resource type="Texture2D" uid="uid://dqcqui0mghcur" path="res://assets/sprites/ui/icons/urso_chama_chama.webp" id="14_8eumd"]
-[ext_resource type="Script" uid="uid://dj1cvk6uvrdc2" path="res://src/ui/ui-elements/audio-sliders/volumeSliders.cs" id="15_audio_sliders"]
+[ext_resource type="Script" uid="uid://dj1cvk6uvrdc2" path="res://src/ui/menu-nodes/audio-sliders/volumeSliders.cs" id="15_audio_sliders"]
 
 [node name="TitleScreen" type="Control" unique_id=1303787038 node_paths=PackedStringArray("Main", "Settings", "Credits")]
 auto_translate_mode = 1
@@ -185,7 +185,7 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-current_tab = 1
+current_tab = 0
 clip_tabs = false
 use_hidden_tabs_for_min_size = true
 tab_0/title = "MENU_VIDEO_TITLE"
@@ -193,7 +193,6 @@ tab_1/title = "MENU_AUDIO_TITLE"
 tab_2/title = "MENU_LANGUAGE_TITLE"
 
 [node name="Video" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1757746494]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "MENU_VIDEO_TITLE"
@@ -226,6 +225,7 @@ layout_mode = 2
 text = "SETTINGS_VSYNC"
 
 [node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1160609111]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"

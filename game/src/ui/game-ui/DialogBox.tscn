@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b6wpeegsxt3gu"]
 
-[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_o2gjm"]
-[ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/ui-objects/DialogBox.cs" id="1_xgc7y"]
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_o2gjm"]
+[ext_resource type="Script" uid="uid://bcxmeih6hhdxg" path="res://src/ui/game-ui/DialogBox.cs" id="1_xgc7y"]
 [ext_resource type="Texture2D" uid="uid://dnnsrrm0e6oxa" path="res://assets/sprites/ui/menu/slider/slider.png" id="3_o2gjm"]
 [ext_resource type="Texture2D" uid="uid://dqcqui0mghcur" path="res://assets/sprites/ui/icons/urso_chama_chama.webp" id="4_rpokc"]
 
