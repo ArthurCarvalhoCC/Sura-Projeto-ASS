@@ -12,7 +12,6 @@ public partial class WorldSceneRoot : Node2D, ISceneRoot
 	public override void _Ready()
 	{
 		Gui.Instance._mobileControls.SetMobileControlsVisible(hideMobileControls);
-		Gui.Instance._hotBar.Show();
 		_player.SetNewPosition(Managers.Instance._sceneManager.playerInitialNewSceneCoords);
 		Managers.Instance._sceneManager.FinishSceneChange();
 		Managers.Instance._audioManager.PlayMusic(InitialMusic);
