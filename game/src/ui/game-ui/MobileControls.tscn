@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dwid5ckfdpkln"]
 
-[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/ui-themes/main.tres" id="1_5g6m6"]
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_5g6m6"]
 [ext_resource type="Texture2D" uid="uid://ch67os4l1tse4" path="res://assets/sprites/ui/mobile-controls/button_select.png" id="1_al7ov"]
-[ext_resource type="Script" uid="uid://d3edqh2s5fw0a" path="res://src/ui/ui-objects/MobileControls.cs" id="2_djqbb"]
+[ext_resource type="Script" uid="uid://d3edqh2s5fw0a" path="res://src/ui/game-ui/MobileControls.cs" id="2_djqbb"]
 [ext_resource type="Texture2D" uid="uid://1teu3m2rm03e" path="res://assets/sprites/ui/mobile-controls/button_select_pressed.png" id="2_ivroo"]
 [ext_resource type="Texture2D" uid="uid://dcrsh0jjycpu3" path="res://assets/sprites/ui/menu/buttons/options-button/options-button.png" id="4_3iw0w"]
 [ext_resource type="Texture2D" uid="uid://nvm6aq5lcq44" path="res://assets/sprites/ui/menu/buttons/options-button/options-button-pressed.png" id="5_djqbb"]

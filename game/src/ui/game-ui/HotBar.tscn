@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://d3hopdbnuwt88"]
+
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_2ryqh"]
+[ext_resource type="Script" uid="uid://3q57r73578vk" path="res://src/ui/game-ui/HotBar.cs" id="1_4sqps"]
+[ext_resource type="PackedScene" uid="uid://c2t0hvp82eilh" path="res://src/ui/ui-nodes/ItemBox.tscn" id="3_hmmij"]
+[ext_resource type="Texture2D" uid="uid://clgfyfbf8aoe6" path="res://assets/sprites/ui/menu/backgrounds/bg_menu2.png" id="3_i78mp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbuv2"]
+texture = ExtResource("3_i78mp")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[node name="HotBar" type="Control" unique_id=1056812743]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_2ryqh")
+script = ExtResource("1_4sqps")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=368122459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=536568525]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_nbuv2")
+
+[node name="Panel" type="Panel" parent="MarginContainer/PanelContainer" unique_id=616552503]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/PanelContainer" unique_id=2078026492]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+scroll_hint_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/ScrollContainer" unique_id=117904246]
+layout_mode = 2
+
+[node name="ItemList" type="VBoxContainer" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer" unique_id=921302247]
+layout_mode = 2
+
+[node name="ItemBox" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/ItemList" unique_id=220499902 instance=ExtResource("3_hmmij")]
+layout_mode = 2
+
+[node name="ItemBox2" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/ItemList" unique_id=824260669 instance=ExtResource("3_hmmij")]
+layout_mode = 2
+
+[node name="ItemBox3" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/ItemList" unique_id=1371409484 instance=ExtResource("3_hmmij")]
+layout_mode = 2
+
+[node name="ItemBox4" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/ItemList" unique_id=1786889210 instance=ExtResource("3_hmmij")]
+layout_mode = 2
+
+[node name="ItemBox5" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/ItemList" unique_id=257370709 instance=ExtResource("3_hmmij")]
+layout_mode = 2
+
+[node name="ItemBox6" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/ItemList" unique_id=1943424968 instance=ExtResource("3_hmmij")]
+layout_mode = 2
+
+[node name="ItemBox7" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/ItemList" unique_id=1487390079 instance=ExtResource("3_hmmij")]
+layout_mode = 2
