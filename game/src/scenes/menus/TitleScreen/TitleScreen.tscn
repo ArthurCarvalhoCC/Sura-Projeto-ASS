@@ -36,7 +36,7 @@ InitialMusic = ExtResource("4_wis7l")
 
 [node name="SkyBg" parent="." unique_id=168957984 instance=ExtResource("16_4x86w")]
 firstColor = Color(0, 0.00699996, 0.14, 1)
-secondColor = Color(0.2293301, 0.14819999, 0.38, 1)
+secondColor = Color(0.17005011, 0.05699999, 0.38, 1)
 parallaxOpacity = 0.44
 parallaxModulate = Color(0.72981, 0.6318, 0.81, 1)
 
