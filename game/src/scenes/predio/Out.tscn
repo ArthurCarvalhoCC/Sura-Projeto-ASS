@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_l1awk"]
 [ext_resource type="Texture2D" uid="uid://iygbaw57xdjj" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/tile_ceramic.png" id="2_sa53c"]
 [ext_resource type="Texture2D" uid="uid://c0188ixgqipqm" path="res://assets/sprites/enviroment/tiles-sets/directional/street.png" id="2_y2yhs"]
-[ext_resource type="Texture2D" uid="uid://cridgm0g0sui3" path="res://assets/sprites/enviroment/tiles-sets/directional/walls.png" id="3_y2yhs"]
+[ext_resource type="Texture2D" uid="uid://cridgm0g0sui3" path="res://assets/sprites/enviroment/tiles-sets/directional/walls/walls.png" id="3_y2yhs"]
 [ext_resource type="Texture2D" uid="uid://bot8keonjx78x" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/dark_wall.png" id="4_0rxgo"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="4_y2yhs"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="5_0rxgo"]
