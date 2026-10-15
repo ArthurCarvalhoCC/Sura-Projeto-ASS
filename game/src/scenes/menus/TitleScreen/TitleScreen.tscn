@@ -185,7 +185,7 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-current_tab = 2
+current_tab = 1
 clip_tabs = false
 use_hidden_tabs_for_min_size = true
 tab_0/title = "MENU_VIDEO_TITLE"
@@ -200,6 +200,8 @@ metadata/_tab_name = "MENU_VIDEO_TITLE"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Video" unique_id=1157588679]
 layout_mode = 2
+scroll_hint_mode = 1
+tile_scroll_hint = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Video/ScrollContainer" unique_id=1599935044]
 layout_mode = 2
@@ -224,13 +226,13 @@ layout_mode = 2
 text = "SETTINGS_VSYNC"
 
 [node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1160609111]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Audio" unique_id=612882527]
 layout_mode = 2
+scroll_hint_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Audio/ScrollContainer" unique_id=2117994237]
 layout_mode = 2
@@ -289,6 +291,7 @@ value = 50.0
 rounded = true
 
 [node name="Language" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=358491666]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 metadata/_tab_name = "MENU_LANGUAGE_TITLE"
@@ -308,29 +311,34 @@ columns = 2
 
 [node name="Portuguese" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=346491034 instance=ExtResource("6_pqkav")]
 layout_mode = 2
+mouse_filter = 1
 text = "Português"
 icon = ExtResource("7_3jiru")
 
 [node name="Spanish" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=1809683220 instance=ExtResource("6_pqkav")]
 layout_mode = 2
+mouse_filter = 1
 text = "Español"
 icon = ExtResource("8_2lu03")
 LocaleCode = "es"
 
 [node name="English" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=2054638765 instance=ExtResource("6_pqkav")]
 layout_mode = 2
+mouse_filter = 1
 text = "English"
 icon = ExtResource("9_84d0x")
 LocaleCode = "en-US"
 
 [node name="Japanese" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=570878379 instance=ExtResource("6_pqkav")]
 layout_mode = 2
+mouse_filter = 1
 text = "日本語"
 icon = ExtResource("10_84d0x")
 LocaleCode = "ja"
 
 [node name="Russian" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=956149222 instance=ExtResource("6_pqkav")]
 layout_mode = 2
+mouse_filter = 1
 text = "Русский"
 icon = ExtResource("11_6kvge")
 LocaleCode = "ru"
