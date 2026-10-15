@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-nodes/cancel-button/CancelButton.tscn" id="12_oyxc4"]
 [ext_resource type="Texture2D" uid="uid://dqcqui0mghcur" path="res://assets/sprites/ui/icons/urso_chama_chama.webp" id="14_8eumd"]
 [ext_resource type="Script" uid="uid://dj1cvk6uvrdc2" path="res://src/ui/ui-nodes/audio-sliders/volumeSliders.cs" id="15_audio_sliders"]
+[ext_resource type="PackedScene" uid="uid://b0a1gxyecka4h" path="res://src/actors/backgrounds/gameplay/sky/SkyBg.tscn" id="16_4x86w"]
 
 [node name="TitleScreen" type="Control" unique_id=1303787038 node_paths=PackedStringArray("Main", "Settings", "Credits")]
 auto_translate_mode = 1
@@ -33,7 +34,14 @@ Settings = NodePath("Pages/Settings")
 Credits = NodePath("Pages/Credits")
 InitialMusic = ExtResource("4_wis7l")
 
+[node name="SkyBg" parent="." unique_id=168957984 instance=ExtResource("16_4x86w")]
+firstColor = Color(0, 0.00699996, 0.14, 1)
+secondColor = Color(0.2293301, 0.14819999, 0.38, 1)
+parallaxOpacity = 0.44
+parallaxModulate = Color(0.72981, 0.6318, 0.81, 1)
+
 [node name="Background" type="TextureRect" parent="." unique_id=216660387]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,7 +62,6 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Pages" unique_id=770484771]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -143,6 +150,7 @@ mouse_default_cursor_shape = 2
 text = "MENU_MAIN_QUIT"
 
 [node name="Settings" type="Control" parent="Pages" unique_id=166331216]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

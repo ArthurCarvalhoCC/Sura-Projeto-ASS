@@ -36,7 +36,7 @@ centered = false
 [node name="Parallax2D" type="Parallax2D" parent="clouds" unique_id=300744305]
 scroll_offset = Vector2(320, 320)
 repeat_size = Vector2(480, 480)
-autoscroll = Vector2(10, 5)
+autoscroll = Vector2(5, 3)
 repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="clouds/Parallax2D" unique_id=1649317487]
@@ -58,7 +58,7 @@ texture = ExtResource("5_nypn5")
 [node name="Parallax2D2" type="Parallax2D" parent="clouds" unique_id=544140972]
 scroll_offset = Vector2(320, 320)
 repeat_size = Vector2(480, 480)
-autoscroll = Vector2(5, 10)
+autoscroll = Vector2(3, 5)
 repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=1747422012]
