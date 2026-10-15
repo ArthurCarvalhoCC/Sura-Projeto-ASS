@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_yaw1v"]
 [ext_resource type="TileSet" uid="uid://bgn5xdl7h2ick" path="res://src/tile-set/Ground.tres" id="2_6vexs"]
+[ext_resource type="AudioStream" uid="uid://c7nn5h3juwedf" path="res://assets/sounds/bgm/4_Igarape/4_Igarape_loop.mp3" id="2_xfdje"]
 [ext_resource type="TileSet" uid="uid://b6suvumrlciuf" path="res://src/tile-set/Grass.tres" id="3_xfdje"]
 [ext_resource type="Texture2D" uid="uid://cridgm0g0sui3" path="res://assets/sprites/enviroment/tiles-sets/directional/walls/walls.png" id="4_7qtgg"]
 [ext_resource type="Texture2D" uid="uid://bot8keonjx78x" path="res://assets/sprites/enviroment/tiles-sets/auto-tiles/dark_wall.png" id="5_wl732"]
@@ -163,6 +164,7 @@ sources/0 = SubResource("TileSetAtlasSource_d8pgb")
 
 [node name="Fishing" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_yaw1v")
+InitialMusic = ExtResource("2_xfdje")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 

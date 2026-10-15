@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dijjap2yawn0w"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_d6rh7"]
+[ext_resource type="AudioStream" uid="uid://bhq1uvprvoasq" path="res://assets/sounds/bgm/2_Aldeia_Interno/2_Aldeia_Interno_loop.mp3" id="2_b4hu7"]
 [ext_resource type="TileSet" uid="uid://bgn5xdl7h2ick" path="res://src/tile-set/Ground.tres" id="2_wigo0"]
 [ext_resource type="TileSet" uid="uid://b6suvumrlciuf" path="res://src/tile-set/Grass.tres" id="4_t86tm"]
 [ext_resource type="Texture2D" uid="uid://bb6xs2r7frspy" path="res://assets/sprites/enviroment/tiles-sets/tile-maps/_tilemap_casa.png" id="5_tihf2"]
@@ -57,8 +58,9 @@ physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_b32a3")
 
-[node name="Wheel" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
+[node name="Maloca" type="Node2D" unique_id=1662081687 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_d6rh7")
+InitialMusic = ExtResource("2_b4hu7")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 
