@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c2t0hvp82eilh"]
+
+[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_nbuv2"]
+[ext_resource type="Texture2D" uid="uid://c4rfc3gtrbmpu" path="res://assets/sprites/ui/menu/scroll-bar/grabber_highlight.png" id="1_qnbej"]
+[ext_resource type="Script" uid="uid://btcj20yhm21dd" path="res://src/ui/ui-nodes/ItemBox.cs" id="2_nbuv2"]
+[ext_resource type="Texture2D" uid="uid://cy6el6egf5ywl" path="res://assets/sprites/ui/icons/icon.svg" id="2_sfh6q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlew8"]
+texture = ExtResource("1_qnbej")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[node name="ItemBox" type="PanelContainer" unique_id=220499902]
+custom_minimum_size = Vector2(24, 24)
+custom_maximum_size = Vector2(24, 24)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_nbuv2")
+theme_override_styles/panel = SubResource("StyleBoxTexture_vlew8")
+script = ExtResource("2_nbuv2")
+
+[node name="Sprite" type="TextureRect" parent="." unique_id=89511793]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_sfh6q")
+
+[node name="Quantity" type="Label" parent="." unique_id=927598574]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8

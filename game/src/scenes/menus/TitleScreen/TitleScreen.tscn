@@ -6,15 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://x745r0ktcegk" path="res://assets/sprites/ui/backgrounds/arte_menu.png" id="3_pqkav"]
 [ext_resource type="AudioStream" uid="uid://b54mqb331dfks" path="res://assets/sounds/bgm/menu.mp3" id="4_wis7l"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/themes/label_title_font.tres" id="5_4w8w4"]
-[ext_resource type="PackedScene" uid="uid://bctrmisjk2dkf" path="res://src/ui/menu-nodes/translation-button/TranslationButton.tscn" id="6_pqkav"]
+[ext_resource type="PackedScene" uid="uid://bctrmisjk2dkf" path="res://src/ui/ui-nodes/translation-button/TranslationButton.tscn" id="6_pqkav"]
 [ext_resource type="Texture2D" uid="uid://svqfn43iico2" path="res://assets/sprites/ui/menu/flags/flag-brazil.png" id="7_3jiru"]
 [ext_resource type="Texture2D" uid="uid://bx3hx5g71iv18" path="res://assets/sprites/ui/menu/flags/flag-mexico.png" id="8_2lu03"]
 [ext_resource type="Texture2D" uid="uid://mq754pqea777" path="res://assets/sprites/ui/menu/flags/flag-eua.png" id="9_84d0x"]
 [ext_resource type="Texture2D" uid="uid://clbe60qkvhivm" path="res://assets/sprites/ui/menu/flags/flag-japan.png" id="10_84d0x"]
 [ext_resource type="Texture2D" uid="uid://b5pgai18r57nq" path="res://assets/sprites/ui/menu/flags/flag-russian.png" id="11_6kvge"]
-[ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/menu-nodes/cancel-button/CancelButton.tscn" id="12_oyxc4"]
+[ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-nodes/cancel-button/CancelButton.tscn" id="12_oyxc4"]
 [ext_resource type="Texture2D" uid="uid://dqcqui0mghcur" path="res://assets/sprites/ui/icons/urso_chama_chama.webp" id="14_8eumd"]
-[ext_resource type="Script" uid="uid://dj1cvk6uvrdc2" path="res://src/ui/menu-nodes/audio-sliders/volumeSliders.cs" id="15_audio_sliders"]
+[ext_resource type="Script" uid="uid://dj1cvk6uvrdc2" path="res://src/ui/ui-nodes/audio-sliders/volumeSliders.cs" id="15_audio_sliders"]
 
 [node name="TitleScreen" type="Control" unique_id=1303787038 node_paths=PackedStringArray("Main", "Settings", "Credits")]
 auto_translate_mode = 1
