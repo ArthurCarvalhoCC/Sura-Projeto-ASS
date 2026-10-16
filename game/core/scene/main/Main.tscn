@@ -49,6 +49,7 @@ _pauseMenu = NodePath("CanvasLayer/PauseMenu")
 [node name="CanvasLayer" type="CanvasLayer" parent="GUI" unique_id=512455076]
 
 [node name="HotBar" parent="GUI/CanvasLayer" unique_id=1056812743 instance=ExtResource("9_8bkbc")]
+visible = false
 
 [node name="DialogBox" parent="GUI/CanvasLayer" unique_id=1656029404 instance=ExtResource("3_3awk8")]
 visible = false

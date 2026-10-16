@@ -22,14 +22,6 @@ grow_vertical = 2
 theme = ExtResource("1_5g6m6")
 script = ExtResource("2_djqbb")
 
-[node name="InteractButton" type="TouchScreenButton" parent="." unique_id=792985076]
-modulate = Color(1, 1, 1, 0.2509804)
-position = Vector2(248, 104)
-texture_normal = ExtResource("1_al7ov")
-texture_pressed = ExtResource("2_ivroo")
-shape = SubResource("RectangleShape2D_bqntk")
-action = "game_accept"
-
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=172675385]
 layout_mode = 1
 anchors_preset = 15
@@ -66,5 +58,12 @@ texture_pressed = ExtResource("5_djqbb")
 texture_hover = ExtResource("6_pikxw")
 texture_disabled = ExtResource("7_5eh4h")
 texture_focused = ExtResource("6_pikxw")
+
+[node name="InteractButton" type="TouchScreenButton" parent="MarginContainer" unique_id=792985076]
+modulate = Color(1, 1, 1, 0.2509804)
+texture_normal = ExtResource("1_al7ov")
+texture_pressed = ExtResource("2_ivroo")
+shape = SubResource("RectangleShape2D_bqntk")
+action = "game_accept"
 
 [connection signal="pressed" from="MarginContainer/PauseButton" to="." method="OnPausePressed"]
