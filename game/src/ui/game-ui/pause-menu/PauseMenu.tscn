@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_fwm3s"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/themes/label_title_font.tres" id="2_0d1cm"]
-[ext_resource type="Script" uid="uid://d30lu5ruvbga5" path="res://src/ui/game-ui/PauseMenu.cs" id="2_fsqkj"]
+[ext_resource type="Script" uid="uid://d30lu5ruvbga5" path="res://src/ui/game-ui/pause-menu/PauseMenu.cs" id="2_fsqkj"]
 [ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="3_1rt07"]
 
 [node name="PauseMenu" type="Control" unique_id=1914284591]
