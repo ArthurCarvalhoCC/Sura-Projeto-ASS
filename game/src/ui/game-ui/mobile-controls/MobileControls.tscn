@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_5g6m6"]
 [ext_resource type="Texture2D" uid="uid://ch67os4l1tse4" path="res://assets/sprites/ui/mobile-controls/button_select.png" id="1_al7ov"]
-[ext_resource type="Script" uid="uid://d3edqh2s5fw0a" path="res://src/ui/game-ui/MobileControls.cs" id="2_djqbb"]
+[ext_resource type="Script" uid="uid://d3edqh2s5fw0a" path="res://src/ui/game-ui/mobile-controls/MobileControls.cs" id="2_djqbb"]
 [ext_resource type="Texture2D" uid="uid://1teu3m2rm03e" path="res://assets/sprites/ui/mobile-controls/button_select_pressed.png" id="2_ivroo"]
 [ext_resource type="Texture2D" uid="uid://dcrsh0jjycpu3" path="res://assets/sprites/ui/menu/buttons/options-button/options-button.png" id="4_3iw0w"]
 [ext_resource type="Texture2D" uid="uid://nvm6aq5lcq44" path="res://assets/sprites/ui/menu/buttons/options-button/options-button-pressed.png" id="5_djqbb"]
@@ -12,7 +12,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqntk"]
 size = Vector2(40, 40)
 
-[node name="MobileControls" type="Control" unique_id=1475332507]
+[node name="MobileControls" type="Control" unique_id=1475332507 node_paths=PackedStringArray("_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +21,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_5g6m6")
 script = ExtResource("2_djqbb")
+_button = NodePath("InteractButton")
+_margin = Vector2(40, 30)
 
 [node name="InteractButton" type="TouchScreenButton" parent="." unique_id=792985076]
 modulate = Color(1, 1, 1, 0.2509804)
