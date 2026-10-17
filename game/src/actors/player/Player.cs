@@ -4,14 +4,17 @@ using Godot.Collections;
 
 public partial class Player : CharacterBody2D
 {
-	[Signal]
-	public delegate void StateChangedEventHandler(string stateName);
-	[Export] public float MoveSpd = 40f;
-	[Export] public AnimationTree _animTree;
+	[ExportGroup("Dependecies")]
+	[Export] public AnimationTree _animationTree;
 	[Export] public CollisionShape2D _collision;
 	[Export] public Camera2D _camera;
+	
+	[ExportGroup("Phisical Variables")]
 	[Export] public float acceleration = 3000f;
 	[Export] public float fricttion = 5000f;
+	[Export] public float MoveSpd = 40f;
+
+	[Signal] public delegate void StateChangedEventHandler(string stateName);
 	
 	public AnimationNodeStateMachinePlayback _animStateMachine;
 	public Vector2 velocity = Vector2.Zero;
@@ -19,6 +22,7 @@ public partial class Player : CharacterBody2D
 	public bool debugMode = false;
 	public bool collisionActive = true;
 	public bool back = false;
+	public Vector2I lastDirection = Vector2I.Zero;
 
 	[ExportGroup("Footsteps")]
 	[Export] public AudioStream FootstepAudio;
@@ -29,7 +33,7 @@ public partial class Player : CharacterBody2D
 	public override void _Ready()
 	{
 		_camera.ProcessCallback = Camera2D.Camera2DProcessCallback.Physics;
-		_animStateMachine = (AnimationNodeStateMachinePlayback)_animTree.Get("parameters/playback");
+		_animStateMachine = (AnimationNodeStateMachinePlayback)_animationTree.Get("parameters/playback");
 	}
 
 	public override void _PhysicsProcess(double delta)

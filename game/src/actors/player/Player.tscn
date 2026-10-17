@@ -232,12 +232,11 @@ _data = {
 &"walk_up": SubResource("Animation_v7rlw")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=25723801 node_paths=PackedStringArray("_animTree", "_collision", "_camera")]
+[node name="Player" type="CharacterBody2D" unique_id=25723801 node_paths=PackedStringArray("_animationTree", "_collision", "_camera")]
 collision_mask = 2
 up_direction = Vector2(0, 1)
 script = ExtResource("1_faapv")
-MoveSpd = 35.0
-_animTree = NodePath("AnimationTree")
+_animationTree = NodePath("AnimationTree")
 _collision = NodePath("Collision")
 _camera = NodePath("Camera")
 FootstepAudio = ExtResource("2_v2xrw")

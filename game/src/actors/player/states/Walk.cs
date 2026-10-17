@@ -15,8 +15,8 @@ public partial class Walk : PlayerState
 
         if (_player.direction == Vector2.Zero) Machine.TransitionTo("idle");
         else {
-            _player._animTree.Set("parameters/Walk/blend_position", _player.direction);
-            _player._animTree.Set("parameters/Idle/blend_position", _player.direction);  
+            _player._animationTree.Set("parameters/Walk/blend_position", _player.direction);
+            _player._animationTree.Set("parameters/Idle/blend_position", _player.direction);  
         }
     }
     public override void PhysicsUpdate(double delta)
