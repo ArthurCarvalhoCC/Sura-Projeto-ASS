@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://2itiictt48n1"]
+
+[ext_resource type="Script" uid="uid://c311vjjk321j3" path="res://src/ui/ui-nodes/game-button/GameButton.cs" id="1_nq321"]
+
+[node name="GameButton" type="Button" unique_id=2057133276]
+script = ExtResource("1_nq321")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=579802507]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1263986466]

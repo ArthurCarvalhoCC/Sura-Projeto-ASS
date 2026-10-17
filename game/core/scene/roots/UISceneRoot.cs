@@ -9,6 +9,7 @@ public partial class UISceneRoot : Control, ISceneRoot
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Gui.Instance._hotbar.SetHotbarVisible(hideMobileControls);
 		Gui.Instance._mobileControls.SetMobileControlsVisible(hideMobileControls);
 		Managers.Instance._sceneManager.FinishSceneChange();
 		Managers.Instance._audioManager.PlayMusic(InitialMusic);
