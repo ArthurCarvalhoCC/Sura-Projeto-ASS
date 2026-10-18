@@ -35,10 +35,10 @@ Credits = NodePath("Pages/Credits")
 InitialMusic = ExtResource("4_wis7l")
 
 [node name="SkyBg" parent="." unique_id=168957984 instance=ExtResource("16_4x86w")]
-firstColor = Color(0, 0.00699996, 0.14, 1)
-secondColor = Color(0.2293301, 0.14819999, 0.38, 1)
-parallaxOpacity = 0.44
-parallaxModulate = Color(0.72981, 0.6318, 0.81, 1)
+firstColor = Color(0.8509804, 0.68235296, 0.41568628, 1)
+secondColor = Color(0, 0.5686275, 0.6313726, 1)
+parallaxOpacity = 0.6
+parallaxModulate = Color(0.85, 1, 0.97249997, 1)
 
 [node name="Background" type="TextureRect" parent="." unique_id=216660387]
 visible = false

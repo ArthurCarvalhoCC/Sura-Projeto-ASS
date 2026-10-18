@@ -4,7 +4,7 @@ using Godot;
 public partial class SkyBg : CanvasLayer
 {
     [Export]
-    private Sprite2D _sprite;
+    private TextureRect _sprite;
 
     [Export]
     private Node2D _parallaxLayer;
