@@ -27,7 +27,7 @@ Managers="*uid://ft6sytpqo0f7"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 
