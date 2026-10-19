@@ -6,19 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://du63iemm3rpbq" path="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_4.png" id="4_ky15b"]
 [ext_resource type="Texture2D" uid="uid://cnunwpvsr54w" path="res://assets/sprites/enviroment/tiles-sets/decoractive/clouds/cloud_3.png" id="5_nypn5"]
 
-[sub_resource type="Gradient" id="Gradient_3irg7"]
+[sub_resource type="Gradient" id="Gradient_522pn"]
 colors = PackedColorArray(0.08627451, 0.4862745, 0.7882353, 1, 0.57, 0.97133327, 1, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_vlew8"]
-gradient = SubResource("Gradient_3irg7")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bekt7"]
+gradient = SubResource("Gradient_522pn")
 fill_from = Vector2(1, 1)
 fill_to = Vector2(0, 0)
 
 [node name="SkyBg" type="CanvasLayer" unique_id=168957984 node_paths=PackedStringArray("_sprite", "_parallaxLayer")]
 layer = -5
 script = ExtResource("1_tdwqx")
-_sprite = NodePath("Sprite2D")
-_parallaxLayer = NodePath("clouds")
+_sprite = NodePath("Background")
+_parallaxLayer = NodePath("Clouds")
 firstColor = Color(0.08627451, 0.4862745, 0.7882353, 1)
 secondColor = Color(0.57, 0.97133327, 1, 1)
 fillFromX = 1.0
@@ -26,55 +26,59 @@ fillFromY = 1.0
 fillToX = 0.0
 fillToY = 0.0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1277600478]
-scale = Vector2(16, 9)
-texture = SubResource("GradientTexture2D_vlew8")
-centered = false
+[node name="Background" type="TextureRect" parent="." unique_id=1188304566]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_bekt7")
 
-[node name="clouds" type="Node2D" parent="." unique_id=1501370276]
+[node name="Clouds" type="Node2D" parent="." unique_id=1501370276]
 
-[node name="Parallax2D" type="Parallax2D" parent="clouds" unique_id=300744305]
+[node name="Parallax2D" type="Parallax2D" parent="Clouds" unique_id=300744305]
 scroll_offset = Vector2(320, 320)
 repeat_size = Vector2(480, 480)
 autoscroll = Vector2(5, 3)
 repeat_times = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Parallax2D" unique_id=1649317487]
+[node name="Sprite2D" type="Sprite2D" parent="Clouds/Parallax2D" unique_id=1649317487]
 position = Vector2(320, 480)
 texture = ExtResource("2_522pn")
 
-[node name="Sprite2D2" type="Sprite2D" parent="clouds/Parallax2D" unique_id=947348035]
+[node name="Sprite2D2" type="Sprite2D" parent="Clouds/Parallax2D" unique_id=947348035]
 position = Vector2(240, 320)
 texture = ExtResource("3_s8j7a")
 
-[node name="Sprite2D3" type="Sprite2D" parent="clouds/Parallax2D" unique_id=452205967]
+[node name="Sprite2D3" type="Sprite2D" parent="Clouds/Parallax2D" unique_id=452205967]
 position = Vector2(343.7143, 351.42862)
 texture = ExtResource("4_ky15b")
 
-[node name="Sprite2D4" type="Sprite2D" parent="clouds/Parallax2D" unique_id=1150223806]
+[node name="Sprite2D4" type="Sprite2D" parent="Clouds/Parallax2D" unique_id=1150223806]
 position = Vector2(420, 520)
 texture = ExtResource("5_nypn5")
 
-[node name="Parallax2D2" type="Parallax2D" parent="clouds" unique_id=544140972]
+[node name="Parallax2D2" type="Parallax2D" parent="Clouds" unique_id=544140972]
 scroll_offset = Vector2(320, 320)
 repeat_size = Vector2(480, 480)
 autoscroll = Vector2(3, 5)
 repeat_times = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=1747422012]
+[node name="Sprite2D" type="Sprite2D" parent="Clouds/Parallax2D2" unique_id=1747422012]
 position = Vector2(1120, 172)
 texture = ExtResource("2_522pn")
 
-[node name="Sprite2D2" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=399265772]
+[node name="Sprite2D2" type="Sprite2D" parent="Clouds/Parallax2D2" unique_id=399265772]
 position = Vector2(1000, 120)
 texture = ExtResource("3_s8j7a")
 flip_h = true
 
-[node name="Sprite2D3" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=63922020]
+[node name="Sprite2D3" type="Sprite2D" parent="Clouds/Parallax2D2" unique_id=63922020]
 position = Vector2(1120, 280)
 texture = ExtResource("4_ky15b")
 flip_v = true
 
-[node name="Sprite2D4" type="Sprite2D" parent="clouds/Parallax2D2" unique_id=1033686684]
+[node name="Sprite2D4" type="Sprite2D" parent="Clouds/Parallax2D2" unique_id=1033686684]
 position = Vector2(880, 120)
 texture = ExtResource("5_nypn5")

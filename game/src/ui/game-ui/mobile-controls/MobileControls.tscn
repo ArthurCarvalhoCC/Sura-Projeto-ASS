@@ -22,7 +22,7 @@ grow_vertical = 2
 theme = ExtResource("1_5g6m6")
 script = ExtResource("2_djqbb")
 _button = NodePath("InteractButton")
-_margin = Vector2(40, 30)
+_margin = Vector2(64, 30)
 
 [node name="InteractButton" type="TouchScreenButton" parent="." unique_id=792985076]
 modulate = Color(1, 1, 1, 0.2509804)

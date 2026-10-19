@@ -3,9 +3,9 @@ using System;
 
 public partial class HotBar : Control
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	public void SetHotbarVisible(bool turn)
 	{
+		Visible = turn;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

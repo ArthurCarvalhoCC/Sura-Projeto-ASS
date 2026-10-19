@@ -29,7 +29,7 @@ _debugScene = ExtResource("12_wof2s")
 
 [node name="SceneContainer" type="Node" parent="." unique_id=1015481246]
 
-[node name="GUI" type="Control" parent="." unique_id=863204452 node_paths=PackedStringArray("_mobileControls", "_hotBar", "_dialogBox", "_sceneTransition", "_pauseMenu")]
+[node name="GUI" type="Control" parent="." unique_id=863204452 node_paths=PackedStringArray("_mobileControls", "_hotbar", "_dialogBox", "_sceneTransition", "_pauseMenu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,20 +41,19 @@ size_flags_vertical = 4
 mouse_filter = 2
 script = ExtResource("3_y5upg")
 _mobileControls = NodePath("CanvasLayer/MobileControls")
-_hotBar = NodePath("CanvasLayer/HotBar")
+_hotbar = NodePath("CanvasLayer/HotBar")
 _dialogBox = NodePath("CanvasLayer/DialogBox")
 _sceneTransition = NodePath("CanvasLayer/SceneTransition")
 _pauseMenu = NodePath("CanvasLayer/PauseMenu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GUI" unique_id=512455076]
 
-[node name="HotBar" parent="GUI/CanvasLayer" unique_id=1056812743 instance=ExtResource("9_8bkbc")]
+[node name="MobileControls" parent="GUI/CanvasLayer" unique_id=1475332507 instance=ExtResource("6_e2s0e")]
 visible = false
+
+[node name="HotBar" parent="GUI/CanvasLayer" unique_id=1056812743 instance=ExtResource("9_8bkbc")]
 
 [node name="DialogBox" parent="GUI/CanvasLayer" unique_id=1656029404 instance=ExtResource("3_3awk8")]
-visible = false
-
-[node name="MobileControls" parent="GUI/CanvasLayer" unique_id=1475332507 instance=ExtResource("6_e2s0e")]
 visible = false
 
 [node name="PauseMenu" parent="GUI/CanvasLayer" unique_id=1914284591 instance=ExtResource("4_2gji6")]

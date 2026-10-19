@@ -1,18 +1,251 @@
 [gd_scene format=3 uid="uid://q2wwy33kq6w1"]
 
-[ext_resource type="Texture2D" uid="uid://dmhnqdcivui86" path="res://assets/sprites/ui/menu/buttons/cancel-button/cancel-button.png" id="1_krvug"]
-[ext_resource type="Texture2D" uid="uid://1p55h3pbp0dg" path="res://assets/sprites/ui/menu/buttons/cancel-button/cancel-button-pressed.png" id="2_3ectl"]
-[ext_resource type="Texture2D" uid="uid://bcoypocoqcn8a" path="res://assets/sprites/ui/menu/buttons/cancel-button/cancel-button-hover.png" id="3_n27hd"]
-[ext_resource type="Texture2D" uid="uid://biui7s55vgct1" path="res://assets/sprites/ui/menu/buttons/cancel-button/cancel-button-disabled.png" id="4_kfyh5"]
+[ext_resource type="Theme" uid="uid://bl2dk06futns2" path="res://src/ui/themes/main_v2.tres" id="1_f1m3m"]
+[ext_resource type="Script" uid="uid://c311vjjk321j3" path="res://src/ui/ui-nodes/game-button/GameButton.cs" id="2_mguco"]
+[ext_resource type="Texture2D" uid="uid://b6rlyy7pmsm2l" path="res://assets/sprites/ui/atlas_ui_v2.png" id="2_u1cje"]
 
-[node name="ReturnButton" type="TextureButton" unique_id=1676564578]
-offset_right = 16.0
-offset_bottom = 16.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlew8"]
+atlas = ExtResource("2_u1cje")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="Animation" id="Animation_81dij"]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath(".:offset_transform_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hqtwp"]
+resource_name = "hover"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1.1, 1.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_rotation")
+tracks/1/interp = 3
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 0.15, 0.25, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292519943295, -0.17453292519943295, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.025),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_y5tdn"]
+resource_name = "normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3bjp1"]
+resource_name = "pressed"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333, 0.08, 0.12, 0.2, 0.2603),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(0.8, 0.8), Vector2(1.1, 1.1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:offset_transform_rotation")
+tracks/2/interp = 3
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mguco"]
+_data = {
+&"RESET": SubResource("Animation_81dij"),
+&"hover": SubResource("Animation_hqtwp"),
+&"normal": SubResource("Animation_y5tdn"),
+&"pressed": SubResource("Animation_3bjp1")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fve7u"]
+texture = ExtResource("2_u1cje")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(1, 48, 6, 8)
+
+[node name="ReturnButton" type="Button" unique_id=1622838627]
+z_index = 1
+offset_right = 22.0
+offset_bottom = 25.0
 size_flags_horizontal = 8
 size_flags_vertical = 8
+offset_transform_enabled = true
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("1_krvug")
-texture_pressed = ExtResource("2_3ectl")
-texture_hover = ExtResource("3_n27hd")
-texture_disabled = ExtResource("4_kfyh5")
-texture_focused = ExtResource("3_n27hd")
+theme = ExtResource("1_f1m3m")
+icon = SubResource("AtlasTexture_vlew8")
+icon_alignment = 1
+script = ExtResource("2_mguco")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1406227917]
+libraries/ = SubResource("AnimationLibrary_mguco")
+autoplay = &"normal"
+
+[node name="Panel" type="Panel" parent="." unique_id=359160624]
+modulate = Color(0, 0, 0, 0.5019608)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fve7u")
