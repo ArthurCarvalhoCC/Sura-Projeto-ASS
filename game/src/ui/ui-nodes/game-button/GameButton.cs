@@ -47,7 +47,7 @@ public partial class GameButton : BaseButton
 		if (animatedFromCenter) PivotOffset = Size / 2;
 		defaultScale = Scale;
 	}
-	protected void initTween(Node target, 
+	protected void initTween(Godot.Node target, 
 		string property, 
 		Variant value, 
 		float duration)

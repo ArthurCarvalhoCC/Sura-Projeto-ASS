@@ -11,9 +11,9 @@ public partial class Walk : PlayerState
     public override void Update(double delta)
     {
         if (_player == null) return;
-        if (_player.debugMode) Machine.TransitionTo("debug");
+        if (_player.debugMode) _stateMachine.TransitionTo("debug");
 
-        if (_player.direction == Vector2.Zero) Machine.TransitionTo("idle");
+        if (_player.direction == Vector2.Zero) _stateMachine.TransitionTo("idle");
         else {
             _player._animationTree.Set("parameters/Walk/blend_position", _player.direction);
             _player._animationTree.Set("parameters/Idle/blend_position", _player.direction);  

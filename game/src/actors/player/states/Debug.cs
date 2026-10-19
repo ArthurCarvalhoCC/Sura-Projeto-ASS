@@ -6,7 +6,7 @@ public partial class Debug : PlayerState
 
     public override void Update(double delta)
     {
-        if (_player.debugMode) Machine.TransitionTo("idle");
+        if (_player.debugMode) _stateMachine.TransitionTo("idle");
         if (_player.back) {
             TurnOnCollision(_player.collisionActive);      
             _player.collisionActive = !_player.collisionActive;

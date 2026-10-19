@@ -10,13 +10,13 @@ public partial class DoorsContainer : Node2D
 
 	public override void _Ready()
 	{
-		foreach (Node child in GetChildren())
+		foreach (Godot.Node child in GetChildren())
 		{
 			if (child is Door door)
 			{
-				doorsList.Add(door);
+                doorsList.Add(door);
 				door.NodeEntered += OnSceneChangeResquest;
-				GD.Print(door.Name+": "+door);
+                GD.Print(door.Name+": "+ door);
 			}
 		}
 	}
