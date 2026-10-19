@@ -26,16 +26,20 @@ public abstract partial class StateMachine : Node
             GD.PushError($"{Name}: BeginState não foi definido ou não implementa IState.");
 			return;
 		}
+		ActualState = initialState;
 		ActualState?.Enter();
 	}
+
 	public override void _Process(double delta)
     {
         ActualState?.Update(delta);
     }
+
     public override void _PhysicsProcess(double delta)
 	{
 		ActualState?.PhysicsUpdate(delta);
 	}
+	
 	public virtual void TransitionTo(string newState)
 	{
 		if (string.IsNullOrWhiteSpace(newState))
