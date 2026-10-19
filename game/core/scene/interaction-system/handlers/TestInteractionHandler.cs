@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class TestInteractionHandler : Node
+public partial class TestInteractionHandler : Godot.Node
 {
 	[Export] private InteractBox box;
 

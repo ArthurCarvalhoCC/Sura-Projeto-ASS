@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.IO;
 
-public partial class DialogManager : Node
+public partial class DialogManager : Godot.Node
 {
 	public static DialogManager Instance;
 

@@ -1,13 +1,13 @@
 using Godot;
 
-public partial class SceneManager : Node
+public partial class SceneManager : Godot.Node
 {
-    private Node _sceneContainerNode;
+    private Godot.Node _sceneContainerNode;
     private SceneTransition _transitionNode;
-    private Node _currentScene;
+    private Godot.Node _currentScene;
     public Vector2I playerInitialNewSceneCoords { get; private set; }
 
-    public void SetSceneContainerNode(Node sceneConteiner)
+    public void SetSceneContainerNode(Godot.Node sceneConteiner)
     {
         _sceneContainerNode = sceneConteiner;
     }
@@ -43,7 +43,7 @@ public partial class SceneManager : Node
     }
     private void ContinueSceneChange(PackedScene scene)
     {
-        _currentScene = scene.Instantiate<Node>();
+        _currentScene = scene.Instantiate<Godot.Node>();
         _sceneContainerNode.AddChild(_currentScene);
     }
     public void FinishSceneChange()
@@ -69,9 +69,9 @@ public partial class SceneManager : Node
     {
         if (turnOn)
         {
-            _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Disabled;
+            _sceneContainerNode.ProcessMode = Godot.Node.ProcessModeEnum.Disabled;
             return;
         }
-        _sceneContainerNode.ProcessMode = Node.ProcessModeEnum.Inherit;
+        _sceneContainerNode.ProcessMode = Godot.Node.ProcessModeEnum.Inherit;
     }
 }

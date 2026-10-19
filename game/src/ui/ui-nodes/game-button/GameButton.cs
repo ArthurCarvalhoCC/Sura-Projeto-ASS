@@ -94,17 +94,6 @@ public partial class GameButton : BaseButton
         defaultScale = Scale;
     }
 
-    protected void InitTween(
-        Node target,
-        string property,
-        Variant value,
-        float duration)
-    {
-        Tween tween = CreateTween();
-        tween.TweenProperty(target, property, value, duration)
-            .SetTrans(transitionType);
-    }
-
     private void PlayButtonAudio(
         AudioStream audio,
         float pitchMin,
@@ -125,4 +114,16 @@ public partial class GameButton : BaseButton
             volumeDb
         );
     }
+
+	protected void initTween(Godot.Node target, 
+		string property, 
+		Variant value, 
+		float duration)
+	{
+		Tween _tween = CreateTween();
+		
+		_tween?.Kill();
+		_tween.TweenProperty( target, property, value, duration).SetTrans(transitionType);
+	}
+
 }
