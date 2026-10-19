@@ -10,11 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://svqfn43iico2" path="res://assets/sprites/ui/menu/flags/flag-brazil.png" id="7_3jiru"]
 [ext_resource type="PackedScene" uid="uid://2itiictt48n1" path="res://src/ui/ui-nodes/game-button/GameButton.tscn" id="8_0qkvd"]
 [ext_resource type="Texture2D" uid="uid://bx3hx5g71iv18" path="res://assets/sprites/ui/menu/flags/flag-mexico.png" id="8_2lu03"]
+[ext_resource type="PackedScene" uid="uid://dkpeffgdvco4m" path="res://src/ui/ui-nodes/audio-sliders/VolumeSlider.tscn" id="9_4x86w"]
 [ext_resource type="Texture2D" uid="uid://mq754pqea777" path="res://assets/sprites/ui/menu/flags/flag-eua.png" id="9_84d0x"]
 [ext_resource type="Texture2D" uid="uid://clbe60qkvhivm" path="res://assets/sprites/ui/menu/flags/flag-japan.png" id="10_84d0x"]
 [ext_resource type="Texture2D" uid="uid://b5pgai18r57nq" path="res://assets/sprites/ui/menu/flags/flag-russian.png" id="11_6kvge"]
 [ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-nodes/cancel-button/CancelButton.tscn" id="12_oyxc4"]
-[ext_resource type="Script" uid="uid://dj1cvk6uvrdc2" path="res://src/ui/ui-nodes/audio-sliders/volumeSliders.cs" id="15_audio_sliders"]
 [ext_resource type="PackedScene" uid="uid://b0a1gxyecka4h" path="res://src/actors/backgrounds/gameplay/sky/SkyBg.tscn" id="16_4x86w"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlew8"]
@@ -75,6 +75,7 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Pages" unique_id=770484771]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -154,7 +155,6 @@ underline = 1
 uri = "https://www.instagram.com/pjd2_2025/"
 
 [node name="Settings" type="Control" parent="Pages" unique_id=166331216]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -185,7 +185,7 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 accessibility_region = true
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 clip_tabs = false
 drag_to_rearrange_enabled = true
 use_hidden_tabs_for_min_size = true
@@ -194,6 +194,7 @@ tab_1/title = "MENU_AUDIO_TITLE"
 tab_2/title = "MENU_LANGUAGE_TITLE"
 
 [node name="Video" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=1757746494]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "MENU_VIDEO_TITLE"
@@ -231,7 +232,6 @@ layout_mode = 2
 text = "SETTINGS_VSYNC"
 
 [node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=1160609111]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"
@@ -245,59 +245,29 @@ scroll_hint_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer" unique_id=2117994237]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer" unique_id=1409679308]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer" unique_id=983946519]
+[node name="Master" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer" unique_id=37430853 instance=ExtResource("9_4x86w")]
 layout_mode = 2
 
-[node name="Labels" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2051574266]
+[node name="SFX" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1222516914 instance=ExtResource("9_4x86w")]
 layout_mode = 2
-theme_override_constants/separation = 10
+labelName = "SETTINGS_SFX_VOLUME"
+_audioBus = 1
 
-[node name="MasterVolume" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Labels" unique_id=2058455020]
+[node name="Music" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer" unique_id=972947749 instance=ExtResource("9_4x86w")]
 layout_mode = 2
-text = "SETTINGS_MASTER_VOLUME"
+labelName = "SETTINGS_MUSIC_VOLUME"
+_audioBus = 2
 
-[node name="SFX" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Labels" unique_id=1016884873]
+[node name="Ambient" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1552456225 instance=ExtResource("9_4x86w")]
 layout_mode = 2
-text = "SETTINGS_SFX_VOLUME"
-
-[node name="Music" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Labels" unique_id=236938468]
-layout_mode = 2
-text = "SETTINGS_MUSIC_VOLUME"
-
-[node name="Ambient" type="Label" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Labels" unique_id=787857538]
-layout_mode = 2
-text = "SETTINGS_AMBIENT_VOLUME"
-
-[node name="Buttons" type="VBoxContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1421168943]
-custom_minimum_size = Vector2(96, 0)
-propagate_maximum_size = false
-layout_mode = 2
-script = ExtResource("15_audio_sliders")
-
-[node name="MasterSlider" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=272489009]
-layout_mode = 2
-size_flags_vertical = 4
-value = 50.0
-rounded = true
-
-[node name="SFXSlider" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=1936868956]
-layout_mode = 2
-value = 50.0
-rounded = true
-
-[node name="MusicSlider" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=231307804]
-layout_mode = 2
-value = 50.0
-rounded = true
-
-[node name="AmbienceSlider" type="HSlider" parent="Pages/Settings/MarginContainer/ConfigSections/Audio/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/Buttons" unique_id=338998045]
-layout_mode = 2
-value = 50.0
-rounded = true
+labelName = "SETTINGS_AMBIENT_VOLUME"
+_audioBus = 3
 
 [node name="Language" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=358491666]
 visible = false
