@@ -28,7 +28,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme = ExtResource("1_o2gjm")
 script = ExtResource("1_xgc7y")
 _DialogName = NodePath("MarginContainer/PanelContainer/MarginContainer2/HBoxContainer/Texts/HBoxContainer/Name")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bctrmisjk2dkf"]
 
 [ext_resource type="Script" uid="uid://t8486fkiqjr1" path="res://src/ui/ui-nodes/translation-button/TranslationButton.cs" id="1_7dcdb"]
+[ext_resource type="Theme" uid="uid://bl2dk06futns2" path="res://src/ui/themes/main_v2.tres" id="1_g4bga"]
 [ext_resource type="Texture2D" uid="uid://cy6el6egf5ywl" path="res://assets/sprites/ui/icons/icon.svg" id="1_qlnby"]
 [ext_resource type="Texture2D" uid="uid://b6rlyy7pmsm2l" path="res://assets/sprites/ui/atlas_ui_v2.png" id="2_rafc2"]
 
@@ -217,6 +218,7 @@ region_rect = Rect2(1, 48, 6, 8)
 
 [node name="TranslationButton" type="Button" unique_id=346491034]
 offset_transform_enabled = true
+theme = ExtResource("1_g4bga")
 text = "aaaa"
 icon = ExtResource("1_qlnby")
 icon_alignment = 1

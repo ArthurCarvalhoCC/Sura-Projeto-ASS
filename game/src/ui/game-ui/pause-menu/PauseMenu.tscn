@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://2ip8o25cvq52"]
 
-[ext_resource type="Theme" uid="uid://b4klmymd1wye1" path="res://src/ui/themes/main.tres" id="1_fwm3s"]
+[ext_resource type="Theme" uid="uid://bl2dk06futns2" path="res://src/ui/themes/main_v2.tres" id="1_mpp1u"]
 [ext_resource type="Theme" uid="uid://d3sb1m53oltci" path="res://src/ui/themes/label_title_font.tres" id="2_0d1cm"]
 [ext_resource type="Script" uid="uid://d30lu5ruvbga5" path="res://src/ui/game-ui/pause-menu/PauseMenu.cs" id="2_fsqkj"]
 [ext_resource type="PackedScene" uid="uid://tv6vgwfd46qa" path="res://src/scenes/menus/TitleScreen/TitleScreen.tscn" id="3_1rt07"]
+[ext_resource type="PackedScene" uid="uid://2itiictt48n1" path="res://src/ui/ui-nodes/game-button/GameButton.tscn" id="5_mfel0"]
 
 [node name="PauseMenu" type="Control" unique_id=1914284591]
 layout_mode = 3
@@ -12,8 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-theme = ExtResource("1_fwm3s")
+theme = ExtResource("1_mpp1u")
 script = ExtResource("2_fsqkj")
 _mainMenuScene = ExtResource("3_1rt07")
 
@@ -61,11 +61,11 @@ layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1499277126]
+[node name="Resume" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2057133276 instance=ExtResource("5_mfel0")]
 layout_mode = 2
 text = "MENU_PAUSE_RESUME"
 
-[node name="MainMenu" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1383806124]
+[node name="MainMenu" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1624029716 instance=ExtResource("5_mfel0")]
 layout_mode = 2
 text = "MENU_PAUSE_MAIN_MENU"
 

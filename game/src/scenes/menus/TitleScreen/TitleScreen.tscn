@@ -38,8 +38,12 @@ Credits = NodePath("Pages/Credits")
 InitialMusic = ExtResource("4_wis7l")
 
 [node name="SkyBg" parent="." unique_id=168957984 instance=ExtResource("16_4x86w")]
-firstColor = Color(0.8509804, 0.68235296, 0.41568628, 1)
-secondColor = Color(0, 0.5686275, 0.6313726, 1)
+firstColor = Color(0.98, 0.9587667, 0.7252, 1)
+secondColor = Color(0, 0.76, 0.76, 1)
+fillFromX = 0.0
+fillFromY = 0.0
+fillToX = 1.0
+fillToY = 1.0
 parallaxOpacity = 0.6
 parallaxModulate = Color(0.85, 1, 0.97249997, 1)
 
@@ -65,7 +69,6 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Pages" unique_id=770484771]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,21 +76,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-
-[node name="Version" type="Label" parent="Pages/Main" unique_id=72435122]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -11.0
-offset_right = 13.0
-grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-mouse_filter = 1
-text = " v0.2"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Main" unique_id=98634546]
 layout_mode = 1
@@ -144,6 +132,7 @@ layout_mode = 2
 text = "MENU_MAIN_QUIT"
 
 [node name="Settings" type="Control" parent="Pages" unique_id=166331216]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -181,7 +170,7 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 accessibility_region = true
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 clip_tabs = false
 drag_to_rearrange_enabled = true
 use_hidden_tabs_for_min_size = true
@@ -190,7 +179,6 @@ tab_1/title = "MENU_AUDIO_TITLE"
 tab_2/title = "MENU_LANGUAGE_TITLE"
 
 [node name="Video" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1757746494]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "MENU_VIDEO_TITLE"
@@ -228,6 +216,7 @@ layout_mode = 2
 text = "SETTINGS_VSYNC"
 
 [node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/VBoxContainer/ConfigSections" unique_id=1160609111]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"
