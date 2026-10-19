@@ -1,9 +1,9 @@
 using Godot;
 using System;
 
-public partial class Main : Node
+public partial class Main : Godot.Node
 {
-	[Export] public Node _sceneContainer { get; private set; }
+	[Export] public Godot.Node _sceneContainer { get; private set; }
 	[Export] public Gui _GUI { get; private set; }
 	[Export] private PackedScene InitialScene;
 	[Export] private Vector2I initialPlayerCoords;

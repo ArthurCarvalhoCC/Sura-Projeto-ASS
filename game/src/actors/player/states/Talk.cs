@@ -11,7 +11,7 @@ public partial class Talk : PlayerState
     public override void Update(double delta)
     {
         if (_player == null) return;
-        if (_player.debugMode) Machine.TransitionTo("debug"); 
+        if (_player.debugMode) _stateMachine.TransitionTo("debug"); 
     }
     public override void PhysicsUpdate(double delta)
     {

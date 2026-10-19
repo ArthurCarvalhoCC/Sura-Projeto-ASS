@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class AudioManager : Node
+public partial class AudioManager : Godot.Node
 {
     public static AudioManager Instance { get; private set; }
 

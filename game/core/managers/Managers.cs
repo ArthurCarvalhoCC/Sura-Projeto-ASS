@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Managers : Node
+public partial class Managers : Godot.Node
 {
 	public static Managers Instance { get; private set; }
 	[Export] public SceneManager _sceneManager { get; private set; }

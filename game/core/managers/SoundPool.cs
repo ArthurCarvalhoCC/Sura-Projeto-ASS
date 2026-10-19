@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class SoundPool : Node //útil para gerenciar sfx
+public partial class SoundPool : Godot.Node //útil para gerenciar sfx
 {
 	private Dictionary< string, SoundQueue> _queues= new();
 

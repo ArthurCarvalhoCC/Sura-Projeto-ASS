@@ -11,8 +11,8 @@ public partial class Idle : PlayerState
     public override void Update(double delta)
     {
         if (_player == null) return;
-        if (_player.debugMode) Machine.TransitionTo("debug");
-        if (_player.direction != Godot.Vector2.Zero) Machine.TransitionTo("walk");   
+        if (_player.debugMode) _stateMachine.TransitionTo("debug");
+        if (_player.direction != Godot.Vector2.Zero) _stateMachine.TransitionTo("walk");   
     }
     public override void PhysicsUpdate(double delta)
     {

@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class volumeSliders : Node
+public partial class volumeSliders : Godot.Node
 {
 	private HSlider _masterSlider;
 	private HSlider _sfxSlider;
