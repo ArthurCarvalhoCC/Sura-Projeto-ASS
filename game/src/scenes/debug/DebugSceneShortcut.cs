@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class DebugSceneShortcut : Godot.Node
+public partial class DebugSceneShortcut : Node
 {
     [Export] private PackedScene _debugScene;   // arrasta a DebugWorld.tscn aqui
     [Export] private Vector2I _spawnCoords;     // onde o player nasce na cena debug

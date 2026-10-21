@@ -104,7 +104,7 @@ targetCoords = Vector2i(120, 140)
 [node name="InteractionsContainer" type="Node2D" parent="." unique_id=1256931497]
 
 [node name="TestInteraction" parent="InteractionsContainer" unique_id=1438785819 instance=ExtResource("13_xne3g")]
-position = Vector2(-1, 33)
+position = Vector2(-36, 44)
 
 [node name="Interactions" type="Node" parent="InteractionsContainer" unique_id=230198877]
 
