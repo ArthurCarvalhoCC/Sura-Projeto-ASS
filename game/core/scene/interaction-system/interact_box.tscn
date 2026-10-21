@@ -6,18 +6,63 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_4g3bo"]
 radius = 24.738634
 
-[node name="InteractBox" type="Area2D" unique_id=1438785819 node_paths=PackedStringArray("balloon")]
+[sub_resource type="Animation" id="Animation_5j686"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Balloon:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -2.5)]
+}
+
+[sub_resource type="Animation" id="Animation_wyvoo"]
+resource_name = "balloon_move"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Balloon:offset_transform_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -2.5), Vector2(0, -5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5j686"]
+_data = {
+&"RESET": SubResource("Animation_5j686"),
+&"balloon_move": SubResource("Animation_wyvoo")
+}
+
+[node name="InteractBox" type="Area2D" unique_id=1438785819 node_paths=PackedStringArray("balloon", "_animationPlayer")]
 collision_layer = 0
 script = ExtResource("1_5ncub")
-balloon = NodePath("Baloon")
+balloon = NodePath("Balloon")
+_animationPlayer = NodePath("AnimationPlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=565994207]
 shape = SubResource("CircleShape2D_4g3bo")
 
-[node name="Baloon" type="TextureRect" parent="." unique_id=1946599769]
+[node name="Balloon" type="TextureRect" parent="." unique_id=1946599769]
 offset_left = -7.0
 offset_top = -21.0
 offset_right = 7.0
 offset_bottom = -7.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -2.5)
 texture = ExtResource("2_wyvoo")
 expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1555094386]
+libraries/ = SubResource("AnimationLibrary_5j686")
+autoplay = &"balloon_move"

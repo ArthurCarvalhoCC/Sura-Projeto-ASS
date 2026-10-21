@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class CutsceneSceneRoot : Godot.Node, ISceneRoot
+public partial class CutsceneSceneRoot : Node, ISceneRoot
 {
 	[Export] public AudioStream InitialMusic {get; private set;}
 	public bool hideMobileControls { get; private set; } = true;

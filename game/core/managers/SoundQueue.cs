@@ -2,7 +2,7 @@ using Godot;
 using System.Collections.Generic;
 
 [Tool]
-public partial class SoundQueue : Godot.Node
+public partial class SoundQueue : Node
 {
     [Export] private int _playerCount = 8;
     [Export] private StringName _bus = "SFX";
