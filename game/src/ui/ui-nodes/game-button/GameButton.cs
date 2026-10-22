@@ -16,24 +16,16 @@ public partial class GameButton : BaseButton
     [Export] private string soundCategory = "UI";
 
     [Export(PropertyHint.Range, "0.1,3.0,0.05")]
-    private float hoverPitchMin = 0.95f;
-    [Export(PropertyHint.Range, "0.1,3.0,0.05")]
-    private float hoverPitchMax = 1.05f;
+    private float hoverPitch = 1f;
 
     [Export(PropertyHint.Range, "-40,6,0.5")]
-    private float hoverVolumeMinDb = -2.0f;
-    [Export(PropertyHint.Range, "-40,6,0.5")]
-    private float hoverVolumeMaxDb = 0.0f;
+    private float hoverVolumeDb = -2.0f;
 
     [Export(PropertyHint.Range, "0.1,3.0,0.05")]
-    private float clickPitchMin = 0.95f;
-    [Export(PropertyHint.Range, "0.1,3.0,0.05")]
-    private float clickPitchMax = 1.05f;
+    private float clickPitch = 1f;
 
     [Export(PropertyHint.Range, "-40,6,0.5")]
-    private float clickVolumeMinDb = -2.0f;
-    [Export(PropertyHint.Range, "-40,6,0.5")]
-    private float clickVolumeMaxDb = 0.0f;
+    private float clickVolumeDb = -2.0f;
 
     [ExportGroup("Animations Behaviors")]
     [Export] private bool animatedFromCenter = true;
@@ -46,7 +38,7 @@ public partial class GameButton : BaseButton
 
     public override void _Ready()
     {
-        _animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+        _animationPlayer = GetNode<AnimationPlayer>("ButtonAnimationPlayer");
 
         MouseEntered += OnMouseEntered;
         FocusEntered += OnMouseEntered;
@@ -58,8 +50,7 @@ public partial class GameButton : BaseButton
 
     protected virtual void OnMouseEntered()
     {
-        PlayButtonAudio(hoverButtonSound, hoverPitchMin, hoverPitchMax,
-            hoverVolumeMinDb, hoverVolumeMaxDb);
+        PlayButtonAudio(hoverButtonSound, hoverPitch, hoverVolumeDb);
         PlayAnimation(_hoverAnimation);
     }
 
@@ -70,8 +61,7 @@ public partial class GameButton : BaseButton
 
     protected virtual void OnButtonDown()
     {
-        PlayButtonAudio(clickButtonSound, clickPitchMin, clickPitchMax,
-            clickVolumeMinDb, clickVolumeMaxDb);
+        PlayButtonAudio(clickButtonSound, clickPitch, clickVolumeDb);
         PlayAnimation(_pressedAnimation);
     }
 
@@ -94,18 +84,10 @@ public partial class GameButton : BaseButton
         defaultScale = Scale;
     }
 
-    private void PlayButtonAudio(
-        AudioStream audio,
-        float pitchMin,
-        float pitchMax,
-        float volumeMinDb,
-        float volumeMaxDb)
+    private void PlayButtonAudio(AudioStream audio, float pitch, float volumeDb)
     {
         if (audio == null || AudioManager.Instance == null)
             return;
-
-        float pitch = (float)GD.RandRange(pitchMin, pitchMax);
-        float volumeDb = (float)GD.RandRange(volumeMinDb, volumeMaxDb);
 
         AudioManager.Instance.PlaySFX(
             audio,
@@ -115,7 +97,7 @@ public partial class GameButton : BaseButton
         );
     }
 
-	protected void initTween(Godot.Node target, 
+	protected void initTween(Node target, 
 		string property, 
 		Variant value, 
 		float duration)
