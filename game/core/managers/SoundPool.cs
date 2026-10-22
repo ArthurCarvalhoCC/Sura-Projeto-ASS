@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public partial class SoundPool : Node //útil para gerenciar sfx
 {
 	private Dictionary< string, SoundQueue> _queues= new();
+	private RandomNumberGenerator _rng = new RandomNumberGenerator();
+
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()

@@ -4,7 +4,8 @@
 [ext_resource type="Theme" uid="uid://bl2dk06futns2" path="res://src/ui/themes/main_v2.tres" id="1_g4bga"]
 [ext_resource type="Texture2D" uid="uid://cy6el6egf5ywl" path="res://assets/sprites/ui/icons/icon.svg" id="1_qlnby"]
 [ext_resource type="Texture2D" uid="uid://b6rlyy7pmsm2l" path="res://assets/sprites/ui/atlas_ui_v2.png" id="2_rafc2"]
-[ext_resource type="AudioStream" uid="uid://dlstdrledwkyi" path="res://assets/sounds/sfx/player/steps.mp3" id="4_28kmo"]
+[ext_resource type="AudioStream" uid="uid://btvo3pvow5k3d" path="res://assets/sounds/sfx/ui/btn/hover.wav" id="4_08bse"]
+[ext_resource type="AudioStream" uid="uid://choisw3g35ean" path="res://assets/sounds/sfx/ui/btn/click.wav" id="5_ai7ia"]
 
 [sub_resource type="Animation" id="Animation_81dij"]
 length = 0.5
@@ -226,8 +227,8 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 script = ExtResource("1_7dcdb")
 LocaleCode = "pt-BR"
-hoverButtonSound = ExtResource("4_28kmo")
-clickButtonSound = ExtResource("4_28kmo")
+hoverButtonSound = ExtResource("4_08bse")
+clickButtonSound = ExtResource("5_ai7ia")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=102016617]
 libraries/ = SubResource("AnimationLibrary_qlnby")

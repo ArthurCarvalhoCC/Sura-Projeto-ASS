@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://bu21ihpect0l5"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_52xgy"]
-[ext_resource type="AudioStream" uid="uid://b54mqb331dfks" path="res://assets/sounds/bgm/menu.mp3" id="2_vkd22"]
 [ext_resource type="PackedScene" uid="uid://4qailok3ycwu" path="res://src/actors/player/Player.tscn" id="3_7d7o5"]
 [ext_resource type="TileSet" uid="uid://72llwced8jf5" path="res://src/tile-set/Floor.tres" id="3_vkd22"]
 [ext_resource type="Script" uid="uid://dd0ad5h3cchbo" path="res://core/scene/door-system/DoorsContainer.cs" id="4_4bjil"]
@@ -59,7 +58,6 @@ sources/1 = SubResource("TileSetAtlasSource_83v6i")
 
 [node name="Hall" type="Node2D" unique_id=2710396 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_52xgy")
-InitialMusic = ExtResource("2_vkd22")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 
@@ -82,6 +80,7 @@ y_sort_enabled = true
 [node name="Player" parent="Objects" unique_id=25723801 instance=ExtResource("3_7d7o5")]
 y_sort_enabled = true
 position = Vector2(120, 149)
+FootstepAudio = null
 
 [node name="DarkBG" parent="Objects/Player" unique_id=683168971 instance=ExtResource("5_7d7o5")]
 

@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://b5pgai18r57nq" path="res://assets/sprites/ui/menu/flags/flag-russian.png" id="11_6kvge"]
 [ext_resource type="PackedScene" uid="uid://q2wwy33kq6w1" path="res://src/ui/ui-nodes/cancel-button/CancelButton.tscn" id="12_oyxc4"]
 [ext_resource type="PackedScene" uid="uid://b0a1gxyecka4h" path="res://src/actors/backgrounds/gameplay/sky/SkyBg.tscn" id="16_4x86w"]
+[ext_resource type="AudioStream" uid="uid://btvo3pvow5k3d" path="res://assets/sounds/sfx/ui/btn/hover.wav" id="17_0qkvd"]
+[ext_resource type="AudioStream" uid="uid://choisw3g35ean" path="res://assets/sounds/sfx/ui/btn/click.wav" id="18_1vwh6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlew8"]
 
@@ -193,7 +195,7 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 accessibility_region = true
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 clip_tabs = false
 drag_to_rearrange_enabled = true
 use_hidden_tabs_for_min_size = true
@@ -202,6 +204,7 @@ tab_1/title = "MENU_AUDIO_TITLE"
 tab_2/title = "MENU_LANGUAGE_TITLE"
 
 [node name="Video" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=1757746494]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "MENU_VIDEO_TITLE"
@@ -239,7 +242,6 @@ layout_mode = 2
 text = "SETTINGS_VSYNC"
 
 [node name="Audio" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=1160609111]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "MENU_AUDIO_TITLE"
@@ -310,6 +312,8 @@ layout_mode = 2
 mouse_filter = 1
 text = "Português"
 icon = ExtResource("7_3jiru")
+hoverButtonSound = ExtResource("17_0qkvd")
+clickButtonSound = ExtResource("18_1vwh6")
 
 [node name="Spanish" parent="Pages/Settings/MarginContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=1809683220 instance=ExtResource("6_pqkav")]
 layout_mode = 2
@@ -317,6 +321,8 @@ mouse_filter = 1
 text = "Español"
 icon = ExtResource("8_2lu03")
 LocaleCode = "es"
+hoverButtonSound = ExtResource("17_0qkvd")
+clickButtonSound = ExtResource("18_1vwh6")
 
 [node name="English" parent="Pages/Settings/MarginContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=2054638765 instance=ExtResource("6_pqkav")]
 layout_mode = 2
@@ -324,6 +330,8 @@ mouse_filter = 1
 text = "English"
 icon = ExtResource("9_84d0x")
 LocaleCode = "en-US"
+hoverButtonSound = ExtResource("17_0qkvd")
+clickButtonSound = ExtResource("18_1vwh6")
 
 [node name="Japanese" parent="Pages/Settings/MarginContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=570878379 instance=ExtResource("6_pqkav")]
 layout_mode = 2
@@ -331,6 +339,8 @@ mouse_filter = 1
 text = "日本語"
 icon = ExtResource("10_84d0x")
 LocaleCode = "ja"
+hoverButtonSound = ExtResource("17_0qkvd")
+clickButtonSound = ExtResource("18_1vwh6")
 
 [node name="Russian" parent="Pages/Settings/MarginContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=956149222 instance=ExtResource("6_pqkav")]
 layout_mode = 2
@@ -338,10 +348,14 @@ mouse_filter = 1
 text = "Русский"
 icon = ExtResource("11_6kvge")
 LocaleCode = "ru"
+hoverButtonSound = ExtResource("17_0qkvd")
+clickButtonSound = ExtResource("18_1vwh6")
 
 [node name="CancelButton" parent="Pages/Settings/MarginContainer" unique_id=1676564578 instance=ExtResource("12_oyxc4")]
 layout_mode = 2
 size_flags_vertical = 0
+hoverButtonSound = ExtResource("17_0qkvd")
+clickButtonSound = ExtResource("18_1vwh6")
 
 [node name="Credits" type="Control" parent="Pages" unique_id=863185914]
 visible = false
@@ -391,6 +405,8 @@ text = "🔥CHINELÕES DE PJD2 🔥"
 [node name="CancelButton" parent="Pages/Credits/MarginContainer" unique_id=1529505432 instance=ExtResource("12_oyxc4")]
 layout_mode = 2
 size_flags_vertical = 0
+hoverButtonSound = ExtResource("17_0qkvd")
+clickButtonSound = ExtResource("18_1vwh6")
 
 [connection signal="pressed" from="Pages/Main/VBoxContainer/MarginContainer/HBoxContainer/Menu/MarginContainer/Options/Play" to="." method="OnPlayPressed"]
 [connection signal="pressed" from="Pages/Main/VBoxContainer/MarginContainer/HBoxContainer/Menu/MarginContainer/Options/Settings" to="." method="OnSettingsPressed"]

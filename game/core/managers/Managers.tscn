@@ -36,8 +36,16 @@ script = ExtResource("4_r07fn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/Default" unique_id=1320046511]
 
+[node name="Ambience" type="Node" parent="AudioManager/SoundPool" unique_id=1210802608]
+script = ExtResource("4_r07fn")
+_playerCount = 3
+_bus = &"Ambience"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/Ambience" unique_id=1325535418]
+
 [node name="Footsteps" type="Node" parent="AudioManager/SoundPool" unique_id=122689380]
 script = ExtResource("4_r07fn")
+_playerCount = 9
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioManager/SoundPool/Footsteps" unique_id=779423577]
 

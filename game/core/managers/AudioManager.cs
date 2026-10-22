@@ -20,7 +20,7 @@ public partial class AudioManager : Node
     {
         if (music == null)
         {
-            GD.PushError("AudioManager.PlayMusic: recebi 'null' como música nesta cena. Mantendo a música da ultima cena com este recurso");
+            StopMusic(fadeTime);
             return;
         }
 
@@ -61,7 +61,6 @@ public partial class AudioManager : Node
         => _sfxPool.Play(category, sound, pitch, volumeDb);
 	// o padrão agora é Default, mas se precisar diferenciar, siga os comentários acima.
 	
-
 	// Para o slider de volume das configurações
     public void SetBusVolume(string bus, float linear)
 	{
