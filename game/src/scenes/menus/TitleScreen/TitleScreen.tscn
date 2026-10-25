@@ -197,7 +197,6 @@ accessibility_region = true
 tab_alignment = 1
 current_tab = 1
 clip_tabs = false
-drag_to_rearrange_enabled = true
 use_hidden_tabs_for_min_size = true
 tab_0/title = "MENU_VIDEO_TITLE"
 tab_1/title = "MENU_AUDIO_TITLE"
@@ -358,7 +357,6 @@ hoverButtonSound = ExtResource("17_0qkvd")
 clickButtonSound = ExtResource("18_1vwh6")
 
 [node name="Credits" type="Control" parent="Pages" unique_id=863185914]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -392,6 +390,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource("5_4w8w4")
+theme_override_constants/outline_size = 5
 text = "MENU_MAIN_CREDITS"
 horizontal_alignment = 1
 vertical_alignment = 1
