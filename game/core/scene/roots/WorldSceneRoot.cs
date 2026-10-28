@@ -4,6 +4,7 @@ using System;
 public partial class WorldSceneRoot : Node2D, ISceneRoot
 {
 	[Export] public AudioStream InitialMusic {get; private set;}
+	[Export] public AudioStream AmbienceMusic {get; private set;}
 	[Export] public DoorsContainer _doorsContainer;
 	[Export] public Player _player;
 	public bool hideMobileControls { get; private set; } = true;
@@ -18,6 +19,7 @@ public partial class WorldSceneRoot : Node2D, ISceneRoot
 		
 		Managers.Instance._sceneManager.FinishSceneChange();
 		Managers.Instance._audioManager.PlayMusic(InitialMusic);
+		Managers.Instance._audioManager.PlaySFX(AmbienceMusic, "Ambience", 1f, -10f);
 		_doorsContainer.SceneChangeRequest += OnSceneChangeRequest;
 	}
 

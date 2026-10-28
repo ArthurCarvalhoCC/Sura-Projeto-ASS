@@ -23,6 +23,7 @@ public partial class SceneManager : Node
     public void StartSceneChange(PackedScene scene)
     {
         CallDeferred(nameof(LoadSceneDeferred), scene);
+        Managers.Instance._audioManager.StopMusic(); 
     }
     private async void LoadSceneDeferred(PackedScene scene) // lógica de StartSceneChange "empacotada" para poder usar na função CallDeferred
     {

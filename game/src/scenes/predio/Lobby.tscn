@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://bnvwsvlke0uhv"]
 
 [ext_resource type="Script" uid="uid://b2fw1akvg4r0p" path="res://core/scene/roots/WorldSceneRoot.cs" id="1_uq6v6"]
-[ext_resource type="AudioStream" uid="uid://b54mqb331dfks" path="res://assets/sounds/bgm/menu.mp3" id="2_gygs3"]
 [ext_resource type="TileSet" uid="uid://72llwced8jf5" path="res://src/tile-set/Floor.tres" id="3_gygs3"]
 [ext_resource type="TileSet" uid="uid://c6qpbbkxuwwwu" path="res://src/tile-set/Wall.tres" id="4_3b6xm"]
 [ext_resource type="Texture2D" uid="uid://bb6xs2r7frspy" path="res://assets/sprites/enviroment/tiles-sets/tile-maps/_tilemap_casa.png" id="4_qeums"]
@@ -59,7 +58,6 @@ sources/1 = SubResource("TileSetAtlasSource_4jr8t")
 
 [node name="Lobby" type="Node2D" unique_id=2710396 node_paths=PackedStringArray("_doorsContainer", "_player")]
 script = ExtResource("1_uq6v6")
-InitialMusic = ExtResource("2_gygs3")
 _doorsContainer = NodePath("DoorsContainer")
 _player = NodePath("Objects/Player")
 
