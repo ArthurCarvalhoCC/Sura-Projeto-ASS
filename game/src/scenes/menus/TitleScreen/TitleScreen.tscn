@@ -46,8 +46,8 @@ Credits = NodePath("Pages/Credits")
 InitialMusic = ExtResource("4_wis7l")
 
 [node name="SkyBg" parent="." unique_id=168957984 instance=ExtResource("16_4x86w")]
-firstColor = Color(0.98, 0.9587667, 0.7252, 1)
-secondColor = Color(0, 0.76, 0.76, 1)
+firstColor = Color(0.98, 0.94178003, 0.7252, 1)
+secondColor = Color(0, 0.35999995, 0.6, 1)
 fillFromX = 0.0
 fillFromY = 0.0
 fillToX = 1.0
@@ -77,6 +77,7 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Main" type="Control" parent="Pages" unique_id=770484771]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,7 +105,7 @@ alignment = 1
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("5_4w8w4")
-theme_override_colors/font_color = Color(0.80752003, 0.98, 0.5488, 1)
+theme_override_colors/font_color = Color(0.71808, 0.96, 0.3552, 1)
 text = "Surá"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -164,7 +165,6 @@ underline = 1
 uri = "https://www.instagram.com/pjd2_2025/"
 
 [node name="Settings" type="Control" parent="Pages" unique_id=166331216]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -193,6 +193,7 @@ grow_vertical = 2
 [node name="ConfigSections" type="TabContainer" parent="Pages/Settings/MarginContainer" unique_id=1036081554]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
+size_flags_horizontal = 4
 accessibility_region = true
 tab_alignment = 1
 current_tab = 1
@@ -279,7 +280,6 @@ labelName = "SETTINGS_AMBIENT_VOLUME"
 _audioBus = 3
 
 [node name="Language" type="PanelContainer" parent="Pages/Settings/MarginContainer/ConfigSections" unique_id=358491666]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 metadata/_tab_name = "MENU_LANGUAGE_TITLE"
@@ -303,8 +303,7 @@ theme_override_constants/margin_bottom = 8
 [node name="GridContainer" type="GridContainer" parent="Pages/Settings/MarginContainer/ConfigSections/Language/ScrollContainer/MarginContainer" unique_id=885873377]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-columns = 2
+columns = 3
 
 [node name="Portuguese" parent="Pages/Settings/MarginContainer/ConfigSections/Language/ScrollContainer/MarginContainer/GridContainer" unique_id=346491034 instance=ExtResource("6_pqkav")]
 layout_mode = 2
